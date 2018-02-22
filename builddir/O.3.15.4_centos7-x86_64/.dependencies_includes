@@ -1,0 +1,1 @@
+DEPENDENCIES_INCLUDES = -I/opt/epics/modules/modbus/2.9.0-ESS1/3.15.4/include -I/opt/epics/modules/modbus/2.9.0-ESS1/3.15.4/include/os/Linux -I/opt/epics/modules/modbus/2.9.0-ESS1/3.15.4/include/os/default -I/opt/epics/modules/asyn/4.31.0/3.15.4/include -I/opt/epics/modules/asyn/4.31.0/3.15.4/include/os/Linux -I/opt/epics/modules/asyn/4.31.0/3.15.4/include/os/default 

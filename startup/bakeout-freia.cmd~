@@ -1,0 +1,22 @@
+epicsEnvSet("DT320_PREFIX" "$(DT320PREFIX=Htr)")
+
+drvAsynIPPortConfigure("TC_DT320","$(IP_ADDR3)",0,0,1)
+modbusInterposeConfig("TC_DT320",1,2000,10)
+#drvModbusAsynConfigure(portName, 
+#                       tcpPortName,
+#                       slaveAddress, 
+#                       modbusFunction, 
+#                       modbusStartAddress, 
+#                       modbusLength,
+#                       dataType,
+#                       pollMsec, 
+#                       plcType);
+
+drvModbusAsynConfigure(DT320_1, "TC_DT320", 1, 3, 4096, 8, 4, 10000, "dt320")
+
+#asynSetTraceIOMask",0,4   # Enable traceIOHex
+#asynSetTraceMask "DMT340_1",0,9     # Enable traceError and traceIODriver
+asynSetTraceMask "DMT340_1",0,1     # Enable traceError
+
+#asynSetTraceIOMask "DMT_STATUS",0,4   # Enable traceIOHex
+#asynSetTraceMask "DMT_STATUS",0,9     # Enable traceError and traceIODriver

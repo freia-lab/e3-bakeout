@@ -1,0 +1,16 @@
+WAVEFORM record DOES NOT WORK YET
+
+To use the module in an ioc add the following statements to your startup snipppet:
+
+require bakeout-freia,<version>
+epicsEnvSet("BAKEOUT_PORT-1", "<YOUR-ASYN-PORT-1>")
+
+drvAsynIPPortConfigure(${BAKEOUT_PORT-1}, <ip-addr:port>,0,0,0)
+
+## Load record instances
+dbLoadRecords("bakeout.db","DT320_PORT=${BAKEOUT_PORT-1},PREFIX='<pv-prefix>'")
+
+In FREIA the bakeout system is connected to Delta IFD9506 server "192.168.1.104:2020"
+
+The example BOY opi file is included in opi/helper-opi-files. Define macro P 
+to the same value as <pv-prefix> in your startup script.

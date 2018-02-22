@@ -1,0 +1,15 @@
+# Record template for DT320 temperature controller
+#ao record template for register outputs
+record(ao, "$(P):TT$(ADR):cSP") {
+    field(DESC,"Set point")
+    field(DTYP,"asynInt32")
+    field(OUT,"@asyn($(PORT) 4097 -16)MODBUS_DATA")
+    field(EGU,"°C")
+    field(HOPR,"500.0")
+    field(LOPR,"-70.0")
+    field(PREC,"1")
+    field(ADEL,"0.1")
+    field(MDEL,"0.1")
+    field(LINR,"SLOPE")
+    field (ASLO, "0.1")
+}
