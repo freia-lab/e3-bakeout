@@ -1,7 +1,7 @@
 # Record template for DT320 temperature controller
 #ao record template for register outputs
 record(ao, "$(P):TT$(ADR):cSP") {
-    field(DESC,"Set point")
+    field(DESC,"Temperature set-point")
     field(DTYP,"asynInt32")
     field(OUT,"@asyn($(PORT) 4097 -16)MODBUS_DATA")
     field(EGU,"°C")
@@ -13,3 +13,84 @@ record(ao, "$(P):TT$(ADR):cSP") {
     field(LINR,"SLOPE")
     field (ASLO, "0.1")
 }
+
+record(ao, "$(P):TT$(ADR):cSlope-Man") {
+    field(DESC,"Temp. rise slope (manual mode)")
+    field(DTYP,"asynInt32")
+    field(OUT,"@asyn($(PORT) 4356 -16)MODBUS_DATA")
+    field(HOPR,"1000.0")
+    field(LOPR,"0")
+    field(PREC,"1")
+    field(ADEL,"0.1")
+    field(MDEL,"0.1")
+    field(LINR,"SLOPE")
+    field (ASLO, "0.1")
+}
+
+record (mbbo, "$(P):TT$(ADR):cCntrlMode") {
+    field(DESC,"Control mode")
+    field(DTYP,"asynInt32")
+    field(OUT,"@asyn($(PORT) 4101 -16)MODBUS_DATA")
+    field(ZRVL, "0")
+    field(ZRST, "PID")
+    field(ONVL, "1")
+    field(ONST, "ON/OFF")
+    field(TWVL, "2")
+    field(TWST, "Manual")
+    field(THVL, "3")
+    field(THST, "Fuzzy")
+    field(NOBT, "16")
+}
+
+record (mbbo, "$(P):TT$(ADR):cAutoTune") {
+    field(DESC,"Auto tunel control")
+    field(DTYP,"asynInt32")
+    field(OUT,"@asyn($(PORT) 4155 -16)MODBUS_DATA")
+    field(ZRVL, "0")
+    field(ZRST, "Off")
+    field(ONVL, "1")
+    field(ONST, "On")
+    field(NOBT, "16")
+}
+
+record (mbbo, "$(P):TT$(ADR):cRunMode") {
+    field(DESC,"Run mode")
+    field(DTYP,"asynInt32")
+    field(OUT,"@asyn($(PORT) 4156 -16)MODBUS_DATA")
+    field(ZRVL, "0")
+    field(ZRST, "STOP")
+    field(ONVL, "1")
+    field(ONST, "RUN")
+    field(TWVL, "2")
+    field(TWST, "END")
+    field(THVL, "3")
+    field(THST, "HOLD")
+    field(NOBT, "16")
+}
+
+record (mbbo, "$(P):TT$(ADR):cSVMode") {
+    field(DESC,"SV control mode")
+    field(DTYP,"asynInt32")
+    field(OUT,"@asyn($(PORT) 4384 -16)MODBUS_DATA")
+    field(ZRVL, "0")
+    field(ZRST, "Fixed")
+    field(ONVL, "1")
+    field(ONST, "Slope")
+    field(TWVL, "2")
+    field(TWST, "Program")
+    field(THVL, "3")
+    field(THST, "Remote")
+    field(NOBT, "16")
+}
+
+record (mbbo, "$(P):TT$(ADR):cSlopeUnit") {
+    field(DESC,"Slope time unit")
+    field(DTYP,"asynInt32")
+    field(OUT,"@asyn($(PORT) 4388 -16)MODBUS_DATA")
+    field(ZRVL, "0")
+    field(ZRST, "min")
+    field(ONVL, "1")
+    field(ONST, "s")
+    field(NOBT, "16")
+}
+
