@@ -1,0 +1,64 @@
+# Record template for DT320 temperature controller
+#ai record template for register inputs
+record(waveform, "$(P):TT$(ADR):sWf-7") {
+    field(DESC,"Data from pport DT320_7")
+    field(DTYP,"asynInt32ArrayIn")
+    field(NELM,"8")
+    field(FTVL,"LONG")
+    field(INP,"@asyn($(PORT),0,1000)INT16")
+    field(SCAN,"$(SCAN)")
+}
+
+record(bi, "$(P):TT$(ADR)-Prg:sRunning") {
+    field(DESC,"Program running")
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn($(PORT),3,1000)MODBUS_DATA")
+    field(SCAN,"$(SCAN)")
+    field(ZNAM, "Off")
+    field(ONAM, "On")
+#    field(MASK, "0x40")
+}
+
+record(longin, "$(P):TT$(ADR)-Prg:sStartPtrn") {
+    field(DESC,"Start pattern # in program")
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn($(PORT),0,0)MODBUS_DATA")
+    field(SCAN,"$(SCAN)")
+}
+
+record(longin, "$(P):TT$(ADR)-Prg:sRemTime") {
+    field(DESC,"Remaining time in the step")
+    field(EGU,"s")
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn($(PORT),2,0)MODBUS_DATA")
+    field(SCAN,"$(SCAN)")
+}
+
+record(longin, "$(P):TT$(ADR)-Prg:sStep") {
+    field(DESC,"Current step in pattern")
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn($(PORT),4,0)MODBUS_DATA")
+    field(SCAN,"$(SCAN)")
+}
+
+record(longin, "$(P):TT$(ADR)-Prg:sPattern") {
+    field(DESC,"Current pattern in pattern")
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn($(PORT),5,0)MODBUS_DATA")
+    field(SCAN,"$(SCAN)")
+}
+
+record(ai, "$(P):TT$(ADR)-Prg:sSV") {
+    field(DESC,"Actual requested temperature")
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn($(PORT) 6 -16)MODBUS_DATA")
+    field(EGU,"°C")
+    field(HOPR,"500.0")
+    field(LOPR,"-70.0")
+    field(PREC,"1")
+    field(ADEL,"0.1")
+    field(MDEL,"0.1")
+    field(LINR,"SLOPE")
+    field (ASLO, "0.1")
+    field(SCAN,"$(SCAN)")
+}

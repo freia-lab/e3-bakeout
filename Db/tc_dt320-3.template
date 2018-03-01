@@ -1,0 +1,26 @@
+# Record template for DT320 temperature controller
+#ai record template for register inputs
+record(waveform, "$(P):TT$(ADR):sWf-3") {
+    field(DESC,"Data from pport DT320_3")
+    field(DTYP,"asynInt32ArrayIn")
+    field(NELM,"8")
+    field(FTVL,"LONG")
+    field(INP,"@asyn($(PORT),0,1000)INT16")
+    field(SCAN,"$(SCAN)")
+}
+
+record(ai, "$(P):TT$(ADR):sOut1-Perc") {
+    field(DESC,"Out 1 control values in manual mode")
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn($(PORT) 2 -16)MODBUS_DATA")
+    field(EGU,"%")
+    field(HOPR,"100.0")
+    field(LOPR,"0.0")
+    field(PREC,"1")
+    field(ADEL,"0.1")
+    field(MDEL,"0.1")
+    field(LINR,"SLOPE")
+    field (ASLO, "0.1")
+    field(SCAN,"$(SCAN)")
+}
+

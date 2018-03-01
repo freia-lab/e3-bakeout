@@ -1,0 +1,75 @@
+# Record template for DT320 temperature controller
+#ai record template for register inputs
+record(waveform, "$(P):TT$(ADR):sWf-6") {
+    field(DESC,"Data from pport DT320_6")
+    field(DTYP,"asynInt32ArrayIn")
+    field(NELM,"8")
+    field(FTVL,"LONG")
+    field(INP,"@asyn($(PORT),0,1000)INT16")
+    field(SCAN,"$(SCAN)")
+}
+
+record(longin, "$(P):TT$(ADR):sLEDs") {
+    field(DESC,"LED status lamps")
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn($(PORT),2,0)MODBUS_DATA")
+    field(SCAN,"$(SCAN)")
+}
+
+record(bi, "$(P):TT$(ADR):sOut1") {
+    field(DESC,"Output 1")
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asyn($(PORT),2,64,1000)MODBUS_DATA")
+    field(SCAN,"$(SCAN)")
+    field(ZNAM, "Off")
+    field(ONAM, "On")
+#    field(MASK, "0x40")
+}
+record(bi, "$(P):TT$(ADR):sAutoTune") {
+    field(DESC,"Auto Tune")
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asyn($(PORT) 2 0x80 0)MODBUS_DATA")
+    field(SCAN,"$(SCAN)")
+    field(ZNAM, "Off")
+    field(ONAM, "On")
+    field(MASK, "0x80")
+}
+record(bi, "$(P):TT$(ADR):sALRM1") {
+    field(DESC,"Alarm 1")
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asyn($(PORT) 2 0x10 0)MODBUS_DATA")
+    field(SCAN,"$(SCAN)")
+    field(ZNAM, "Off")
+    field(ONAM, "On")
+    field(MASK, "0x10")
+}
+record(bi, "$(P):TT$(ADR):sALRM2") {
+    field(DESC,"Alarm 2")
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asyn($(PORT) 2 0x02 0)MODBUS_DATA")
+    field(SCAN,"$(SCAN)")
+    field(ZNAM, "Off")
+    field(ONAM, "On")
+    field(MASK, "0x02")
+}
+record(bi, "$(P):TT$(ADR):sALRM3") {
+    field(DESC,"Alarm 3")
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asyn($(PORT) 2 0x01 0)MODBUS_DATA")
+    field(SCAN,"$(SCAN)")
+    field(ZNAM, "Off")
+    field(ONAM, "On")
+    field(MASK, "0x01")
+}
+record(mbbi, "$(P):TT$(ADR):sEGU") {
+    field(DESC,"Temperature units")
+    field(DTYP,"asynUInt32Digital")
+    field(INP,"@asyn($(PORT) 2 0x0c 0)MODBUS_DATA")
+    field(SHFT, 2)
+    field(MASK, "0x0f")
+    field(SCAN,"$(SCAN)")
+    field(ZRVL, "1")
+    field(ONVL, "2")
+    field(ZRST, "°C")
+    field(ONST, "°F")
+}
