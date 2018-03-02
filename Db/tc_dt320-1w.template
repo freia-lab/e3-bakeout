@@ -42,10 +42,37 @@ record(ao, "$(P):TT$(ADR):cOut1-Perc") {
     field (ASLO, "10.0")
 }
 
-record(ao, "$(P):TT$(ADR):cSlope-Man") {
-    field(DESC,"Temp. rise slope (manual mode)")
+record(ao, "$(P):TT$(ADR):cOut1-Perc") {
+    field(DESC,"Out 1 control value in manual mode")
     field(DTYP,"asynInt32")
-    field(OUT,"@asyn($(PORT) 4356 -16)MODBUS_DATA")
+    field(OUT,"@asyn($(PORT) 4114 -16)MODBUS_DATA")
+    field(EGU,"%")
+    field(HOPR,"100.0")
+    field(LOPR,"0.0")
+    field(PREC,"1")
+    field(ADEL,"0.1")
+    field(MDEL,"0.1")
+    field(LINR,"SLOPE")
+    field (ASLO, "10.0")
+}
+
+record(ao, "$(P):TT$(ADR):cOut1-Hyst") {
+    field(DESC,"Hysteresis (ON/OFF ctrl mode)")
+    field(DTYP,"asynInt32")
+    field(OUT,"@asyn($(PORT) 0x1010 -16)MODBUS_DATA")
+    field(HOPR,"999.9")
+    field(LOPR,"-99.9")
+    field(PREC,"1")
+    field(ADEL,"0.1")
+    field(MDEL,"0.1")
+    field(LINR,"SLOPE")
+    field (ASLO, "0.1")
+}
+
+record(ao, "$(P):TT$(ADR)-Prg:cSlope") {
+    field(DESC,"Temp. rise slope (program mode)")
+    field(DTYP,"asynInt32")
+    field(OUT,"@asyn($(PORT) 0x1114 -16)MODBUS_DATA")
     field(HOPR,"1000.0")
     field(LOPR,"0")
     field(PREC,"1")
@@ -55,10 +82,10 @@ record(ao, "$(P):TT$(ADR):cSlope-Man") {
     field (ASLO, "0.1")
 }
 
-record(ao, "$(P):TT$(ADR):cSlope-Prg") {
+record(ao, "$(P):TT$(ADR):cSlope-Man") {
     field(DESC,"Temp. rise slope (program mode)")
     field(DTYP,"asynInt32")
-    field(OUT,"@asyn($(PORT) 4372 -16)MODBUS_DATA")
+    field(OUT,"@asyn($(PORT) 0x1104 -16)MODBUS_DATA")
     field(HOPR,"1000.0")
     field(LOPR,"0")
     field(PREC,"1")
@@ -71,7 +98,7 @@ record(ao, "$(P):TT$(ADR):cSlope-Prg") {
 record (mbbo, "$(P):TT$(ADR):cCntrlMode") {
     field(DESC,"Control mode")
     field(DTYP,"asynInt32")
-    field(OUT,"@asyn($(PORT) 4101 -16)MODBUS_DATA")
+    field(OUT,"@asyn($(PORT) 0x1005 -16)MODBUS_DATA")
     field(ZRVL, "0")
     field(ZRST, "PID")
     field(ONVL, "1")
@@ -135,3 +162,13 @@ record (mbbo, "$(P):TT$(ADR):cSlopeUnit") {
     field(NOBT, "16")
 }
 
+record(longout, "$(P):TT$(ADR)-Prg:cStartStep") {
+    field(DESC,"Start step in program")
+    field(DTYP,"asynInt32")
+    field(OUT,"@asyn($(PORT),0x101f)MODBUS_DATA")
+}
+record(longout, "$(P):TT$(ADR)-Prg:cStartPtrn") {
+    field(DESC,"Start pattern in program")
+    field(DTYP,"asynInt32")
+    field(OUT,"@asyn($(PORT),0x1030)MODBUS_DATA")
+}

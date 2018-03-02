@@ -1,0 +1,159 @@
+file "tc_dt320-1.template"  { pattern
+{ P,               PORT,     ADR,  SCAN }
+{ $(DT320_PREFIX), DT320_1-1,  01,   "I/O Intr"}
+{ $(DT320_PREFIX), DT320_1-2,  02,   "I/O Intr"}
+{ $(DT320_PREFIX), DT320_1-3,  03,   "I/O Intr"}
+{ $(DT320_PREFIX), DT320_1-4,  04,   "I/O Intr"}
+{ $(DT320_PREFIX), DT320_1-5,  05,   "I/O Intr"}
+{ $(DT320_PREFIX), DT320_1-6,  06,   "I/O Intr"}
+{ $(DT320_PREFIX), DT320_1-7,  07,   "I/O Intr"}
+{ $(DT320_PREFIX), DT320_1-8,  08,   "I/O Intr"}
+{ $(DT320_PREFIX), DT320_1-9,  09,   "I/O Intr"}
+{ $(DT320_PREFIX), DT320_1-10, 10,   "I/O Intr"}
+}
+
+file "tc_dt320-2.template"  { pattern
+{ P,               PORT,     ADR,  SCAN }
+{ $(DT320_PREFIX), DT320_2-1,  01,   "I/O Intr"}
+{ $(DT320_PREFIX), DT320_2-2,  02,   "I/O Intr"}
+{ $(DT320_PREFIX), DT320_2-3,  03,   "I/O Intr"}
+}
+
+file "tc_dt320-3.template"  { pattern
+{ P,               PORT,     ADR,  SCAN }
+{ $(DT320_PREFIX), DT320_3-1,  01,   "I/O Intr"}
+{ $(DT320_PREFIX), DT320_3-2,  02,   "I/O Intr"}
+{ $(DT320_PREFIX), DT320_3-3,  03,   "I/O Intr"}
+}
+
+file "tc_dt320-4.template"  { pattern
+{ P,               PORT,     ADR,  SCAN }
+{ $(DT320_PREFIX), DT320_4-1,  01,   "I/O Intr"}
+{ $(DT320_PREFIX), DT320_4-2,  02,   "I/O Intr"}
+{ $(DT320_PREFIX), DT320_4-3,  03,   "I/O Intr"}
+}
+
+file "tc_dt320-5.template"  { pattern
+{ P,               PORT,     ADR,  SCAN }
+{ $(DT320_PREFIX), DT320_5-1,  01,   "I/O Intr"}
+{ $(DT320_PREFIX), DT320_5-2,  02,   "I/O Intr"}
+{ $(DT320_PREFIX), DT320_5-3,  03,   "I/O Intr"}
+}
+
+file "tc_dt320-6.template"  { pattern
+{ P,               PORT,     ADR,  SCAN }
+{ $(DT320_PREFIX), DT320_6-1,  01,   "I/O Intr"}
+{ $(DT320_PREFIX), DT320_6-2,  02,   "I/O Intr"}
+{ $(DT320_PREFIX), DT320_6-3,  03,   "I/O Intr"}
+{ $(DT320_PREFIX), DT320_6-4,  04,   "I/O Intr"}
+{ $(DT320_PREFIX), DT320_6-5,  05,   "I/O Intr"}
+{ $(DT320_PREFIX), DT320_6-6,  06,   "I/O Intr"}
+{ $(DT320_PREFIX), DT320_6-7,  07,   "I/O Intr"}
+{ $(DT320_PREFIX), DT320_6-8,  08,   "I/O Intr"}
+{ $(DT320_PREFIX), DT320_6-9,  09,   "I/O Intr"}
+{ $(DT320_PREFIX), DT320_6-10, 10,   "I/O Intr"}
+}
+
+file "tc_dt320-7.template"  { pattern
+{ P,               PORT,     ADR,  SCAN }
+{ $(DT320_PREFIX), DT320_7-1,  01,   "I/O Intr"}
+{ $(DT320_PREFIX), DT320_7-2,  02,   "I/O Intr"}
+{ $(DT320_PREFIX), DT320_7-3,  03,   "I/O Intr"}
+{ $(DT320_PREFIX), DT320_7-4,  04,   "I/O Intr"}
+{ $(DT320_PREFIX), DT320_7-5,  05,   "I/O Intr"}
+{ $(DT320_PREFIX), DT320_7-6,  06,   "I/O Intr"}
+{ $(DT320_PREFIX), DT320_7-7,  07,   "I/O Intr"}
+{ $(DT320_PREFIX), DT320_7-8,  08,   "I/O Intr"}
+{ $(DT320_PREFIX), DT320_7-9,  09,   "I/O Intr"}
+{ $(DT320_PREFIX), DT320_7-10, 10,   "I/O Intr"}
+}
+
+file "tc_dt320-8.template"  { pattern
+{ P,               PORT,     ADR,  SCAN }
+{ $(DT320_PREFIX), DT320_8-1,  01,   "I/O Intr"}
+{ $(DT320_PREFIX), DT320_8-2,  02,   "I/O Intr"}
+}
+
+file "tc_dt320-9.template"  { pattern
+{ P,               PORT,     ADR,  SCAN }
+{ $(DT320_PREFIX), DT320_9-1,  01,   "Passive"}
+{ $(DT320_PREFIX), DT320_9-2,  02,   "Passive"}
+{ $(DT320_PREFIX), DT320_9-3,  03,   "Passive"}
+}
+
+file "tc_dt320-73.template"  { pattern
+{ P,               PORT,     ADR,  SCAN }
+{ $(DT320_PREFIX), DT320_73-1,  01,   "I/O Intr"}
+{ $(DT320_PREFIX), DT320_73-2,  02,   "I/O Intr"}
+{ $(DT320_PREFIX), DT320_73-3,  03,   "I/O Intr"}
+}
+
+file "tc_dt320-75.template"  { pattern
+{ P,               PORT,     ADR,  SCAN }
+{ $(DT320_PREFIX), DT320_75-1,  01,   "I/O Intr"}
+{ $(DT320_PREFIX), DT320_75-2,  02,   "I/O Intr"}
+{ $(DT320_PREFIX), DT320_75-3,  03,   "I/O Intr"}
+}
+
+file "tc_dt320-77.template"  { pattern
+{ P,               PORT,     ADR,  SCAN }
+{ $(DT320_PREFIX), DT320_77-1,  01,   "I/O Intr"}
+{ $(DT320_PREFIX), DT320_77-2,  02,   "I/O Intr"}
+{ $(DT320_PREFIX), DT320_77-3,  03,   "I/O Intr"}
+}
+
+file "tc_dt320-79.template"  { pattern
+{ P,               PORT,     ADR,  SCAN }
+{ $(DT320_PREFIX), DT320_79-1,  01,   "I/O Intr"}
+{ $(DT320_PREFIX), DT320_79-2,  02,   "I/O Intr"}
+{ $(DT320_PREFIX), DT320_79-3,  03,   "I/O Intr"}
+}
+
+file "tc_dt320-80.template"  { pattern
+{ P,               PORT,     ADR,  SCAN }
+{ $(DT320_PREFIX), DT320_80-1,  01,   "I/O Intr"}
+{ $(DT320_PREFIX), DT320_80-2,  02,   "I/O Intr"}
+{ $(DT320_PREFIX), DT320_80-3,  03,   "I/O Intr"}
+}
+
+file "tc_dt320-81.template"  { pattern
+{ P,               PORT,     ADR,  SCAN }
+{ $(DT320_PREFIX), DT320_81-1,  01,   "I/O Intr"}
+{ $(DT320_PREFIX), DT320_81-2,  02,   "I/O Intr"}
+}
+
+file "tc_dt320-82.template"  { pattern
+{ P,               PORT,     ADR,  SCAN }
+{ $(DT320_PREFIX), DT320_82-1,  01,   "I/O Intr"}
+{ $(DT320_PREFIX), DT320_82-2,  02,   "I/O Intr"}
+{ $(DT320_PREFIX), DT320_82-3,  03,   "I/O Intr"}
+}
+
+file "tc_dt320-83.template"  { pattern
+{ P,               PORT,     ADR,  SCAN }
+{ $(DT320_PREFIX), DT320_83-1,  01,   "I/O Intr"}
+{ $(DT320_PREFIX), DT320_83-2,  02,   "I/O Intr"}
+{ $(DT320_PREFIX), DT320_83-3,  03,   "I/O Intr"}
+}
+
+file "tc_dt320-84.template"  { pattern
+{ P,               PORT,     ADR,  SCAN }
+{ $(DT320_PREFIX), DT320_84-1,  01,   "I/O Intr"}
+{ $(DT320_PREFIX), DT320_84-2,  02,   "I/O Intr"}
+{ $(DT320_PREFIX), DT320_84-3,  03,   "I/O Intr"}
+}
+
+file "tc_dt320-1w.template"  { pattern
+{ P,               PORT,     ADR }
+{ $(DT320_PREFIX), DT320_1W-1, 01 }
+{ $(DT320_PREFIX), DT320_1W-2, 02 }
+{ $(DT320_PREFIX), DT320_1W-3, 03 }
+}
+
+file "tc_dt320-8w.template"  { pattern
+{ P,               PORT,     ADR }
+{ $(DT320_PREFIX), DT320_8W-1, 01 }
+{ $(DT320_PREFIX), DT320_8W-2, 02 }
+{ $(DT320_PREFIX), DT320_8W-3, 03 }
+}
+

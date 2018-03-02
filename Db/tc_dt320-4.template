@@ -9,7 +9,7 @@ record(waveform, "$(P):TT$(ADR):sWf-4") {
     field(SCAN,"$(SCAN)")
 }
 
-record(longin, "$(P):TT$(ADR):sStartStep") {
+record(longin, "$(P):TT$(ADR)-Prg:sStartStep") {
     field(DESC,"Start step in program")
     field(DTYP,"asynInt32")
     field(INP,"@asyn($(PORT),7,0)MODBUS_DATA")
