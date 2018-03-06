@@ -28,7 +28,7 @@
   <show_ruler>true</show_ruler>
   <snap_to_geometry>true</snap_to_geometry>
   <widget_type>Display</widget_type>
-  <width>850</width>
+  <width>1000</width>
   <wuid>248b9049:1614290df51:6c5</wuid>
   <x>-1</x>
   <y>-1</y>
@@ -89,7 +89,7 @@
     <tooltip></tooltip>
     <visible>true</visible>
     <widget_type>Tabbed Container</widget_type>
-    <width>850</width>
+    <width>1000</width>
     <wuid>-2215652e:161dbb3e447:-6aa2</wuid>
     <x>0</x>
     <y>0</y>
@@ -129,7 +129,7 @@
       <transparent>true</transparent>
       <visible>true</visible>
       <widget_type>Grouping Container</widget_type>
-      <width>848</width>
+      <width>998</width>
       <wuid>-2215652e:161dbb3e447:-6aa1</wuid>
       <x>1</x>
       <y>1</y>
@@ -168,7 +168,7 @@
         <tooltip></tooltip>
         <visible>true</visible>
         <widget_type>Linking Container</widget_type>
-        <width>848</width>
+        <width>998</width>
         <wuid>-2215652e:161dbb3e447:-6a9d</wuid>
         <x>0</x>
         <y>0</y>
@@ -210,7 +210,7 @@
       <transparent>true</transparent>
       <visible>false</visible>
       <widget_type>Grouping Container</widget_type>
-      <width>848</width>
+      <width>998</width>
       <wuid>-2215652e:161dbb3e447:-6a76</wuid>
       <x>1</x>
       <y>1</y>
@@ -249,7 +249,7 @@
         <tooltip></tooltip>
         <visible>true</visible>
         <widget_type>Linking Container</widget_type>
-        <width>848</width>
+        <width>998</width>
         <wuid>-2215652e:161dbb3e447:-6a0f</wuid>
         <x>0</x>
         <y>0</y>

@@ -1,11 +1,23 @@
 # Record template for DT320 temperature controller
 #waveform record template for register outputs
-record(waveform, "$(P):TT$(ADR):cPattern-0a") {
+record(waveform, "$(P):TT$(ADR)-Prg:cPattern-0a") {
     field(DESC,"Temp/time pattern part 1")
     field(DTYP,"asynInt32ArrayOut")
     field(NELM,"8")
     field(FTVL,"LONG")
     field(INP,"@asyn($(PORT),0x1200,1000)INT16")
+    field(EGU,"°C min")
+    field(HOPR,"9999")
+    field(LOPR,"-999")
+    field(PREC,"0")
+#    field(FLNK,"$(P):TT$(ADR):sPattern-0a")
+}
+record(waveform, "$(P):TT$(ADR)-Prg:cPattern-0b") {
+    field(DESC,"Temp/time pattern part 2")
+    field(DTYP,"asynInt32ArrayOut")
+    field(NELM,"8")
+    field(FTVL,"LONG")
+    field(INP,"@asyn($(PORT),0x1208,1000)INT16")
     field(EGU,"°C min")
     field(HOPR,"9999")
     field(LOPR,"-999")

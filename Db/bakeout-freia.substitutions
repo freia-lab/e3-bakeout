@@ -31,6 +31,13 @@ file "tc_dt320-4.template"  { pattern
 { $(DT320_PREFIX), DT320_4-1,  01,   "I/O Intr"}
 { $(DT320_PREFIX), DT320_4-2,  02,   "I/O Intr"}
 { $(DT320_PREFIX), DT320_4-3,  03,   "I/O Intr"}
+{ $(DT320_PREFIX), DT320_4-4,  04,   "I/O Intr"}
+{ $(DT320_PREFIX), DT320_4-5,  05,   "I/O Intr"}
+{ $(DT320_PREFIX), DT320_4-6,  06,   "I/O Intr"}
+{ $(DT320_PREFIX), DT320_4-7,  07,   "I/O Intr"}
+{ $(DT320_PREFIX), DT320_4-8,  08,   "I/O Intr"}
+{ $(DT320_PREFIX), DT320_4-9,  09,   "I/O Intr"}
+{ $(DT320_PREFIX), DT320_4-10, 10,   "I/O Intr"}
 }
 
 file "tc_dt320-5.template"  { pattern
@@ -79,6 +86,27 @@ file "tc_dt320-9.template"  { pattern
 { $(DT320_PREFIX), DT320_9-1,  01,   "Passive"}
 { $(DT320_PREFIX), DT320_9-2,  02,   "Passive"}
 { $(DT320_PREFIX), DT320_9-3,  03,   "Passive"}
+{ $(DT320_PREFIX), DT320_9-4,  04,   "Passive"}
+{ $(DT320_PREFIX), DT320_9-5,  05,   "Passive"}
+{ $(DT320_PREFIX), DT320_9-6,  06,   "Passive"}
+{ $(DT320_PREFIX), DT320_9-7,  07,   "Passive"}
+{ $(DT320_PREFIX), DT320_9-8,  08,   "Passive"}
+{ $(DT320_PREFIX), DT320_9-9,  09,   "Passive"}
+{ $(DT320_PREFIX), DT320_9-10, 10,   "Passive"}
+}
+
+file "tc_dt320-10.template"  { pattern
+{ P,               PORT,       ADR,   SCAN }
+{ $(DT320_PREFIX), DT320_10-1,  01,   "Passive"}
+{ $(DT320_PREFIX), DT320_10-2,  02,   "Passive"}
+{ $(DT320_PREFIX), DT320_10-3,  03,   "Passive"}
+{ $(DT320_PREFIX), DT320_10-4,  04,   "Passive"}
+{ $(DT320_PREFIX), DT320_10-5,  05,   "Passive"}
+{ $(DT320_PREFIX), DT320_10-6,  06,   "Passive"}
+{ $(DT320_PREFIX), DT320_10-7,  07,   "Passive"}
+{ $(DT320_PREFIX), DT320_10-8,  08,   "Passive"}
+{ $(DT320_PREFIX), DT320_10-9,  09,   "Passive"}
+{ $(DT320_PREFIX), DT320_10-10, 10,   "Passive"}
 }
 
 file "tc_dt320-73.template"  { pattern
@@ -148,6 +176,13 @@ file "tc_dt320-1w.template"  { pattern
 { $(DT320_PREFIX), DT320_1W-1, 01 }
 { $(DT320_PREFIX), DT320_1W-2, 02 }
 { $(DT320_PREFIX), DT320_1W-3, 03 }
+{ $(DT320_PREFIX), DT320_1W-4, 04 }
+{ $(DT320_PREFIX), DT320_1W-5, 05 }
+{ $(DT320_PREFIX), DT320_1W-6, 06 }
+{ $(DT320_PREFIX), DT320_1W-7, 07 }
+{ $(DT320_PREFIX), DT320_1W-8, 08 }
+{ $(DT320_PREFIX), DT320_1W-9, 09 }
+{ $(DT320_PREFIX), DT320_1W-10,10 }
 }
 
 file "tc_dt320-8w.template"  { pattern
@@ -155,5 +190,12 @@ file "tc_dt320-8w.template"  { pattern
 { $(DT320_PREFIX), DT320_8W-1, 01 }
 { $(DT320_PREFIX), DT320_8W-2, 02 }
 { $(DT320_PREFIX), DT320_8W-3, 03 }
+{ $(DT320_PREFIX), DT320_8W-4, 04 }
+{ $(DT320_PREFIX), DT320_8W-5, 05 }
+{ $(DT320_PREFIX), DT320_8W-6, 06 }
+{ $(DT320_PREFIX), DT320_8W-7, 07 }
+{ $(DT320_PREFIX), DT320_8W-8, 08 }
+{ $(DT320_PREFIX), DT320_8W-9, 09 }
+{ $(DT320_PREFIX), DT320_8W-10,10 }
 }
 

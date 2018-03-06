@@ -16,7 +16,7 @@ record(longin, "$(P):TT$(ADR):sLEDs") {
     field(SCAN,"$(SCAN)")
 }
 
-record(bi, "$(P):TT$(ADR):sOut1") {
+record(bi, "$(P):TT$(ADR):sOut1-LED") {
     field(DESC,"Output 1")
     field(DTYP,"asynUInt32Digital")
     field(INP,"@asynMask($(PORT),2,64,1000)")
@@ -25,7 +25,7 @@ record(bi, "$(P):TT$(ADR):sOut1") {
     field(ONAM, "On")
 #    field(MASK, "0x40")
 }
-record(bi, "$(P):TT$(ADR):sAutoTune") {
+record(bi, "$(P):TT$(ADR):sAutoTune-LED") {
     field(DESC,"Auto Tune")
     field(DTYP,"asynUInt32Digital")
     field(INP,"@asynMask($(PORT) 2 0x80 1000)")
@@ -34,7 +34,7 @@ record(bi, "$(P):TT$(ADR):sAutoTune") {
     field(ONAM, "On")
     field(MASK, "0x80")
 }
-record(bi, "$(P):TT$(ADR):sALRM1") {
+record(bi, "$(P):TT$(ADR):sALRM1-LED") {
     field(DESC,"Alarm 1")
     field(DTYP,"asynUInt32Digital")
     field(INP,"@asynMask($(PORT) 2 0x10 1000)")
@@ -43,7 +43,7 @@ record(bi, "$(P):TT$(ADR):sALRM1") {
     field(ONAM, "On")
     field(MASK, "0x10")
 }
-record(bi, "$(P):TT$(ADR):sALRM2") {
+record(bi, "$(P):TT$(ADR):sALRM2-LED") {
     field(DESC,"Alarm 2")
     field(DTYP,"asynUInt32Digital")
     field(INP,"@asynMask($(PORT) 2 0x02 1000)")
@@ -52,7 +52,7 @@ record(bi, "$(P):TT$(ADR):sALRM2") {
     field(ONAM, "On")
     field(MASK, "0x02")
 }
-record(bi, "$(P):TT$(ADR):sALRM3") {
+record(bi, "$(P):TT$(ADR):sALRM3-LED") {
     field(DESC,"Alarm 3")
     field(DTYP,"asynUInt32Digital")
     field(INP,"@asynMask($(PORT) 2 0x01 1000)")
@@ -61,7 +61,7 @@ record(bi, "$(P):TT$(ADR):sALRM3") {
     field(ONAM, "On")
     field(MASK, "0x01")
 }
-record(mbbi, "$(P):TT$(ADR):sEGU") {
+record(mbbi, "$(P):TT$(ADR):sEGU-LED") {
     field(DESC,"Temperature units")
     field(DTYP,"asynUInt32Digital")
     field(INP,"@asynMask($(PORT) 2 0x0c 1000)")

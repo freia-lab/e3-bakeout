@@ -22,7 +22,8 @@ record(ai, "$(P):TT$(ADR)-PID:sPB") {
     field (ASLO, "0.1")
     field(SCAN,"$(SCAN)")
 }
-record(ai, "$(P):TT$(ADR):sTi") {
+
+record(ai, "$(P):TT$(ADR)-PID:sTi") {
     field(DESC,"PID - integral time")
     field(DTYP,"asynInt32")
     field(INP,"@asyn($(PORT) 2 -16)MODBUS_DATA")
@@ -36,7 +37,7 @@ record(ai, "$(P):TT$(ADR):sTi") {
     field (ASLO, "1")
     field(SCAN,"$(SCAN)")
 }
-record(ai, "$(P):TT$(ADR):sTd") {
+record(ai, "$(P):TT$(ADR)-PID:sTd") {
     field(DESC,"PID - derivative time")
     field(DTYP,"asynInt32")
     field(INP,"@asyn($(PORT) 3 -16)MODBUS_DATA")

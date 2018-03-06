@@ -184,7 +184,7 @@ $(pv_value)</tooltip>
       <show_scrollbar>true</show_scrollbar>
       <tooltip></tooltip>
       <transparent>true</transparent>
-      <visible>true</visible>
+      <visible>false</visible>
       <widget_type>Grouping Container</widget_type>
       <width>1391</width>
       <wuid>-2215652e:161dbb3e447:-6008</wuid>
@@ -262,7 +262,29 @@ $(pv_value)</tooltip>
           <pv_name>$(P):TT$(N):sRdV</pv_name>
           <pv_value />
           <rotation_angle>0.0</rotation_angle>
-          <rules />
+          <rules>
+            <rule name="ValueRule" prop_id="pv_value" out_exp="true">
+              <exp bool_exp="(pv0+3276.69)&lt;0.05">
+                <value>"Not ready"</value>
+              </exp>
+              <exp bool_exp="(pv0+3276.59)&lt;0.05">
+                <value>"Initializing..."</value>
+              </exp>
+              <exp bool_exp="(pv0+3276.49) &lt; 0.05">
+                <value>"No sensor"</value>
+              </exp>
+              <exp bool_exp="(pv0+3276.39)&lt;0.05">
+                <value>"Sensor err"</value>
+              </exp>
+              <exp bool_exp="(pv0+3276.29)&lt;0.05">
+                <value>"ADC err"</value>
+              </exp>
+              <exp bool_exp="(pv0+3276.19)&lt;0.05">
+                <value>"Mem err"</value>
+              </exp>
+              <pv trig="true">$(pv_name)</pv>
+            </rule>
+          </rules>
           <scale_options>
             <width_scalable>true</width_scalable>
             <height_scalable>true</height_scalable>
@@ -425,7 +447,7 @@ $(pv_value)</tooltip>
             <color red="0" green="255" blue="0" />
           </on_color>
           <on_label>ON</on_label>
-          <pv_name>$(P):TT$(N):sOut1</pv_name>
+          <pv_name>$(P):TT$(N):sOut1-LED</pv_name>
           <pv_value />
           <rules />
           <scale_options>
@@ -483,7 +505,7 @@ $(pv_value)</tooltip>
             <color red="255" green="0" blue="0" />
           </on_color>
           <on_label>ON</on_label>
-          <pv_name>$(P):TT$(N):sALRM1</pv_name>
+          <pv_name>$(P):TT$(N):sALRM1-LED</pv_name>
           <pv_value />
           <rules />
           <scale_options>
@@ -541,7 +563,7 @@ $(pv_value)</tooltip>
             <color red="255" green="0" blue="0" />
           </on_color>
           <on_label>ON</on_label>
-          <pv_name>$(P):TT$(N):sALRM2</pv_name>
+          <pv_name>$(P):TT$(N):sALRM2-LED</pv_name>
           <pv_value />
           <rules />
           <scale_options>
@@ -599,7 +621,7 @@ $(pv_value)</tooltip>
             <color red="255" green="0" blue="0" />
           </on_color>
           <on_label>ON</on_label>
-          <pv_name>$(P):TT$(N):sALRM3</pv_name>
+          <pv_name>$(P):TT$(N):sALRM3-LED</pv_name>
           <pv_value />
           <rules />
           <scale_options>
@@ -774,7 +796,29 @@ SV</text>
           <pv_name>$(P):TT$(N):sRdV</pv_name>
           <pv_value />
           <rotation_angle>0.0</rotation_angle>
-          <rules />
+          <rules>
+            <rule name="ValueRule" prop_id="pv_value" out_exp="true">
+              <exp bool_exp="(pv0+3276.69)&lt;0.05">
+                <value>"Not ready"</value>
+              </exp>
+              <exp bool_exp="(pv0+3276.59)&lt;0.05">
+                <value>"Initializing..."</value>
+              </exp>
+              <exp bool_exp="(pv0+3276.49) &lt; 0.05">
+                <value>"No sensor"</value>
+              </exp>
+              <exp bool_exp="(pv0+3276.39)&lt;0.05">
+                <value>"Sensor err"</value>
+              </exp>
+              <exp bool_exp="(pv0+3276.29)&lt;0.05">
+                <value>"ADC err"</value>
+              </exp>
+              <exp bool_exp="(pv0+3276.19)&lt;0.05">
+                <value>"Mem err"</value>
+              </exp>
+              <pv trig="true">$(pv_name)</pv>
+            </rule>
+          </rules>
           <scale_options>
             <width_scalable>true</width_scalable>
             <height_scalable>true</height_scalable>
@@ -937,7 +981,7 @@ $(pv_value)</tooltip>
             <color red="0" green="255" blue="0" />
           </on_color>
           <on_label>ON</on_label>
-          <pv_name>$(P):TT$(N):sOut1</pv_name>
+          <pv_name>$(P):TT$(N):sOut1-LED</pv_name>
           <pv_value />
           <rules />
           <scale_options>
@@ -995,7 +1039,7 @@ $(pv_value)</tooltip>
             <color red="255" green="0" blue="0" />
           </on_color>
           <on_label>ON</on_label>
-          <pv_name>$(P):TT$(N):sALRM1</pv_name>
+          <pv_name>$(P):TT$(N):sALRM1-LED</pv_name>
           <pv_value />
           <rules />
           <scale_options>
@@ -1053,7 +1097,7 @@ $(pv_value)</tooltip>
             <color red="255" green="0" blue="0" />
           </on_color>
           <on_label>ON</on_label>
-          <pv_name>$(P):TT$(N):sALRM2</pv_name>
+          <pv_name>$(P):TT$(N):sALRM2-LED</pv_name>
           <pv_value />
           <rules />
           <scale_options>
@@ -1111,7 +1155,7 @@ $(pv_value)</tooltip>
             <color red="255" green="0" blue="0" />
           </on_color>
           <on_label>ON</on_label>
-          <pv_name>$(P):TT$(N):sALRM3</pv_name>
+          <pv_name>$(P):TT$(N):sALRM3-LED</pv_name>
           <pv_value />
           <rules />
           <scale_options>
@@ -1286,7 +1330,29 @@ SV</text>
           <pv_name>$(P):TT$(N):sRdV</pv_name>
           <pv_value />
           <rotation_angle>0.0</rotation_angle>
-          <rules />
+          <rules>
+            <rule name="ValueRule" prop_id="pv_value" out_exp="true">
+              <exp bool_exp="(pv0+3276.69)&lt;0.05">
+                <value>"Not ready"</value>
+              </exp>
+              <exp bool_exp="(pv0+3276.59)&lt;0.05">
+                <value>"Initializing..."</value>
+              </exp>
+              <exp bool_exp="(pv0+3276.49) &lt; 0.05">
+                <value>"No sensor"</value>
+              </exp>
+              <exp bool_exp="(pv0+3276.39)&lt;0.05">
+                <value>"Sensor err"</value>
+              </exp>
+              <exp bool_exp="(pv0+3276.29)&lt;0.05">
+                <value>"ADC err"</value>
+              </exp>
+              <exp bool_exp="(pv0+3276.19)&lt;0.05">
+                <value>"Mem err"</value>
+              </exp>
+              <pv trig="true">$(pv_name)</pv>
+            </rule>
+          </rules>
           <scale_options>
             <width_scalable>true</width_scalable>
             <height_scalable>true</height_scalable>
@@ -1449,7 +1515,7 @@ $(pv_value)</tooltip>
             <color red="0" green="255" blue="0" />
           </on_color>
           <on_label>ON</on_label>
-          <pv_name>$(P):TT$(N):sOut1</pv_name>
+          <pv_name>$(P):TT$(N):sOut1-LED</pv_name>
           <pv_value />
           <rules />
           <scale_options>
@@ -1507,7 +1573,7 @@ $(pv_value)</tooltip>
             <color red="255" green="0" blue="0" />
           </on_color>
           <on_label>ON</on_label>
-          <pv_name>$(P):TT$(N):sALRM1</pv_name>
+          <pv_name>$(P):TT$(N):sALRM1-LED</pv_name>
           <pv_value />
           <rules />
           <scale_options>
@@ -1565,7 +1631,7 @@ $(pv_value)</tooltip>
             <color red="255" green="0" blue="0" />
           </on_color>
           <on_label>ON</on_label>
-          <pv_name>$(P):TT$(N):sALRM2</pv_name>
+          <pv_name>$(P):TT$(N):sALRM2-LED</pv_name>
           <pv_value />
           <rules />
           <scale_options>
@@ -1623,7 +1689,7 @@ $(pv_value)</tooltip>
             <color red="255" green="0" blue="0" />
           </on_color>
           <on_label>ON</on_label>
-          <pv_name>$(P):TT$(N):sALRM3</pv_name>
+          <pv_name>$(P):TT$(N):sALRM3-LED</pv_name>
           <pv_value />
           <rules />
           <scale_options>
@@ -1798,7 +1864,29 @@ SV</text>
           <pv_name>$(P):TT$(N):sRdV</pv_name>
           <pv_value />
           <rotation_angle>0.0</rotation_angle>
-          <rules />
+          <rules>
+            <rule name="ValueRule" prop_id="pv_value" out_exp="true">
+              <exp bool_exp="(pv0+3276.69)&lt;0.05">
+                <value>"Not ready"</value>
+              </exp>
+              <exp bool_exp="(pv0+3276.59)&lt;0.05">
+                <value>"Initializing..."</value>
+              </exp>
+              <exp bool_exp="(pv0+3276.49) &lt; 0.05">
+                <value>"No sensor"</value>
+              </exp>
+              <exp bool_exp="(pv0+3276.39)&lt;0.05">
+                <value>"Sensor err"</value>
+              </exp>
+              <exp bool_exp="(pv0+3276.29)&lt;0.05">
+                <value>"ADC err"</value>
+              </exp>
+              <exp bool_exp="(pv0+3276.19)&lt;0.05">
+                <value>"Mem err"</value>
+              </exp>
+              <pv trig="true">$(pv_name)</pv>
+            </rule>
+          </rules>
           <scale_options>
             <width_scalable>true</width_scalable>
             <height_scalable>true</height_scalable>
@@ -1961,7 +2049,7 @@ $(pv_value)</tooltip>
             <color red="0" green="255" blue="0" />
           </on_color>
           <on_label>ON</on_label>
-          <pv_name>$(P):TT$(N):sOut1</pv_name>
+          <pv_name>$(P):TT$(N):sOut1-LED</pv_name>
           <pv_value />
           <rules />
           <scale_options>
@@ -2019,7 +2107,7 @@ $(pv_value)</tooltip>
             <color red="255" green="0" blue="0" />
           </on_color>
           <on_label>ON</on_label>
-          <pv_name>$(P):TT$(N):sALRM1</pv_name>
+          <pv_name>$(P):TT$(N):sALRM1-LED</pv_name>
           <pv_value />
           <rules />
           <scale_options>
@@ -2077,7 +2165,7 @@ $(pv_value)</tooltip>
             <color red="255" green="0" blue="0" />
           </on_color>
           <on_label>ON</on_label>
-          <pv_name>$(P):TT$(N):sALRM2</pv_name>
+          <pv_name>$(P):TT$(N):sALRM2-LED</pv_name>
           <pv_value />
           <rules />
           <scale_options>
@@ -2135,7 +2223,7 @@ $(pv_value)</tooltip>
             <color red="255" green="0" blue="0" />
           </on_color>
           <on_label>ON</on_label>
-          <pv_name>$(P):TT$(N):sALRM3</pv_name>
+          <pv_name>$(P):TT$(N):sALRM3-LED</pv_name>
           <pv_value />
           <rules />
           <scale_options>
@@ -2310,7 +2398,29 @@ SV</text>
           <pv_name>$(P):TT$(N):sRdV</pv_name>
           <pv_value />
           <rotation_angle>0.0</rotation_angle>
-          <rules />
+          <rules>
+            <rule name="ValueRule" prop_id="pv_value" out_exp="true">
+              <exp bool_exp="(pv0+3276.69)&lt;0.05">
+                <value>"Not ready"</value>
+              </exp>
+              <exp bool_exp="(pv0+3276.59)&lt;0.05">
+                <value>"Initializing..."</value>
+              </exp>
+              <exp bool_exp="(pv0+3276.49) &lt; 0.05">
+                <value>"No sensor"</value>
+              </exp>
+              <exp bool_exp="(pv0+3276.39)&lt;0.05">
+                <value>"Sensor err"</value>
+              </exp>
+              <exp bool_exp="(pv0+3276.29)&lt;0.05">
+                <value>"ADC err"</value>
+              </exp>
+              <exp bool_exp="(pv0+3276.19)&lt;0.05">
+                <value>"Mem err"</value>
+              </exp>
+              <pv trig="true">$(pv_name)</pv>
+            </rule>
+          </rules>
           <scale_options>
             <width_scalable>true</width_scalable>
             <height_scalable>true</height_scalable>
@@ -2473,7 +2583,7 @@ $(pv_value)</tooltip>
             <color red="0" green="255" blue="0" />
           </on_color>
           <on_label>ON</on_label>
-          <pv_name>$(P):TT$(N):sOut1</pv_name>
+          <pv_name>$(P):TT$(N):sOut1-LED</pv_name>
           <pv_value />
           <rules />
           <scale_options>
@@ -2531,7 +2641,7 @@ $(pv_value)</tooltip>
             <color red="255" green="0" blue="0" />
           </on_color>
           <on_label>ON</on_label>
-          <pv_name>$(P):TT$(N):sALRM1</pv_name>
+          <pv_name>$(P):TT$(N):sALRM1-LED</pv_name>
           <pv_value />
           <rules />
           <scale_options>
@@ -2589,7 +2699,7 @@ $(pv_value)</tooltip>
             <color red="255" green="0" blue="0" />
           </on_color>
           <on_label>ON</on_label>
-          <pv_name>$(P):TT$(N):sALRM2</pv_name>
+          <pv_name>$(P):TT$(N):sALRM2-LED</pv_name>
           <pv_value />
           <rules />
           <scale_options>
@@ -2647,7 +2757,7 @@ $(pv_value)</tooltip>
             <color red="255" green="0" blue="0" />
           </on_color>
           <on_label>ON</on_label>
-          <pv_name>$(P):TT$(N):sALRM3</pv_name>
+          <pv_name>$(P):TT$(N):sALRM3-LED</pv_name>
           <pv_value />
           <rules />
           <scale_options>
@@ -2822,7 +2932,29 @@ SV</text>
           <pv_name>$(P):TT$(N):sRdV</pv_name>
           <pv_value />
           <rotation_angle>0.0</rotation_angle>
-          <rules />
+          <rules>
+            <rule name="ValueRule" prop_id="pv_value" out_exp="true">
+              <exp bool_exp="(pv0+3276.69)&lt;0.05">
+                <value>"Not ready"</value>
+              </exp>
+              <exp bool_exp="(pv0+3276.59)&lt;0.05">
+                <value>"Initializing..."</value>
+              </exp>
+              <exp bool_exp="(pv0+3276.49) &lt; 0.05">
+                <value>"No sensor"</value>
+              </exp>
+              <exp bool_exp="(pv0+3276.39)&lt;0.05">
+                <value>"Sensor err"</value>
+              </exp>
+              <exp bool_exp="(pv0+3276.29)&lt;0.05">
+                <value>"ADC err"</value>
+              </exp>
+              <exp bool_exp="(pv0+3276.19)&lt;0.05">
+                <value>"Mem err"</value>
+              </exp>
+              <pv trig="true">$(pv_name)</pv>
+            </rule>
+          </rules>
           <scale_options>
             <width_scalable>true</width_scalable>
             <height_scalable>true</height_scalable>
@@ -2985,7 +3117,7 @@ $(pv_value)</tooltip>
             <color red="0" green="255" blue="0" />
           </on_color>
           <on_label>ON</on_label>
-          <pv_name>$(P):TT$(N):sOut1</pv_name>
+          <pv_name>$(P):TT$(N):sOut1-LED</pv_name>
           <pv_value />
           <rules />
           <scale_options>
@@ -3043,7 +3175,7 @@ $(pv_value)</tooltip>
             <color red="255" green="0" blue="0" />
           </on_color>
           <on_label>ON</on_label>
-          <pv_name>$(P):TT$(N):sALRM1</pv_name>
+          <pv_name>$(P):TT$(N):sALRM1-LED</pv_name>
           <pv_value />
           <rules />
           <scale_options>
@@ -3101,7 +3233,7 @@ $(pv_value)</tooltip>
             <color red="255" green="0" blue="0" />
           </on_color>
           <on_label>ON</on_label>
-          <pv_name>$(P):TT$(N):sALRM2</pv_name>
+          <pv_name>$(P):TT$(N):sALRM2-LED</pv_name>
           <pv_value />
           <rules />
           <scale_options>
@@ -3159,7 +3291,7 @@ $(pv_value)</tooltip>
             <color red="255" green="0" blue="0" />
           </on_color>
           <on_label>ON</on_label>
-          <pv_name>$(P):TT$(N):sALRM3</pv_name>
+          <pv_name>$(P):TT$(N):sALRM3-LED</pv_name>
           <pv_value />
           <rules />
           <scale_options>
@@ -3334,7 +3466,29 @@ SV</text>
           <pv_name>$(P):TT$(N):sRdV</pv_name>
           <pv_value />
           <rotation_angle>0.0</rotation_angle>
-          <rules />
+          <rules>
+            <rule name="ValueRule" prop_id="pv_value" out_exp="true">
+              <exp bool_exp="(pv0+3276.69)&lt;0.05">
+                <value>"Not ready"</value>
+              </exp>
+              <exp bool_exp="(pv0+3276.59)&lt;0.05">
+                <value>"Initializing..."</value>
+              </exp>
+              <exp bool_exp="(pv0+3276.49) &lt; 0.05">
+                <value>"No sensor"</value>
+              </exp>
+              <exp bool_exp="(pv0+3276.39)&lt;0.05">
+                <value>"Sensor err"</value>
+              </exp>
+              <exp bool_exp="(pv0+3276.29)&lt;0.05">
+                <value>"ADC err"</value>
+              </exp>
+              <exp bool_exp="(pv0+3276.19)&lt;0.05">
+                <value>"Mem err"</value>
+              </exp>
+              <pv trig="true">$(pv_name)</pv>
+            </rule>
+          </rules>
           <scale_options>
             <width_scalable>true</width_scalable>
             <height_scalable>true</height_scalable>
@@ -3497,7 +3651,7 @@ $(pv_value)</tooltip>
             <color red="0" green="255" blue="0" />
           </on_color>
           <on_label>ON</on_label>
-          <pv_name>$(P):TT$(N):sOut1</pv_name>
+          <pv_name>$(P):TT$(N):sOut1-LED</pv_name>
           <pv_value />
           <rules />
           <scale_options>
@@ -3555,7 +3709,7 @@ $(pv_value)</tooltip>
             <color red="255" green="0" blue="0" />
           </on_color>
           <on_label>ON</on_label>
-          <pv_name>$(P):TT$(N):sALRM1</pv_name>
+          <pv_name>$(P):TT$(N):sALRM1-LED</pv_name>
           <pv_value />
           <rules />
           <scale_options>
@@ -3613,7 +3767,7 @@ $(pv_value)</tooltip>
             <color red="255" green="0" blue="0" />
           </on_color>
           <on_label>ON</on_label>
-          <pv_name>$(P):TT$(N):sALRM2</pv_name>
+          <pv_name>$(P):TT$(N):sALRM2-LED</pv_name>
           <pv_value />
           <rules />
           <scale_options>
@@ -3671,7 +3825,7 @@ $(pv_value)</tooltip>
             <color red="255" green="0" blue="0" />
           </on_color>
           <on_label>ON</on_label>
-          <pv_name>$(P):TT$(N):sALRM3</pv_name>
+          <pv_name>$(P):TT$(N):sALRM3-LED</pv_name>
           <pv_value />
           <rules />
           <scale_options>
@@ -3846,7 +4000,29 @@ SV</text>
           <pv_name>$(P):TT$(N):sRdV</pv_name>
           <pv_value />
           <rotation_angle>0.0</rotation_angle>
-          <rules />
+          <rules>
+            <rule name="ValueRule" prop_id="pv_value" out_exp="true">
+              <exp bool_exp="(pv0+3276.69)&lt;0.05">
+                <value>"Not ready"</value>
+              </exp>
+              <exp bool_exp="(pv0+3276.59)&lt;0.05">
+                <value>"Initializing..."</value>
+              </exp>
+              <exp bool_exp="(pv0+3276.49) &lt; 0.05">
+                <value>"No sensor"</value>
+              </exp>
+              <exp bool_exp="(pv0+3276.39)&lt;0.05">
+                <value>"Sensor err"</value>
+              </exp>
+              <exp bool_exp="(pv0+3276.29)&lt;0.05">
+                <value>"ADC err"</value>
+              </exp>
+              <exp bool_exp="(pv0+3276.19)&lt;0.05">
+                <value>"Mem err"</value>
+              </exp>
+              <pv trig="true">$(pv_name)</pv>
+            </rule>
+          </rules>
           <scale_options>
             <width_scalable>true</width_scalable>
             <height_scalable>true</height_scalable>
@@ -4009,7 +4185,7 @@ $(pv_value)</tooltip>
             <color red="0" green="255" blue="0" />
           </on_color>
           <on_label>ON</on_label>
-          <pv_name>$(P):TT$(N):sOut1</pv_name>
+          <pv_name>$(P):TT$(N):sOut1-LED</pv_name>
           <pv_value />
           <rules />
           <scale_options>
@@ -4067,7 +4243,7 @@ $(pv_value)</tooltip>
             <color red="255" green="0" blue="0" />
           </on_color>
           <on_label>ON</on_label>
-          <pv_name>$(P):TT$(N):sALRM1</pv_name>
+          <pv_name>$(P):TT$(N):sALRM1-LED</pv_name>
           <pv_value />
           <rules />
           <scale_options>
@@ -4125,7 +4301,7 @@ $(pv_value)</tooltip>
             <color red="255" green="0" blue="0" />
           </on_color>
           <on_label>ON</on_label>
-          <pv_name>$(P):TT$(N):sALRM2</pv_name>
+          <pv_name>$(P):TT$(N):sALRM2-LED</pv_name>
           <pv_value />
           <rules />
           <scale_options>
@@ -4183,7 +4359,7 @@ $(pv_value)</tooltip>
             <color red="255" green="0" blue="0" />
           </on_color>
           <on_label>ON</on_label>
-          <pv_name>$(P):TT$(N):sALRM3</pv_name>
+          <pv_name>$(P):TT$(N):sALRM3-LED</pv_name>
           <pv_value />
           <rules />
           <scale_options>
@@ -4358,7 +4534,29 @@ SV</text>
           <pv_name>$(P):TT$(N):sRdV</pv_name>
           <pv_value />
           <rotation_angle>0.0</rotation_angle>
-          <rules />
+          <rules>
+            <rule name="ValueRule" prop_id="pv_value" out_exp="true">
+              <exp bool_exp="(pv0+3276.69)&lt;0.05">
+                <value>"Not ready"</value>
+              </exp>
+              <exp bool_exp="(pv0+3276.59)&lt;0.05">
+                <value>"Initializing..."</value>
+              </exp>
+              <exp bool_exp="(pv0+3276.49) &lt; 0.05">
+                <value>"No sensor"</value>
+              </exp>
+              <exp bool_exp="(pv0+3276.39)&lt;0.05">
+                <value>"Sensor err"</value>
+              </exp>
+              <exp bool_exp="(pv0+3276.29)&lt;0.05">
+                <value>"ADC err"</value>
+              </exp>
+              <exp bool_exp="(pv0+3276.19)&lt;0.05">
+                <value>"Mem err"</value>
+              </exp>
+              <pv trig="true">$(pv_name)</pv>
+            </rule>
+          </rules>
           <scale_options>
             <width_scalable>true</width_scalable>
             <height_scalable>true</height_scalable>
@@ -4521,7 +4719,7 @@ $(pv_value)</tooltip>
             <color red="0" green="255" blue="0" />
           </on_color>
           <on_label>ON</on_label>
-          <pv_name>$(P):TT$(N):sOut1</pv_name>
+          <pv_name>$(P):TT$(N):sOut1-LED</pv_name>
           <pv_value />
           <rules />
           <scale_options>
@@ -4579,7 +4777,7 @@ $(pv_value)</tooltip>
             <color red="255" green="0" blue="0" />
           </on_color>
           <on_label>ON</on_label>
-          <pv_name>$(P):TT$(N):sALRM1</pv_name>
+          <pv_name>$(P):TT$(N):sALRM1-LED</pv_name>
           <pv_value />
           <rules />
           <scale_options>
@@ -4637,7 +4835,7 @@ $(pv_value)</tooltip>
             <color red="255" green="0" blue="0" />
           </on_color>
           <on_label>ON</on_label>
-          <pv_name>$(P):TT$(N):sALRM2</pv_name>
+          <pv_name>$(P):TT$(N):sALRM2-LED</pv_name>
           <pv_value />
           <rules />
           <scale_options>
@@ -4695,7 +4893,7 @@ $(pv_value)</tooltip>
             <color red="255" green="0" blue="0" />
           </on_color>
           <on_label>ON</on_label>
-          <pv_name>$(P):TT$(N):sALRM3</pv_name>
+          <pv_name>$(P):TT$(N):sALRM3-LED</pv_name>
           <pv_value />
           <rules />
           <scale_options>
@@ -4870,7 +5068,29 @@ SV</text>
           <pv_name>$(P):TT$(N):sRdV</pv_name>
           <pv_value />
           <rotation_angle>0.0</rotation_angle>
-          <rules />
+          <rules>
+            <rule name="ValueRule" prop_id="pv_value" out_exp="true">
+              <exp bool_exp="(pv0+3276.69)&lt;0.05">
+                <value>"Not ready"</value>
+              </exp>
+              <exp bool_exp="(pv0+3276.59)&lt;0.05">
+                <value>"Initializing..."</value>
+              </exp>
+              <exp bool_exp="(pv0+3276.49) &lt; 0.05">
+                <value>"No sensor"</value>
+              </exp>
+              <exp bool_exp="(pv0+3276.39)&lt;0.05">
+                <value>"Sensor err"</value>
+              </exp>
+              <exp bool_exp="(pv0+3276.29)&lt;0.05">
+                <value>"ADC err"</value>
+              </exp>
+              <exp bool_exp="(pv0+3276.19)&lt;0.05">
+                <value>"Mem err"</value>
+              </exp>
+              <pv trig="true">$(pv_name)</pv>
+            </rule>
+          </rules>
           <scale_options>
             <width_scalable>true</width_scalable>
             <height_scalable>true</height_scalable>
@@ -5033,7 +5253,7 @@ $(pv_value)</tooltip>
             <color red="0" green="255" blue="0" />
           </on_color>
           <on_label>ON</on_label>
-          <pv_name>$(P):TT$(N):sOut1</pv_name>
+          <pv_name>$(P):TT$(N):sOut1-LED</pv_name>
           <pv_value />
           <rules />
           <scale_options>
@@ -5091,7 +5311,7 @@ $(pv_value)</tooltip>
             <color red="255" green="0" blue="0" />
           </on_color>
           <on_label>ON</on_label>
-          <pv_name>$(P):TT$(N):sALRM1</pv_name>
+          <pv_name>$(P):TT$(N):sALRM1-LED</pv_name>
           <pv_value />
           <rules />
           <scale_options>
@@ -5149,7 +5369,7 @@ $(pv_value)</tooltip>
             <color red="255" green="0" blue="0" />
           </on_color>
           <on_label>ON</on_label>
-          <pv_name>$(P):TT$(N):sALRM2</pv_name>
+          <pv_name>$(P):TT$(N):sALRM2-LED</pv_name>
           <pv_value />
           <rules />
           <scale_options>
@@ -5207,7 +5427,7 @@ $(pv_value)</tooltip>
             <color red="255" green="0" blue="0" />
           </on_color>
           <on_label>ON</on_label>
-          <pv_name>$(P):TT$(N):sALRM3</pv_name>
+          <pv_name>$(P):TT$(N):sALRM3-LED</pv_name>
           <pv_value />
           <rules />
           <scale_options>
@@ -5345,7 +5565,7 @@ SV</text>
       <show_scrollbar>true</show_scrollbar>
       <tooltip></tooltip>
       <transparent>true</transparent>
-      <visible>false</visible>
+      <visible>true</visible>
       <widget_type>Grouping Container</widget_type>
       <width>1391</width>
       <wuid>-2215652e:161dbb3e447:-6007</wuid>
@@ -5542,7 +5762,7 @@ SV</text>
           <show_scrollbar>true</show_scrollbar>
           <tooltip></tooltip>
           <transparent>true</transparent>
-          <visible>true</visible>
+          <visible>false</visible>
           <widget_type>Grouping Container</widget_type>
           <width>1019</width>
           <wuid>-2215652e:161dbb3e447:-5fcc</wuid>
@@ -5712,6 +5932,47 @@ SV</text>
           <wuid>-2215652e:161dbb3e447:-5fc8</wuid>
           <x>1</x>
           <y>1</y>
+          <widget typeId="org.csstudio.opibuilder.widgets.linkingContainer" version="1.0.0">
+            <actions hook="false" hook_all="false" />
+            <background_color>
+              <color red="240" green="240" blue="240" />
+            </background_color>
+            <border_color>
+              <color red="0" green="128" blue="255" />
+            </border_color>
+            <border_style>3</border_style>
+            <border_width>1</border_width>
+            <enabled>true</enabled>
+            <font>
+              <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
+            </font>
+            <foreground_color>
+              <color red="192" green="192" blue="192" />
+            </foreground_color>
+            <group_name></group_name>
+            <height>656</height>
+            <macros>
+              <include_parent_macros>true</include_parent_macros>
+              <N>03</N>
+            </macros>
+            <name>Linking Container</name>
+            <opi_file>dt320-test.opi</opi_file>
+            <resize_behaviour>2</resize_behaviour>
+            <rules />
+            <scale_options>
+              <width_scalable>true</width_scalable>
+              <height_scalable>true</height_scalable>
+              <keep_wh_ratio>false</keep_wh_ratio>
+            </scale_options>
+            <scripts />
+            <tooltip></tooltip>
+            <visible>true</visible>
+            <widget_type>Linking Container</widget_type>
+            <width>1019</width>
+            <wuid>-2215652e:161dbb3e447:-470d</wuid>
+            <x>0</x>
+            <y>0</y>
+          </widget>
         </widget>
         <widget typeId="org.csstudio.opibuilder.widgets.groupingContainer" version="1.0.0">
           <actions hook="false" hook_all="false" />
@@ -5753,6 +6014,47 @@ SV</text>
           <wuid>-2215652e:161dbb3e447:-5fc7</wuid>
           <x>1</x>
           <y>1</y>
+          <widget typeId="org.csstudio.opibuilder.widgets.linkingContainer" version="1.0.0">
+            <actions hook="false" hook_all="false" />
+            <background_color>
+              <color red="240" green="240" blue="240" />
+            </background_color>
+            <border_color>
+              <color red="0" green="128" blue="255" />
+            </border_color>
+            <border_style>3</border_style>
+            <border_width>1</border_width>
+            <enabled>true</enabled>
+            <font>
+              <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
+            </font>
+            <foreground_color>
+              <color red="192" green="192" blue="192" />
+            </foreground_color>
+            <group_name></group_name>
+            <height>656</height>
+            <macros>
+              <include_parent_macros>true</include_parent_macros>
+              <N>04</N>
+            </macros>
+            <name>Linking Container</name>
+            <opi_file>dt320-test.opi</opi_file>
+            <resize_behaviour>2</resize_behaviour>
+            <rules />
+            <scale_options>
+              <width_scalable>true</width_scalable>
+              <height_scalable>true</height_scalable>
+              <keep_wh_ratio>false</keep_wh_ratio>
+            </scale_options>
+            <scripts />
+            <tooltip></tooltip>
+            <visible>true</visible>
+            <widget_type>Linking Container</widget_type>
+            <width>1019</width>
+            <wuid>-2215652e:161dbb3e447:-466b</wuid>
+            <x>0</x>
+            <y>0</y>
+          </widget>
         </widget>
         <widget typeId="org.csstudio.opibuilder.widgets.groupingContainer" version="1.0.0">
           <actions hook="false" hook_all="false" />
@@ -5794,6 +6096,47 @@ SV</text>
           <wuid>-2215652e:161dbb3e447:-5fc6</wuid>
           <x>1</x>
           <y>1</y>
+          <widget typeId="org.csstudio.opibuilder.widgets.linkingContainer" version="1.0.0">
+            <actions hook="false" hook_all="false" />
+            <background_color>
+              <color red="240" green="240" blue="240" />
+            </background_color>
+            <border_color>
+              <color red="0" green="128" blue="255" />
+            </border_color>
+            <border_style>3</border_style>
+            <border_width>1</border_width>
+            <enabled>true</enabled>
+            <font>
+              <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
+            </font>
+            <foreground_color>
+              <color red="192" green="192" blue="192" />
+            </foreground_color>
+            <group_name></group_name>
+            <height>656</height>
+            <macros>
+              <include_parent_macros>true</include_parent_macros>
+              <N>05</N>
+            </macros>
+            <name>Linking Container</name>
+            <opi_file>dt320-test.opi</opi_file>
+            <resize_behaviour>2</resize_behaviour>
+            <rules />
+            <scale_options>
+              <width_scalable>true</width_scalable>
+              <height_scalable>true</height_scalable>
+              <keep_wh_ratio>false</keep_wh_ratio>
+            </scale_options>
+            <scripts />
+            <tooltip></tooltip>
+            <visible>true</visible>
+            <widget_type>Linking Container</widget_type>
+            <width>1019</width>
+            <wuid>-2215652e:161dbb3e447:-463e</wuid>
+            <x>0</x>
+            <y>0</y>
+          </widget>
         </widget>
         <widget typeId="org.csstudio.opibuilder.widgets.groupingContainer" version="1.0.0">
           <actions hook="false" hook_all="false" />
@@ -5835,6 +6178,47 @@ SV</text>
           <wuid>-2215652e:161dbb3e447:-5fc5</wuid>
           <x>1</x>
           <y>1</y>
+          <widget typeId="org.csstudio.opibuilder.widgets.linkingContainer" version="1.0.0">
+            <actions hook="false" hook_all="false" />
+            <background_color>
+              <color red="240" green="240" blue="240" />
+            </background_color>
+            <border_color>
+              <color red="0" green="128" blue="255" />
+            </border_color>
+            <border_style>3</border_style>
+            <border_width>1</border_width>
+            <enabled>true</enabled>
+            <font>
+              <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
+            </font>
+            <foreground_color>
+              <color red="192" green="192" blue="192" />
+            </foreground_color>
+            <group_name></group_name>
+            <height>656</height>
+            <macros>
+              <include_parent_macros>true</include_parent_macros>
+              <N>06</N>
+            </macros>
+            <name>Linking Container</name>
+            <opi_file>dt320-test.opi</opi_file>
+            <resize_behaviour>2</resize_behaviour>
+            <rules />
+            <scale_options>
+              <width_scalable>true</width_scalable>
+              <height_scalable>true</height_scalable>
+              <keep_wh_ratio>false</keep_wh_ratio>
+            </scale_options>
+            <scripts />
+            <tooltip></tooltip>
+            <visible>true</visible>
+            <widget_type>Linking Container</widget_type>
+            <width>1019</width>
+            <wuid>-2215652e:161dbb3e447:-45da</wuid>
+            <x>0</x>
+            <y>0</y>
+          </widget>
         </widget>
         <widget typeId="org.csstudio.opibuilder.widgets.groupingContainer" version="1.0.0">
           <actions hook="false" hook_all="false" />
@@ -5876,6 +6260,47 @@ SV</text>
           <wuid>-2215652e:161dbb3e447:-5fc4</wuid>
           <x>1</x>
           <y>1</y>
+          <widget typeId="org.csstudio.opibuilder.widgets.linkingContainer" version="1.0.0">
+            <actions hook="false" hook_all="false" />
+            <background_color>
+              <color red="240" green="240" blue="240" />
+            </background_color>
+            <border_color>
+              <color red="0" green="128" blue="255" />
+            </border_color>
+            <border_style>3</border_style>
+            <border_width>1</border_width>
+            <enabled>true</enabled>
+            <font>
+              <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
+            </font>
+            <foreground_color>
+              <color red="192" green="192" blue="192" />
+            </foreground_color>
+            <group_name></group_name>
+            <height>656</height>
+            <macros>
+              <include_parent_macros>true</include_parent_macros>
+              <N>07</N>
+            </macros>
+            <name>Linking Container</name>
+            <opi_file>dt320-test.opi</opi_file>
+            <resize_behaviour>2</resize_behaviour>
+            <rules />
+            <scale_options>
+              <width_scalable>true</width_scalable>
+              <height_scalable>true</height_scalable>
+              <keep_wh_ratio>false</keep_wh_ratio>
+            </scale_options>
+            <scripts />
+            <tooltip></tooltip>
+            <visible>true</visible>
+            <widget_type>Linking Container</widget_type>
+            <width>1019</width>
+            <wuid>-2215652e:161dbb3e447:-4558</wuid>
+            <x>0</x>
+            <y>0</y>
+          </widget>
         </widget>
         <widget typeId="org.csstudio.opibuilder.widgets.groupingContainer" version="1.0.0">
           <actions hook="false" hook_all="false" />
@@ -5917,6 +6342,47 @@ SV</text>
           <wuid>-2215652e:161dbb3e447:-5fc3</wuid>
           <x>1</x>
           <y>1</y>
+          <widget typeId="org.csstudio.opibuilder.widgets.linkingContainer" version="1.0.0">
+            <actions hook="false" hook_all="false" />
+            <background_color>
+              <color red="240" green="240" blue="240" />
+            </background_color>
+            <border_color>
+              <color red="0" green="128" blue="255" />
+            </border_color>
+            <border_style>3</border_style>
+            <border_width>1</border_width>
+            <enabled>true</enabled>
+            <font>
+              <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
+            </font>
+            <foreground_color>
+              <color red="192" green="192" blue="192" />
+            </foreground_color>
+            <group_name></group_name>
+            <height>656</height>
+            <macros>
+              <include_parent_macros>true</include_parent_macros>
+              <N>08</N>
+            </macros>
+            <name>Linking Container</name>
+            <opi_file>dt320-test.opi</opi_file>
+            <resize_behaviour>2</resize_behaviour>
+            <rules />
+            <scale_options>
+              <width_scalable>true</width_scalable>
+              <height_scalable>true</height_scalable>
+              <keep_wh_ratio>false</keep_wh_ratio>
+            </scale_options>
+            <scripts />
+            <tooltip></tooltip>
+            <visible>true</visible>
+            <widget_type>Linking Container</widget_type>
+            <width>1019</width>
+            <wuid>-2215652e:161dbb3e447:-4539</wuid>
+            <x>0</x>
+            <y>0</y>
+          </widget>
         </widget>
         <widget typeId="org.csstudio.opibuilder.widgets.groupingContainer" version="1.0.0">
           <actions hook="false" hook_all="false" />
@@ -5958,6 +6424,47 @@ SV</text>
           <wuid>-2215652e:161dbb3e447:-5fc2</wuid>
           <x>1</x>
           <y>1</y>
+          <widget typeId="org.csstudio.opibuilder.widgets.linkingContainer" version="1.0.0">
+            <actions hook="false" hook_all="false" />
+            <background_color>
+              <color red="240" green="240" blue="240" />
+            </background_color>
+            <border_color>
+              <color red="0" green="128" blue="255" />
+            </border_color>
+            <border_style>3</border_style>
+            <border_width>1</border_width>
+            <enabled>true</enabled>
+            <font>
+              <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
+            </font>
+            <foreground_color>
+              <color red="192" green="192" blue="192" />
+            </foreground_color>
+            <group_name></group_name>
+            <height>656</height>
+            <macros>
+              <include_parent_macros>true</include_parent_macros>
+              <N>09</N>
+            </macros>
+            <name>Linking Container</name>
+            <opi_file>dt320-test.opi</opi_file>
+            <resize_behaviour>2</resize_behaviour>
+            <rules />
+            <scale_options>
+              <width_scalable>true</width_scalable>
+              <height_scalable>true</height_scalable>
+              <keep_wh_ratio>false</keep_wh_ratio>
+            </scale_options>
+            <scripts />
+            <tooltip></tooltip>
+            <visible>true</visible>
+            <widget_type>Linking Container</widget_type>
+            <width>1019</width>
+            <wuid>-2215652e:161dbb3e447:-44ef</wuid>
+            <x>0</x>
+            <y>0</y>
+          </widget>
         </widget>
         <widget typeId="org.csstudio.opibuilder.widgets.groupingContainer" version="1.0.0">
           <actions hook="false" hook_all="false" />
@@ -5993,12 +6500,53 @@ SV</text>
           <show_scrollbar>true</show_scrollbar>
           <tooltip></tooltip>
           <transparent>true</transparent>
-          <visible>false</visible>
+          <visible>true</visible>
           <widget_type>Grouping Container</widget_type>
           <width>1019</width>
           <wuid>-2215652e:161dbb3e447:-5fc1</wuid>
           <x>1</x>
           <y>1</y>
+          <widget typeId="org.csstudio.opibuilder.widgets.linkingContainer" version="1.0.0">
+            <actions hook="false" hook_all="false" />
+            <background_color>
+              <color red="240" green="240" blue="240" />
+            </background_color>
+            <border_color>
+              <color red="0" green="128" blue="255" />
+            </border_color>
+            <border_style>3</border_style>
+            <border_width>1</border_width>
+            <enabled>true</enabled>
+            <font>
+              <opifont.name fontName="Cantarell" height="11" style="0" pixels="false">Default</opifont.name>
+            </font>
+            <foreground_color>
+              <color red="192" green="192" blue="192" />
+            </foreground_color>
+            <group_name></group_name>
+            <height>656</height>
+            <macros>
+              <include_parent_macros>true</include_parent_macros>
+              <N>10</N>
+            </macros>
+            <name>Linking Container</name>
+            <opi_file>dt320-test.opi</opi_file>
+            <resize_behaviour>2</resize_behaviour>
+            <rules />
+            <scale_options>
+              <width_scalable>true</width_scalable>
+              <height_scalable>true</height_scalable>
+              <keep_wh_ratio>false</keep_wh_ratio>
+            </scale_options>
+            <scripts />
+            <tooltip></tooltip>
+            <visible>true</visible>
+            <widget_type>Linking Container</widget_type>
+            <width>1019</width>
+            <wuid>-2215652e:161dbb3e447:-44a3</wuid>
+            <x>0</x>
+            <y>0</y>
+          </widget>
         </widget>
       </widget>
     </widget>

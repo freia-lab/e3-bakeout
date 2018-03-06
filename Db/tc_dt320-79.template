@@ -8,3 +8,17 @@ record(waveform, "$(P):TT$(ADR):sWf-79") {
     field(INP,"@asyn($(PORT),0,1000)INT16")
     field(SCAN,"$(SCAN)")
 }
+
+record(ai, "$(P):TT$(ADR):sSlope-Man") {
+    field(DESC,"Temp. rise slope (man mode)")
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn($(PORT) 4 -16)MODBUS_DATA")
+    field(HOPR,"1000.0")
+    field(LOPR,"0")
+    field(PREC,"1")
+    field(ADEL,"0.1")
+    field(MDEL,"0.1")
+    field(LINR,"SLOPE")
+    field (ASLO, "0.1")
+    field(SCAN,"$(SCAN)")
+}

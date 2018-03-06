@@ -8,3 +8,31 @@ record(waveform, "$(P):TT$(ADR):sWf-83") {
     field(INP,"@asyn($(PORT),0,1000)INT16")
     field(SCAN,"$(SCAN)")
 }
+
+record (mbbi, "$(P):TT$(ADR):sSVMode") {
+    field(DESC,"SV control mode readback")
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn($(PORT) 0 -16)MODBUS_DATA")
+    field(ZRVL, "0")
+    field(ZRST, "Fixed")
+    field(ONVL, "1")
+    field(ONST, "Slope")
+    field(TWVL, "2")
+    field(TWST, "Program")
+    field(THVL, "3")
+    field(THST, "Remote")
+    field(NOBT, "16")
+    field(SCAN,"$(SCAN)")
+}
+
+record (mbbi, "$(P):TT$(ADR):sSlopeUnit") {
+    field(DESC,"Slope time unit readback")
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn($(PORT) 4 -16)MODBUS_DATA")
+    field(ZRVL, "0")
+    field(ZRST, "min")
+    field(ONVL, "1")
+    field(ONST, "s")
+    field(NOBT, "16")
+    field(SCAN,"$(SCAN)")
+}

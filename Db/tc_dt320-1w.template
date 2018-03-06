@@ -3,7 +3,7 @@
 record(ao, "$(P):TT$(ADR):cSP") {
     field(DESC,"Temperature set-point")
     field(DTYP,"asynInt32")
-    field(OUT,"@asyn($(PORT) 4097 -16)MODBUS_DATA")
+    field(OUT,"@asyn($(PORT) 0x1001 -16)MODBUS_DATA")
     field(EGU,"°C")
     field(HOPR,"500.0")
     field(LOPR,"-70.0")
@@ -14,41 +14,65 @@ record(ao, "$(P):TT$(ADR):cSP") {
     field (ASLO, "0.1")
 }
 
+record (mbbo, "$(P):TT$(ADR):cSensorType") {
+    field(DESC,"Sensor type")
+    field(DTYP,"asynInt32")
+    field(OUT,"@asyn($(PORT) 0x1004 -16)MODBUS_DATA")
+    field(ZRVL, "0")
+    field(ZRST, "Thermocouple K")
+    field(ONVL, "1")
+    field(ONST, "Thermocouple J")
+    field(TWVL, "2")
+    field(TWST, "Thermocouple T")
+    field(THVL, "3")
+    field(THST, "Thermocouple E")
+    field(FRVL, "4")
+    field(FRST, "Thermocouple N")
+    field(FVVL, "5")
+    field(FVST, "Thermocouple R")
+    field(SXVL, "6")
+    field(SXST, "Thermocouple S")
+    field(SVVL, "7")
+    field(SVST, "Thermocouple B")
+    field(EIVL, "8")
+    field(EIST, "Thermocouple L")
+    field(NIVL, "9")
+    field(NIST, "Thermocouple U")
+    field(TEVL, "10")
+    field(TEST, "Thermocouple TXK")
+    field(ELVL, "11")
+    field(ELST, "JPt100")
+    field(TVVL, "12")
+    field(TVST, "Pt10")
+    field(TTVL, "13")
+    field(TTST, "Ni120")
+    field(FTVL, "14")
+    field(FTST, "Cu50")
+    field(NOBT, "16")
+}
+
+record (mbbo, "$(P):TT$(ADR):cCntrlMode") {
+    field(DESC,"Control mode")
+    field(DTYP,"asynInt32")
+    field(OUT,"@asyn($(PORT) 0x1005 -16)MODBUS_DATA")
+    field(ZRVL, "0")
+    field(ZRST, "PID")
+    field(ONVL, "1")
+    field(ONST, "ON/OFF")
+    field(TWVL, "2")
+    field(TWST, "Manual")
+    field(THVL, "3")
+    field(THST, "Fuzzy")
+    field(NOBT, "16")
+}
+
 record(ao, "$(P):TT$(ADR):cOut1-Period") {
     field(DESC,"Out 1 control period in manual mode")
     field(DTYP,"asynInt32")
-    field(OUT,"@asyn($(PORT) 4103 -16)MODBUS_DATA")
+    field(OUT,"@asyn($(PORT) 0x1007 -16)MODBUS_DATA")
     field(EGU,"s")
     field(HOPR,"999.0")
     field(LOPR,"1.0")
-    field(PREC,"1")
-    field(ADEL,"0.1")
-    field(MDEL,"0.1")
-    field(LINR,"SLOPE")
-    field (ASLO, "10.0")
-}
-
-record(ao, "$(P):TT$(ADR):cOut1-Perc") {
-    field(DESC,"Out 1 control value in manual mode")
-    field(DTYP,"asynInt32")
-    field(OUT,"@asyn($(PORT) 4114 -16)MODBUS_DATA")
-    field(EGU,"%")
-    field(HOPR,"100.0")
-    field(LOPR,"0.0")
-    field(PREC,"1")
-    field(ADEL,"0.1")
-    field(MDEL,"0.1")
-    field(LINR,"SLOPE")
-    field (ASLO, "10.0")
-}
-
-record(ao, "$(P):TT$(ADR):cOut1-Perc") {
-    field(DESC,"Out 1 control value in manual mode")
-    field(DTYP,"asynInt32")
-    field(OUT,"@asyn($(PORT) 4114 -16)MODBUS_DATA")
-    field(EGU,"%")
-    field(HOPR,"100.0")
-    field(LOPR,"0.0")
     field(PREC,"1")
     field(ADEL,"0.1")
     field(MDEL,"0.1")
@@ -69,6 +93,33 @@ record(ao, "$(P):TT$(ADR):cOut1-Hyst") {
     field (ASLO, "0.1")
 }
 
+record(ao, "$(P):TT$(ADR):cOut1-Perc") {
+    field(DESC,"Out 1 control value in manual mode")
+    field(DTYP,"asynInt32")
+    field(OUT,"@asyn($(PORT) 0x1012 -16)MODBUS_DATA")
+    field(EGU,"%")
+    field(HOPR,"100.0")
+    field(LOPR,"0.0")
+    field(PREC,"1")
+    field(ADEL,"0.1")
+    field(MDEL,"0.1")
+    field(LINR,"SLOPE")
+    field (ASLO, "10.0")
+}
+
+record(ao, "$(P):TT$(ADR):cSlope-Man") {
+    field(DESC,"Temp. rise slope (man mode)")
+    field(DTYP,"asynInt32")
+    field(OUT,"@asyn($(PORT) 0x1104 -16)MODBUS_DATA")
+    field(HOPR,"1000.0")
+    field(LOPR,"0")
+    field(PREC,"1")
+    field(ADEL,"0.1")
+    field(MDEL,"0.1")
+    field(LINR,"SLOPE")
+    field (ASLO, "0.1")
+}
+
 record(ao, "$(P):TT$(ADR)-Prg:cSlope") {
     field(DESC,"Temp. rise slope (program mode)")
     field(DTYP,"asynInt32")
@@ -82,12 +133,14 @@ record(ao, "$(P):TT$(ADR)-Prg:cSlope") {
     field (ASLO, "0.1")
 }
 
-record(ao, "$(P):TT$(ADR):cSlope-Man") {
-    field(DESC,"Temp. rise slope (program mode)")
+
+record(ao, "$(P):TT$(ADR):cOut1-Period") {
+    field(DESC,"Out 1 control period in manual mode")
     field(DTYP,"asynInt32")
-    field(OUT,"@asyn($(PORT) 0x1104 -16)MODBUS_DATA")
-    field(HOPR,"1000.0")
-    field(LOPR,"0")
+    field(OUT,"@asyn($(PORT) 0x1007 -16)MODBUS_DATA")
+    field(EGU,"s")
+    field(HOPR,"990.0")
+    field(LOPR,"1.0")
     field(PREC,"1")
     field(ADEL,"0.1")
     field(MDEL,"0.1")
@@ -95,25 +148,49 @@ record(ao, "$(P):TT$(ADR):cSlope-Man") {
     field (ASLO, "0.1")
 }
 
-record (mbbo, "$(P):TT$(ADR):cCntrlMode") {
-    field(DESC,"Control mode")
+record(ao, "$(P):TT$(ADR)-PID:cPB") {
+    field(DESC,"PID - proportional band (gain)")
     field(DTYP,"asynInt32")
-    field(OUT,"@asyn($(PORT) 0x1005 -16)MODBUS_DATA")
-    field(ZRVL, "0")
-    field(ZRST, "PID")
-    field(ONVL, "1")
-    field(ONST, "ON/OFF")
-    field(TWVL, "2")
-    field(TWST, "Manual")
-    field(THVL, "3")
-    field(THST, "Fuzzy")
-    field(NOBT, "16")
+    field(OUT,"@asyn($(PORT) 0x1009 -16)MODBUS_DATA")
+    field(HOPR,"999.9")
+    field(LOPR,"0.1")
+    field(PREC,"1")
+    field(ADEL,"0.1")
+    field(MDEL,"0.1")
+    field(LINR,"SLOPE")
+    field (ASLO, "0.1")
+}
+record(ao, "$(P):TT$(ADR)-PID:cTi") {
+    field(DESC,"PID - integral time")
+    field(DTYP,"asynInt32")
+    field(OUT,"@asyn($(PORT) 0x100a -16)MODBUS_DATA")
+    field(EGU,"s")
+    field(HOPR,"9999")
+    field(LOPR,"0")
+    field(PREC,"1")
+    field(ADEL,"2")
+    field(MDEL,"2")
+    field(LINR,"SLOPE")
+    field (ASLO, "1")
+}
+record(ao, "$(P):TT$(ADR)-PID:cTd") {
+    field(DESC,"PID - derivative time")
+    field(DTYP,"asynInt32")
+    field(OUT,"@asyn($(PORT) 0x100b -16)MODBUS_DATA")
+    field(EGU,"s")
+    field(HOPR,"9999")
+    field(LOPR,"0")
+    field(PREC,"1")
+    field(ADEL,"2")
+    field(MDEL,"2")
+    field(LINR,"SLOPE")
+    field (ASLO, "1")
 }
 
 record (mbbo, "$(P):TT$(ADR):cAutoTune") {
     field(DESC,"Auto tunel control")
     field(DTYP,"asynInt32")
-    field(OUT,"@asyn($(PORT) 4155 -16)MODBUS_DATA")
+    field(OUT,"@asyn($(PORT) 0x103b -16)MODBUS_DATA")
     field(ZRVL, "0")
     field(ZRST, "Off")
     field(ONVL, "1")
@@ -124,7 +201,7 @@ record (mbbo, "$(P):TT$(ADR):cAutoTune") {
 record (mbbo, "$(P):TT$(ADR):cRunMode") {
     field(DESC,"Run mode")
     field(DTYP,"asynInt32")
-    field(OUT,"@asyn($(PORT) 4156 -16)MODBUS_DATA")
+    field(OUT,"@asyn($(PORT) 0x103c -16)MODBUS_DATA")
     field(ZRVL, "0")
     field(ZRST, "STOP")
     field(ONVL, "1")
@@ -139,7 +216,7 @@ record (mbbo, "$(P):TT$(ADR):cRunMode") {
 record (mbbo, "$(P):TT$(ADR):cSVMode") {
     field(DESC,"SV control mode")
     field(DTYP,"asynInt32")
-    field(OUT,"@asyn($(PORT) 4384 -16)MODBUS_DATA")
+    field(OUT,"@asyn($(PORT) 0x1120 -16)MODBUS_DATA")
     field(ZRVL, "0")
     field(ZRST, "Fixed")
     field(ONVL, "1")
@@ -154,7 +231,7 @@ record (mbbo, "$(P):TT$(ADR):cSVMode") {
 record (mbbo, "$(P):TT$(ADR):cSlopeUnit") {
     field(DESC,"Slope time unit")
     field(DTYP,"asynInt32")
-    field(OUT,"@asyn($(PORT) 4388 -16)MODBUS_DATA")
+    field(OUT,"@asyn($(PORT) 0x1124 -16)MODBUS_DATA")
     field(ZRVL, "0")
     field(ZRST, "min")
     field(ONVL, "1")
@@ -171,4 +248,126 @@ record(longout, "$(P):TT$(ADR)-Prg:cStartPtrn") {
     field(DESC,"Start pattern in program")
     field(DTYP,"asynInt32")
     field(OUT,"@asyn($(PORT),0x1030)MODBUS_DATA")
+}
+
+record(bo, "$(P):TT$(ADR)-Prg:cmdSave") {
+    field(DESC,"Save the programmable settings")
+    field(DTYP,"asynInt32")
+    field(OUT,"@asyn($(PORT),0x1129)MODBUS_DATA")
+    field(ZNAM, "Idle")
+    field(ONAM, "Save")
+    field(HIGH, "5")
+}
+
+record(longout, "$(P):TT$(ADR)-Prg:cLastStep-0") {
+    field(DESC,"Last step in pattern 0")
+    field(DTYP,"asynInt32")
+    field(OUT,"@asyn($(PORT),0x1400)MODBUS_DATA")
+    field(LOPR,"0")
+    field(HOPR,"15")
+}
+record(longout, "$(P):TT$(ADR)-Prg:cLastStep-1") {
+    field(DESC,"Last step in pattern 0")
+    field(DTYP,"asynInt32")
+    field(OUT,"@asyn($(PORT),0x1401)MODBUS_DATA")
+    field(LOPR,"0")
+    field(HOPR,"15")
+}
+record(longout, "$(P):TT$(ADR)-Prg:cLastStep-2") {
+    field(DESC,"Last step in pattern 0")
+    field(DTYP,"asynInt32")
+    field(OUT,"@asyn($(PORT),0x1402)MODBUS_DATA")
+    field(LOPR,"0")
+    field(HOPR,"15")
+}
+record(longout, "$(P):TT$(ADR)-Prg:cLastStep-3") {
+    field(DESC,"Last step in pattern 0")
+    field(DTYP,"asynInt32")
+    field(OUT,"@asyn($(PORT),0x1403)MODBUS_DATA")
+    field(LOPR,"0")
+    field(HOPR,"15")
+}
+record(longout, "$(P):TT$(ADR)-Prg:cLastStep-4") {
+    field(DESC,"Last step in pattern 0")
+    field(DTYP,"asynInt32")
+    field(OUT,"@asyn($(PORT),0x1404)MODBUS_DATA")
+    field(LOPR,"0")
+    field(HOPR,"15")
+}
+record(longout, "$(P):TT$(ADR)-Prg:cLastStep-5") {
+    field(DESC,"Last step in pattern 0")
+    field(DTYP,"asynInt32")
+    field(OUT,"@asyn($(PORT),0x1405)MODBUS_DATA")
+    field(LOPR,"0")
+    field(HOPR,"15")
+}
+record(longout, "$(P):TT$(ADR)-Prg:cLastStep-6") {
+    field(DESC,"Last step in pattern 0")
+    field(DTYP,"asynInt32")
+    field(OUT,"@asyn($(PORT),0x1406)MODBUS_DATA")
+    field(LOPR,"0")
+    field(HOPR,"15")
+}
+record(longout, "$(P):TT$(ADR)-Prg:cLastStep-7") {
+    field(DESC,"Last step in pattern 0")
+    field(DTYP,"asynInt32")
+    field(OUT,"@asyn($(PORT),0x1407)MODBUS_DATA")
+    field(LOPR,"0")
+    field(HOPR,"15")
+}
+record(longout, "$(P):TT$(ADR)-Prg:cLastStep-8") {
+    field(DESC,"Last step in pattern 0")
+    field(DTYP,"asynInt32")
+    field(OUT,"@asyn($(PORT),0x1408)MODBUS_DATA")
+    field(LOPR,"0")
+    field(HOPR,"15")
+}
+record(longout, "$(P):TT$(ADR)-Prg:cLastStep-9") {
+    field(DESC,"Last step in pattern 0")
+    field(DTYP,"asynInt32")
+    field(OUT,"@asyn($(PORT),0x1409)MODBUS_DATA")
+    field(LOPR,"0")
+    field(HOPR,"15")
+}
+record(longout, "$(P):TT$(ADR)-Prg:cLastStep-10") {
+    field(DESC,"Last step in pattern 0")
+    field(DTYP,"asynInt32")
+    field(OUT,"@asyn($(PORT),0x140a)MODBUS_DATA")
+    field(LOPR,"0")
+    field(HOPR,"15")
+}
+record(longout, "$(P):TT$(ADR)-Prg:cLastStep-11") {
+    field(DESC,"Last step in pattern 0")
+    field(DTYP,"asynInt32")
+    field(OUT,"@asyn($(PORT),0x140b)MODBUS_DATA")
+    field(LOPR,"0")
+    field(HOPR,"15")
+}
+record(longout, "$(P):TT$(ADR)-Prg:cLastStep-12") {
+    field(DESC,"Last step in pattern 0")
+    field(DTYP,"asynInt32")
+    field(OUT,"@asyn($(PORT),0x140c)MODBUS_DATA")
+    field(LOPR,"0")
+    field(HOPR,"15")
+}
+record(longout, "$(P):TT$(ADR)-Prg:cLastStep-13") {
+    field(DESC,"Last step in pattern 0")
+    field(DTYP,"asynInt32")
+    field(OUT,"@asyn($(PORT),0x140d)MODBUS_DATA")
+    field(LOPR,"0")
+    field(HOPR,"15")
+}
+record(longout, "$(P):TT$(ADR)-Prg:cLastStep-14") {
+    field(DESC,"Last step in pattern 0")
+    field(DTYP,"asynInt32")
+    field(OUT,"@asyn($(PORT),0x140e)MODBUS_DATA")
+    field(LOPR,"0")
+    field(HOPR,"15")
+}
+record(longout, "$(P):TT$(ADR)-Prg:cLastStep-15") {
+    field(DESC,"Last step in pattern 0")
+    field(DTYP,"asynInt32")
+    field(OUT,"@asyn($(PORT),0x140f)MODBUS_DATA")
+    field(LOPR,"0")
+    field(HOPR,"15")
 }

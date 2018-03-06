@@ -8,3 +8,31 @@ record(waveform, "$(P):TT$(ADR):sWf-8") {
     field(INP,"@asyn($(PORT),0,1000)INT16")
     field(SCAN,"$(SCAN)")
 }
+
+record (mbbi, "$(P):TT$(ADR):sAutoTune") {
+    field(DESC,"Auto tunel control readback")
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn($(PORT) 3 -16)MODBUS_DATA")
+    field(ZRVL, "0")
+    field(ZRST, "Off")
+    field(ONVL, "1")
+    field(ONST, "On")
+    field(NOBT, "16")
+    field(SCAN,"$(SCAN)")
+}
+
+record (mbbi, "$(P):TT$(ADR):sRunMode") {
+    field(DESC,"Run mode readback")
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn($(PORT) 4 -16)MODBUS_DATA")
+    field(ZRVL, "0")
+    field(ZRST, "STOP")
+    field(ONVL, "1")
+    field(ONST, "RUN")
+    field(TWVL, "2")
+    field(TWST, "END")
+    field(THVL, "3")
+    field(THST, "HOLD")
+    field(NOBT, "16")
+    field(SCAN,"$(SCAN)")
+}

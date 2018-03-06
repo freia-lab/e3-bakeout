@@ -34,6 +34,14 @@ record(longin, "$(P):TT$(ADR)-Prg:sRemTime") {
     field(SCAN,"$(SCAN)")
 }
 
+record(longin, "$(P):TT$(ADR)-Prg:sRemTimeMin") {
+    field(DESC,"Remaining time in the step")
+    field(EGU,"min")
+    field(DTYP,"asynInt32")
+    field(INP,"@asyn($(PORT),3,0)MODBUS_DATA")
+    field(SCAN,"$(SCAN)")
+}
+
 record(longin, "$(P):TT$(ADR)-Prg:sStep") {
     field(DESC,"Current step in pattern")
     field(DTYP,"asynInt32")
