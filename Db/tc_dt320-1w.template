@@ -91,12 +91,13 @@ record(ao, "$(P):TT$(ADR):cOut1-Hyst") {
     field(MDEL,"0.1")
     field(LINR,"SLOPE")
     field (ASLO, "0.1")
+    field (FLNK, "$(P):TT$(ADR):sWf-3")
 }
 
 record(ao, "$(P):TT$(ADR):cOut1-Perc") {
     field(DESC,"Out 1 control value in manual mode")
     field(DTYP,"asynInt32")
-    field(OUT,"@asyn($(PORT) 0x1012 -16)MODBUS_DATA")
+    field(OUT,"@asyn($(PORT) 0x1014 -16)MODBUS_DATA")
     field(EGU,"%")
     field(HOPR,"100.0")
     field(LOPR,"0.0")
@@ -104,7 +105,8 @@ record(ao, "$(P):TT$(ADR):cOut1-Perc") {
     field(ADEL,"0.1")
     field(MDEL,"0.1")
     field(LINR,"SLOPE")
-    field (ASLO, "10.0")
+    field (ASLO, "0.1")
+    field (FLNK, "$(P):TT$(ADR):sWf-3")
 }
 
 record(ao, "$(P):TT$(ADR):cSlope-Man") {
@@ -159,6 +161,7 @@ record(ao, "$(P):TT$(ADR)-PID:cPB") {
     field(MDEL,"0.1")
     field(LINR,"SLOPE")
     field (ASLO, "0.1")
+    field (FLNK, "$(P):TT$(ADR):sWf-2")
 }
 record(ao, "$(P):TT$(ADR)-PID:cTi") {
     field(DESC,"PID - integral time")
@@ -172,6 +175,7 @@ record(ao, "$(P):TT$(ADR)-PID:cTi") {
     field(MDEL,"2")
     field(LINR,"SLOPE")
     field (ASLO, "1")
+    field (FLNK, "$(P):TT$(ADR):sWf-2")
 }
 record(ao, "$(P):TT$(ADR)-PID:cTd") {
     field(DESC,"PID - derivative time")
@@ -185,6 +189,7 @@ record(ao, "$(P):TT$(ADR)-PID:cTd") {
     field(MDEL,"2")
     field(LINR,"SLOPE")
     field (ASLO, "1")
+    field (FLNK, "$(P):TT$(ADR):sWf-2")
 }
 
 record (mbbo, "$(P):TT$(ADR):cAutoTune") {
@@ -243,6 +248,7 @@ record(longout, "$(P):TT$(ADR)-Prg:cStartStep") {
     field(DESC,"Start step in program")
     field(DTYP,"asynInt32")
     field(OUT,"@asyn($(PORT),0x101f)MODBUS_DATA")
+    field(FLNK,"$(P):TT$(ADR):sWf-4")
 }
 record(longout, "$(P):TT$(ADR)-Prg:cStartPtrn") {
     field(DESC,"Start pattern in program")

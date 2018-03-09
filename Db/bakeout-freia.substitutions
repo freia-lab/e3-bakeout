@@ -14,30 +14,44 @@ file "tc_dt320-1.template"  { pattern
 
 file "tc_dt320-2.template"  { pattern
 { P,               PORT,     ADR,  SCAN }
-{ $(DT320_PREFIX), DT320_2-1,  01,   "I/O Intr"}
-{ $(DT320_PREFIX), DT320_2-2,  02,   "I/O Intr"}
-{ $(DT320_PREFIX), DT320_2-3,  03,   "I/O Intr"}
+{ $(DT320_PREFIX), DT320_8R-1,  01,   "Passive"}
+{ $(DT320_PREFIX), DT320_8R-2,  02,   "Passive"}
+{ $(DT320_PREFIX), DT320_8R-3,  03,   "Passive"}
+{ $(DT320_PREFIX), DT320_8R-4,  04,   "Passive"}
+{ $(DT320_PREFIX), DT320_8R-5,  05,   "Passive"}
+{ $(DT320_PREFIX), DT320_8R-6,  06,   "Passive"}
+{ $(DT320_PREFIX), DT320_8R-7,  07,   "Passive"}
+{ $(DT320_PREFIX), DT320_8R-8,  08,   "Passive"}
+{ $(DT320_PREFIX), DT320_8R-9,  09,   "Passive"}
+{ $(DT320_PREFIX), DT320_8R-10, 10,   "Passive"}
 }
 
 file "tc_dt320-3.template"  { pattern
 { P,               PORT,     ADR,  SCAN }
-{ $(DT320_PREFIX), DT320_3-1,  01,   "I/O Intr"}
-{ $(DT320_PREFIX), DT320_3-2,  02,   "I/O Intr"}
-{ $(DT320_PREFIX), DT320_3-3,  03,   "I/O Intr"}
+{ $(DT320_PREFIX), DT320_8R-1,  01,   "Passive"}
+{ $(DT320_PREFIX), DT320_8R-2,  02,   "Passive"}
+{ $(DT320_PREFIX), DT320_8R-3,  03,   "Passive"}
+{ $(DT320_PREFIX), DT320_8R-4,  04,   "Passive"}
+{ $(DT320_PREFIX), DT320_8R-5,  05,   "Passive"}
+{ $(DT320_PREFIX), DT320_8R-6,  06,   "Passive"}
+{ $(DT320_PREFIX), DT320_8R-7,  07,   "Passive"}
+{ $(DT320_PREFIX), DT320_8R-8,  08,   "Passive"}
+{ $(DT320_PREFIX), DT320_8R-9,  09,   "Passive"}
+{ $(DT320_PREFIX), DT320_8R-10, 10,   "Passive"}
 }
 
 file "tc_dt320-4.template"  { pattern
 { P,               PORT,     ADR,  SCAN }
-{ $(DT320_PREFIX), DT320_4-1,  01,   "I/O Intr"}
-{ $(DT320_PREFIX), DT320_4-2,  02,   "I/O Intr"}
-{ $(DT320_PREFIX), DT320_4-3,  03,   "I/O Intr"}
-{ $(DT320_PREFIX), DT320_4-4,  04,   "I/O Intr"}
-{ $(DT320_PREFIX), DT320_4-5,  05,   "I/O Intr"}
-{ $(DT320_PREFIX), DT320_4-6,  06,   "I/O Intr"}
-{ $(DT320_PREFIX), DT320_4-7,  07,   "I/O Intr"}
-{ $(DT320_PREFIX), DT320_4-8,  08,   "I/O Intr"}
-{ $(DT320_PREFIX), DT320_4-9,  09,   "I/O Intr"}
-{ $(DT320_PREFIX), DT320_4-10, 10,   "I/O Intr"}
+{ $(DT320_PREFIX), DT320_8R-1,  01,   "Passive"}
+{ $(DT320_PREFIX), DT320_8R-2,  02,   "Passive"}
+{ $(DT320_PREFIX), DT320_8R-3,  03,   "Passive"}
+{ $(DT320_PREFIX), DT320_8R-4,  04,   "Passive"}
+{ $(DT320_PREFIX), DT320_8R-5,  05,   "Passive"}
+{ $(DT320_PREFIX), DT320_8R-6,  06,   "Passive"}
+{ $(DT320_PREFIX), DT320_8R-7,  07,   "Passive"}
+{ $(DT320_PREFIX), DT320_8R-8,  08,   "Passive"}
+{ $(DT320_PREFIX), DT320_8R-9,  09,   "Passive"}
+{ $(DT320_PREFIX), DT320_8R-10, 10,   "Passive"}
 }
 
 file "tc_dt320-5.template"  { pattern

@@ -5,14 +5,24 @@ record(waveform, "$(P):TT$(ADR):sWf-4") {
     field(DTYP,"asynInt32ArrayIn")
     field(NELM,"8")
     field(FTVL,"LONG")
-    field(INP,"@asyn($(PORT),0,1000)INT16")
+    field(INP,"@asyn($(PORT),0x1018,1000)INT16")
     field(SCAN,"$(SCAN)")
+    field(FLNK,"$(P):TT$(ADR):sWf4-7")
+}
+
+record (subArray, "$(P):TT$(ADR):sWf4-7") {
+   field (DESC, "Chan 7 of $(P):TT$(ADR):sWf-4")
+   field (DTYP, "Soft Channel")
+   field (INP, "$(P):TT$(ADR):sWf-4")
+   field (FTVL, "LONG")
+   field (INDX, 7)
+   field (MALM, 8)
+   field (FLNK, "$(P):TT$(ADR)-Prg:sStartStep")
 }
 
 record(longin, "$(P):TT$(ADR)-Prg:sStartStep") {
     field(DESC,"Start step in program")
-    field(DTYP,"asynInt32")
-    field(INP,"@asyn($(PORT),7,0)MODBUS_DATA")
-    field(SCAN,"$(SCAN)")
+    field(DTYP,"Soft Channel")
+    field(INP,"$(P):TT$(ADR):sWf4-7")
 }
 

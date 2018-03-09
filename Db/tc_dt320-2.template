@@ -5,14 +5,25 @@ record(waveform, "$(P):TT$(ADR):sWf-2") {
     field(DTYP,"asynInt32ArrayIn")
     field(NELM,"8")
     field(FTVL,"LONG")
-    field(INP,"@asyn($(PORT),0,1000)INT16")
+    field(INP,"@asyn($(PORT),0x1008,1000)INT16")
     field(SCAN,"$(SCAN)")
+    field(FLNK,"$(P):TT$(ADR):sWf2-1")
+}
+
+record (subArray, "$(P):TT$(ADR):sWf2-1") {
+   field (DESC, "Chan 1 of $(P):TT$(ADR):sWf-2")
+   field (DTYP, "Soft Channel")
+   field (INP, "$(P):TT$(ADR):sWf-2")
+   field (FTVL, "LONG")
+   field (INDX, 1)
+   field (MALM, 8)
+   field (FLNK, "$(P):TT$(ADR)-PID:sPB")
 }
 
 record(ai, "$(P):TT$(ADR)-PID:sPB") {
     field(DESC,"PID - proportional band (gain)")
-    field(DTYP,"asynInt32")
-    field(INP,"@asyn($(PORT) 1 -16)MODBUS_DATA")
+    field(DTYP,"Raw Soft Channel")
+    field(INP,"$(P):TT$(ADR):sWf2-1")
     field(HOPR,"999.9")
     field(LOPR,"0.1")
     field(PREC,"1")
@@ -20,13 +31,23 @@ record(ai, "$(P):TT$(ADR)-PID:sPB") {
     field(MDEL,"0.1")
     field(LINR,"SLOPE")
     field (ASLO, "0.1")
-    field(SCAN,"$(SCAN)")
+    field (FLNK, "$(P):TT$(ADR):sWf2-2")
+}
+
+record (subArray, "$(P):TT$(ADR):sWf2-2") {
+   field (DESC, "Chan 2 of $(P):TT$(ADR):sWf-2")
+   field (DTYP, "Soft Channel")
+   field (INP, "$(P):TT$(ADR):sWf-2")
+   field (FTVL, "LONG")
+   field (INDX, 2)
+   field (MALM, 8)
+   field (FLNK, "$(P):TT$(ADR)-PID:sTi")
 }
 
 record(ai, "$(P):TT$(ADR)-PID:sTi") {
     field(DESC,"PID - integral time")
-    field(DTYP,"asynInt32")
-    field(INP,"@asyn($(PORT) 2 -16)MODBUS_DATA")
+    field(DTYP,"Raw Soft Channel")
+    field(INP,"$(P):TT$(ADR):sWf2-2")
     field(EGU,"s")
     field(HOPR,"9999")
     field(LOPR,"0")
@@ -35,12 +56,23 @@ record(ai, "$(P):TT$(ADR)-PID:sTi") {
     field(MDEL,"2")
     field(LINR,"SLOPE")
     field (ASLO, "1")
-    field(SCAN,"$(SCAN)")
+    field (FLNK, "$(P):TT$(ADR):sWf2-3")
 }
+
+record (subArray, "$(P):TT$(ADR):sWf2-3") {
+   field (DESC, "Chan 3 of $(P):TT$(ADR):sWf-2")
+   field (DTYP, "Soft Channel")
+   field (INP, "$(P):TT$(ADR):sWf-2")
+   field (FTVL, "LONG")
+   field (INDX, 3)
+   field (MALM, 8)
+   field (FLNK, "$(P):TT$(ADR)-PID:sTd")
+}
+
 record(ai, "$(P):TT$(ADR)-PID:sTd") {
     field(DESC,"PID - derivative time")
-    field(DTYP,"asynInt32")
-    field(INP,"@asyn($(PORT) 3 -16)MODBUS_DATA")
+    field(DTYP,"Raw Soft Channel")
+    field(INP,"$(P):TT$(ADR):sWf2-3")
     field(EGU,"s")
     field(HOPR,"9999")
     field(LOPR,"0")
@@ -49,5 +81,4 @@ record(ai, "$(P):TT$(ADR)-PID:sTd") {
     field(MDEL,"2")
     field(LINR,"SLOPE")
     field (ASLO, "1")
-    field(SCAN,"$(SCAN)")
 }

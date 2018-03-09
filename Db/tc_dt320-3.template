@@ -5,14 +5,25 @@ record(waveform, "$(P):TT$(ADR):sWf-3") {
     field(DTYP,"asynInt32ArrayIn")
     field(NELM,"8")
     field(FTVL,"LONG")
-    field(INP,"@asyn($(PORT),0,1000)INT16")
+    field(INP,"@asyn($(PORT),0x1010,1000)INT16")
     field(SCAN,"$(SCAN)")
+   field (FLNK, "$(P):TT$(ADR):sWf3-0")
+}
+
+record (subArray, "$(P):TT$(ADR):sWf3-0") {
+   field (DESC, "Chan 0 of $(P):TT$(ADR):sWf-3")
+   field (DTYP, "Soft Channel")
+   field (INP, "$(P):TT$(ADR):sWf-3")
+   field (FTVL, "LONG")
+   field (INDX, 0)
+   field (MALM, 8)
+   field (FLNK, "$(P):TT$(ADR):sOut1-Hyst")
 }
 
 record(ai, "$(P):TT$(ADR):sOut1-Hyst") {
     field(DESC,"Hysteresis (ON/OFF ctrl mode)")
-    field(DTYP,"asynInt32")
-    field(INP,"@asyn($(PORT) 0 -16)MODBUS_DATA")
+    field(DTYP,"Raw Soft Channel")
+    field(INP,"$(P):TT$(ADR):sWf3-0")
     field(HOPR,"999.9")
     field(LOPR,"-99.9")
     field(PREC,"1")
@@ -20,13 +31,23 @@ record(ai, "$(P):TT$(ADR):sOut1-Hyst") {
     field(MDEL,"0.1")
     field(LINR,"SLOPE")
     field (ASLO, "0.1")
-    field(SCAN,"$(SCAN)")
+    field (FLNK, "$(P):TT$(ADR):sWf3-4")
+}
+
+record (subArray, "$(P):TT$(ADR):sWf3-4") {
+   field (DESC, "Chan 4 of $(P):TT$(ADR):sWf-3")
+   field (DTYP, "Soft Channel")
+   field (INP, "$(P):TT$(ADR):sWf-3")
+   field (FTVL, "LONG")
+   field (INDX, 4)
+   field (MALM, 8)
+   field (FLNK, "$(P):TT$(ADR):sOut1-Perc")
 }
 
 record(ai, "$(P):TT$(ADR):sOut1-Perc") {
     field(DESC,"Out 1 control values in manual mode")
-    field(DTYP,"asynInt32")
-    field(INP,"@asyn($(PORT) 2 -16)MODBUS_DATA")
+    field(DTYP,"Raw Soft Channel")
+    field(INP,"$(P):TT$(ADR):sWf3-4")
     field(EGU,"%")
     field(HOPR,"100.0")
     field(LOPR,"0.0")
@@ -35,21 +56,5 @@ record(ai, "$(P):TT$(ADR):sOut1-Perc") {
     field(MDEL,"0.1")
     field(LINR,"SLOPE")
     field (ASLO, "0.1")
-    field(SCAN,"$(SCAN)")
-}
-
-record(ai, "$(P):TT$(ADR):sOut1-Perc") {
-    field(DESC,"Out 1 control value in manual mode")
-    field(DTYP,"asynInt32")
-    field(INP,"@asyn($(PORT) 2 -16)MODBUS_DATA")
-    field(EGU,"%")
-    field(HOPR,"100.0")
-    field(LOPR,"0.0")
-    field(PREC,"1")
-    field(ADEL,"0.1")
-    field(MDEL,"0.1")
-    field(LINR,"SLOPE")
-    field (ASLO, "10.0")
-    field(SCAN,"$(SCAN)")
 }
 
