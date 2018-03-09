@@ -371,3 +371,116 @@ record(longout, "$(P):TT$(ADR)-Prg:cLastStep-15") {
     field(LOPR,"0")
     field(HOPR,"15")
 }
+
+record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-0") {
+    field(DESC,"Last step in pattern 0")
+    field(DTYP,"asynInt32")
+    field(OUT,"@asyn($(PORT),0x1420)MODBUS_DATA")
+    field(LOPR,"0")
+    field(HOPR,"17")
+}
+record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-1") {
+    field(DESC,"Last step in pattern 0")
+    field(DTYP,"asynInt32")
+    field(OUT,"@asyn($(PORT),0x1421)MODBUS_DATA")
+    field(LOPR,"0")
+    field(HOPR,"17")
+}
+record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-2") {
+    field(DESC,"Last step in pattern 0")
+    field(DTYP,"asynInt32")
+    field(OUT,"@asyn($(PORT),0x1422)MODBUS_DATA")
+    field(LOPR,"0")
+    field(HOPR,"17")
+}
+record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-3") {
+    field(DESC,"Last step in pattern 0")
+    field(DTYP,"asynInt32")
+    field(OUT,"@asyn($(PORT),0x1423)MODBUS_DATA")
+    field(LOPR,"0")
+    field(HOPR,"17")
+}
+record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-4") {
+    field(DESC,"Last step in pattern 0")
+    field(DTYP,"asynInt32")
+    field(OUT,"@asyn($(PORT),0x1424)MODBUS_DATA")
+    field(LOPR,"0")
+    field(HOPR,"17")
+}
+record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-5") {
+    field(DESC,"Last step in pattern 0")
+    field(DTYP,"asynInt32")
+    field(OUT,"@asyn($(PORT),0x1425)MODBUS_DATA")
+    field(LOPR,"0")
+    field(HOPR,"17")
+}
+record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-6") {
+    field(DESC,"Last step in pattern 0")
+    field(DTYP,"asynInt32")
+    field(OUT,"@asyn($(PORT),0x1426)MODBUS_DATA")
+    field(LOPR,"0")
+    field(HOPR,"17")
+}
+record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-7") {
+    field(DESC,"Last step in pattern 0")
+    field(DTYP,"asynInt32")
+    field(OUT,"@asyn($(PORT),0x1427)MODBUS_DATA")
+    field(LOPR,"0")
+    field(HOPR,"17")
+}
+record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-8") {
+    field(DESC,"Last step in pattern 0")
+    field(DTYP,"asynInt32")
+    field(OUT,"@asyn($(PORT),0x1428)MODBUS_DATA")
+    field(LOPR,"0")
+    field(HOPR,"17")
+}
+record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-9") {
+    field(DESC,"Last step in pattern 0")
+    field(DTYP,"asynInt32")
+    field(OUT,"@asyn($(PORT),0x1429)MODBUS_DATA")
+    field(LOPR,"0")
+    field(HOPR,"17")
+}
+record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-10") {
+    field(DESC,"Last step in pattern 0")
+    field(DTYP,"asynInt32")
+    field(OUT,"@asyn($(PORT),0x142a)MODBUS_DATA")
+    field(LOPR,"0")
+    field(HOPR,"17")
+}
+record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-11") {
+    field(DESC,"Last step in pattern 0")
+    field(DTYP,"asynInt32")
+    field(OUT,"@asyn($(PORT),0x142b)MODBUS_DATA")
+    field(LOPR,"0")
+    field(HOPR,"17")
+}
+record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-12") {
+    field(DESC,"Last step in pattern 0")
+    field(DTYP,"asynInt32")
+    field(OUT,"@asyn($(PORT),0x142c)MODBUS_DATA")
+    field(LOPR,"0")
+    field(HOPR,"17")
+}
+record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-13") {
+    field(DESC,"Last step in pattern 0")
+    field(DTYP,"asynInt32")
+    field(OUT,"@asyn($(PORT),0x142d)MODBUS_DATA")
+    field(LOPR,"0")
+    field(HOPR,"17")
+}
+record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-14") {
+    field(DESC,"Last step in pattern 0")
+    field(DTYP,"asynInt32")
+    field(OUT,"@asyn($(PORT),0x142e)MODBUS_DATA")
+    field(LOPR,"0")
+    field(HOPR,"17")
+}
+record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-15") {
+    field(DESC,"Last step in pattern 0")
+    field(DTYP,"asynInt32")
+    field(OUT,"@asyn($(PORT),0x142f)MODBUS_DATA")
+    field(LOPR,"0")
+    field(HOPR,"17")
+}
