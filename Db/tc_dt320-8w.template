@@ -10,7 +10,7 @@ record(waveform, "$(P):TT$(ADR)-Prg:cPattern-0a") {
     field(HOPR,"9999")
     field(LOPR,"-999")
     field(PREC,"0")
-#    field(FLNK,"$(P):TT$(ADR):sPattern-0a")
+    field(FLNK,"$(P):TT$(ADR)-Prg:sPattern-0a")
 }
 record(waveform, "$(P):TT$(ADR)-Prg:cPattern-0b") {
     field(DESC,"Temp/time pattern part 2")
@@ -22,5 +22,5 @@ record(waveform, "$(P):TT$(ADR)-Prg:cPattern-0b") {
     field(HOPR,"9999")
     field(LOPR,"-999")
     field(PREC,"0")
-#    field(FLNK,"$(P):TT$(ADR):sPattern-0a")
+    field(FLNK,"$(P):TT$(ADR)-Prg:sPattern-0b")
 }

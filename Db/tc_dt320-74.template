@@ -1,10 +1,26 @@
 # Record template for DT320 temperature controller
 #ai record template for register inputs
 record(waveform, "$(P):TT$(ADR):sWf-74") {
-    field(DESC,"Data from pport DT320_74")
+    field(DESC,"Data from port DT320_74")
     field(DTYP,"asynInt32ArrayIn")
     field(NELM,"8")
     field(FTVL,"LONG")
-    field(INP,"@asyn($(PORT),0,1000)INT16")
+    field(INP,"@asyn($(PORT),0x1408,1000)INT16")
     field(SCAN,"$(SCAN)")
+    field (FLNK, "$(P):TT$(ADR):sWf74-0")
+}
+record (subArray, "$(P):TT$(ADR):sWf74-0") {
+   field (DESC, "Chan 0 of $(P):TT$(ADR):sWf-74")
+   field (DTYP, "Soft Channel")
+   field (INP, "$(P):TT$(ADR):sWf-74")
+   field (FTVL, "LONG")
+   field (INDX, 0)
+   field (MALM, 8)
+   field (FLNK, "$(P):TT$(ADR)-Prg:sLastStep-8")
+}
+
+record(longin, "$(P):TT$(ADR)-Prg:sLastStep-8") {
+    field(DESC,"Last step in program")
+    field(DTYP,"Soft Channel")
+    field(INP,"$(P):TT$(ADR):sWf74-0")
 }

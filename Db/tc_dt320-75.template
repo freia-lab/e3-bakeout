@@ -5,6 +5,6 @@ record(waveform, "$(P):TT$(ADR):sWf-75") {
     field(DTYP,"asynInt32ArrayIn")
     field(NELM,"8")
     field(FTVL,"LONG")
-    field(INP,"@asyn($(PORT),0,1000)INT16")
+    field(INP,"@asyn($(PORT),0x1410,1000)INT16")
     field(SCAN,"$(SCAN)")
 }

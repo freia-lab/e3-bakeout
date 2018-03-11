@@ -271,6 +271,7 @@ record(longout, "$(P):TT$(ADR)-Prg:cLastStep-0") {
     field(OUT,"@asyn($(PORT),0x1400)MODBUS_DATA")
     field(LOPR,"0")
     field(HOPR,"15")
+    field(FLNK,"$(P):TT$(ADR):sWf-73")
 }
 record(longout, "$(P):TT$(ADR)-Prg:cLastStep-1") {
     field(DESC,"Last step in pattern 0")
@@ -278,6 +279,7 @@ record(longout, "$(P):TT$(ADR)-Prg:cLastStep-1") {
     field(OUT,"@asyn($(PORT),0x1401)MODBUS_DATA")
     field(LOPR,"0")
     field(HOPR,"15")
+    field(FLNK,"$(P):TT$(ADR):sWf-73")
 }
 record(longout, "$(P):TT$(ADR)-Prg:cLastStep-2") {
     field(DESC,"Last step in pattern 0")
@@ -285,6 +287,7 @@ record(longout, "$(P):TT$(ADR)-Prg:cLastStep-2") {
     field(OUT,"@asyn($(PORT),0x1402)MODBUS_DATA")
     field(LOPR,"0")
     field(HOPR,"15")
+    field(FLNK,"$(P):TT$(ADR):sWf-73")
 }
 record(longout, "$(P):TT$(ADR)-Prg:cLastStep-3") {
     field(DESC,"Last step in pattern 0")
@@ -292,6 +295,7 @@ record(longout, "$(P):TT$(ADR)-Prg:cLastStep-3") {
     field(OUT,"@asyn($(PORT),0x1403)MODBUS_DATA")
     field(LOPR,"0")
     field(HOPR,"15")
+    field(FLNK,"$(P):TT$(ADR):sWf-73")
 }
 record(longout, "$(P):TT$(ADR)-Prg:cLastStep-4") {
     field(DESC,"Last step in pattern 0")
@@ -299,6 +303,7 @@ record(longout, "$(P):TT$(ADR)-Prg:cLastStep-4") {
     field(OUT,"@asyn($(PORT),0x1404)MODBUS_DATA")
     field(LOPR,"0")
     field(HOPR,"15")
+    field(FLNK,"$(P):TT$(ADR):sWf-73")
 }
 record(longout, "$(P):TT$(ADR)-Prg:cLastStep-5") {
     field(DESC,"Last step in pattern 0")
@@ -306,6 +311,7 @@ record(longout, "$(P):TT$(ADR)-Prg:cLastStep-5") {
     field(OUT,"@asyn($(PORT),0x1405)MODBUS_DATA")
     field(LOPR,"0")
     field(HOPR,"15")
+    field(FLNK,"$(P):TT$(ADR):sWf-73")
 }
 record(longout, "$(P):TT$(ADR)-Prg:cLastStep-6") {
     field(DESC,"Last step in pattern 0")
@@ -313,6 +319,7 @@ record(longout, "$(P):TT$(ADR)-Prg:cLastStep-6") {
     field(OUT,"@asyn($(PORT),0x1406)MODBUS_DATA")
     field(LOPR,"0")
     field(HOPR,"15")
+    field(FLNK,"$(P):TT$(ADR):sWf-73")
 }
 record(longout, "$(P):TT$(ADR)-Prg:cLastStep-7") {
     field(DESC,"Last step in pattern 0")
@@ -320,6 +327,7 @@ record(longout, "$(P):TT$(ADR)-Prg:cLastStep-7") {
     field(OUT,"@asyn($(PORT),0x1407)MODBUS_DATA")
     field(LOPR,"0")
     field(HOPR,"15")
+    field(FLNK,"$(P):TT$(ADR):sWf-73")
 }
 record(longout, "$(P):TT$(ADR)-Prg:cLastStep-8") {
     field(DESC,"Last step in pattern 0")
@@ -327,6 +335,7 @@ record(longout, "$(P):TT$(ADR)-Prg:cLastStep-8") {
     field(OUT,"@asyn($(PORT),0x1408)MODBUS_DATA")
     field(LOPR,"0")
     field(HOPR,"15")
+    field(FLNK,"$(P):TT$(ADR):sWf-74")
 }
 record(longout, "$(P):TT$(ADR)-Prg:cLastStep-9") {
     field(DESC,"Last step in pattern 0")
@@ -334,6 +343,7 @@ record(longout, "$(P):TT$(ADR)-Prg:cLastStep-9") {
     field(OUT,"@asyn($(PORT),0x1409)MODBUS_DATA")
     field(LOPR,"0")
     field(HOPR,"15")
+    field(FLNK,"$(P):TT$(ADR):sWf-74")
 }
 record(longout, "$(P):TT$(ADR)-Prg:cLastStep-10") {
     field(DESC,"Last step in pattern 0")
@@ -341,6 +351,7 @@ record(longout, "$(P):TT$(ADR)-Prg:cLastStep-10") {
     field(OUT,"@asyn($(PORT),0x140a)MODBUS_DATA")
     field(LOPR,"0")
     field(HOPR,"15")
+    field(FLNK,"$(P):TT$(ADR):sWf-74")
 }
 record(longout, "$(P):TT$(ADR)-Prg:cLastStep-11") {
     field(DESC,"Last step in pattern 0")
@@ -348,6 +359,7 @@ record(longout, "$(P):TT$(ADR)-Prg:cLastStep-11") {
     field(OUT,"@asyn($(PORT),0x140b)MODBUS_DATA")
     field(LOPR,"0")
     field(HOPR,"15")
+    field(FLNK,"$(P):TT$(ADR):sWf-74")
 }
 record(longout, "$(P):TT$(ADR)-Prg:cLastStep-12") {
     field(DESC,"Last step in pattern 0")
@@ -355,6 +367,7 @@ record(longout, "$(P):TT$(ADR)-Prg:cLastStep-12") {
     field(OUT,"@asyn($(PORT),0x140c)MODBUS_DATA")
     field(LOPR,"0")
     field(HOPR,"15")
+    field(FLNK,"$(P):TT$(ADR):sWf-74")
 }
 record(longout, "$(P):TT$(ADR)-Prg:cLastStep-13") {
     field(DESC,"Last step in pattern 0")
@@ -362,6 +375,7 @@ record(longout, "$(P):TT$(ADR)-Prg:cLastStep-13") {
     field(OUT,"@asyn($(PORT),0x140d)MODBUS_DATA")
     field(LOPR,"0")
     field(HOPR,"15")
+    field(FLNK,"$(P):TT$(ADR):sWf-74")
 }
 record(longout, "$(P):TT$(ADR)-Prg:cLastStep-14") {
     field(DESC,"Last step in pattern 0")
@@ -369,6 +383,7 @@ record(longout, "$(P):TT$(ADR)-Prg:cLastStep-14") {
     field(OUT,"@asyn($(PORT),0x140e)MODBUS_DATA")
     field(LOPR,"0")
     field(HOPR,"15")
+    field(FLNK,"$(P):TT$(ADR):sWf-74")
 }
 record(longout, "$(P):TT$(ADR)-Prg:cLastStep-15") {
     field(DESC,"Last step in pattern 0")
@@ -376,6 +391,7 @@ record(longout, "$(P):TT$(ADR)-Prg:cLastStep-15") {
     field(OUT,"@asyn($(PORT),0x140f)MODBUS_DATA")
     field(LOPR,"0")
     field(HOPR,"15")
+    field(FLNK,"$(P):TT$(ADR):sWf-74")
 }
 
 record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-0") {
@@ -384,6 +400,7 @@ record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-0") {
     field(OUT,"@asyn($(PORT),0x1420)MODBUS_DATA")
     field(LOPR,"0")
     field(HOPR,"17")
+    field(FLNK,"$(P):TT$(ADR):sWf-77")
 }
 record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-1") {
     field(DESC,"Last step in pattern 0")
@@ -391,6 +408,7 @@ record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-1") {
     field(OUT,"@asyn($(PORT),0x1421)MODBUS_DATA")
     field(LOPR,"0")
     field(HOPR,"17")
+    field(FLNK,"$(P):TT$(ADR):sWf-77")
 }
 record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-2") {
     field(DESC,"Last step in pattern 0")
@@ -398,6 +416,7 @@ record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-2") {
     field(OUT,"@asyn($(PORT),0x1422)MODBUS_DATA")
     field(LOPR,"0")
     field(HOPR,"17")
+    field(FLNK,"$(P):TT$(ADR):sWf-77")
 }
 record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-3") {
     field(DESC,"Last step in pattern 0")
@@ -405,6 +424,7 @@ record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-3") {
     field(OUT,"@asyn($(PORT),0x1423)MODBUS_DATA")
     field(LOPR,"0")
     field(HOPR,"17")
+    field(FLNK,"$(P):TT$(ADR):sWf-77")
 }
 record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-4") {
     field(DESC,"Last step in pattern 0")
@@ -412,6 +432,7 @@ record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-4") {
     field(OUT,"@asyn($(PORT),0x1424)MODBUS_DATA")
     field(LOPR,"0")
     field(HOPR,"17")
+    field(FLNK,"$(P):TT$(ADR):sWf-77")
 }
 record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-5") {
     field(DESC,"Last step in pattern 0")
@@ -419,6 +440,7 @@ record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-5") {
     field(OUT,"@asyn($(PORT),0x1425)MODBUS_DATA")
     field(LOPR,"0")
     field(HOPR,"17")
+    field(FLNK,"$(P):TT$(ADR):sWf-77")
 }
 record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-6") {
     field(DESC,"Last step in pattern 0")
@@ -426,6 +448,7 @@ record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-6") {
     field(OUT,"@asyn($(PORT),0x1426)MODBUS_DATA")
     field(LOPR,"0")
     field(HOPR,"17")
+    field(FLNK,"$(P):TT$(ADR):sWf-77")
 }
 record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-7") {
     field(DESC,"Last step in pattern 0")
@@ -433,6 +456,7 @@ record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-7") {
     field(OUT,"@asyn($(PORT),0x1427)MODBUS_DATA")
     field(LOPR,"0")
     field(HOPR,"17")
+    field(FLNK,"$(P):TT$(ADR):sWf-77")
 }
 record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-8") {
     field(DESC,"Last step in pattern 0")
@@ -440,6 +464,7 @@ record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-8") {
     field(OUT,"@asyn($(PORT),0x1428)MODBUS_DATA")
     field(LOPR,"0")
     field(HOPR,"17")
+    field(FLNK,"$(P):TT$(ADR):sWf-78")
 }
 record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-9") {
     field(DESC,"Last step in pattern 0")
@@ -447,6 +472,7 @@ record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-9") {
     field(OUT,"@asyn($(PORT),0x1429)MODBUS_DATA")
     field(LOPR,"0")
     field(HOPR,"17")
+    field(FLNK,"$(P):TT$(ADR):sWf-78")
 }
 record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-10") {
     field(DESC,"Last step in pattern 0")
@@ -454,6 +480,7 @@ record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-10") {
     field(OUT,"@asyn($(PORT),0x142a)MODBUS_DATA")
     field(LOPR,"0")
     field(HOPR,"17")
+    field(FLNK,"$(P):TT$(ADR):sWf-78")
 }
 record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-11") {
     field(DESC,"Last step in pattern 0")
@@ -461,6 +488,7 @@ record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-11") {
     field(OUT,"@asyn($(PORT),0x142b)MODBUS_DATA")
     field(LOPR,"0")
     field(HOPR,"17")
+    field(FLNK,"$(P):TT$(ADR):sWf-78")
 }
 record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-12") {
     field(DESC,"Last step in pattern 0")
@@ -468,6 +496,7 @@ record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-12") {
     field(OUT,"@asyn($(PORT),0x142c)MODBUS_DATA")
     field(LOPR,"0")
     field(HOPR,"17")
+    field(FLNK,"$(P):TT$(ADR):sWf-78")
 }
 record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-13") {
     field(DESC,"Last step in pattern 0")
@@ -475,6 +504,7 @@ record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-13") {
     field(OUT,"@asyn($(PORT),0x142d)MODBUS_DATA")
     field(LOPR,"0")
     field(HOPR,"17")
+    field(FLNK,"$(P):TT$(ADR):sWf-78")
 }
 record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-14") {
     field(DESC,"Last step in pattern 0")
@@ -482,6 +512,7 @@ record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-14") {
     field(OUT,"@asyn($(PORT),0x142e)MODBUS_DATA")
     field(LOPR,"0")
     field(HOPR,"17")
+    field(FLNK,"$(P):TT$(ADR):sWf-78")
 }
 record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-15") {
     field(DESC,"Last step in pattern 0")
@@ -489,4 +520,5 @@ record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-15") {
     field(OUT,"@asyn($(PORT),0x142f)MODBUS_DATA")
     field(LOPR,"0")
     field(HOPR,"17")
+    field(FLNK,"$(P):TT$(ADR):sWf-78")
 }

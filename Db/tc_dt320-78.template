@@ -5,6 +5,22 @@ record(waveform, "$(P):TT$(ADR):sWf-78") {
     field(DTYP,"asynInt32ArrayIn")
     field(NELM,"8")
     field(FTVL,"LONG")
-    field(INP,"@asyn($(PORT),0,1000)INT16")
+    field(INP,"@asyn($(PORT),0x1428,1000)INT16")
     field(SCAN,"$(SCAN)")
+    field (FLNK, "$(P):TT$(ADR):sWf78-0")
+}
+record (subArray, "$(P):TT$(ADR):sWf78-0") {
+   field (DESC, "Chan 0 of $(P):TT$(ADR):sWf-78")
+   field (DTYP, "Soft Channel")
+   field (INP, "$(P):TT$(ADR):sWf-78")
+   field (FTVL, "LONG")
+   field (INDX, 0)
+   field (MALM, 8)
+   field (FLNK, "$(P):TT$(ADR)-Prg:sLinkPtrn-8")
+}
+
+record(longin, "$(P):TT$(ADR)-Prg:sLinkPtrn-8") {
+    field(DESC,"Next pattern in pattern 8")
+    field(DTYP,"Soft Channel")
+    field(INP,"$(P):TT$(ADR):sWf78-0")
 }
