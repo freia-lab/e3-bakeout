@@ -1,0 +1,18 @@
+# Records common for all channels
+record (fanout, "$(P):Ctrl-TT$(ADR):cmdUpdate") {
+    field (DESC,"Update all ro records")
+    field (LNK0, "$(P):TT$(ADR):sWf-1")
+    field (LNK1, "$(P):TT$(ADR):sWf-2")
+    field (LNK2, "$(P):TT$(ADR):sWf-3")
+    field (LNK3, "$(P):TT$(ADR):sWf-4")
+    field (LNK4, "$(P):TT$(ADR):sWf-5")
+    field (LNK5, "$(P):TT$(ADR):sWf-6")
+    field (LNK6, "$(P):TT$(ADR):sWf-8")
+    field (LNK7, "$(P):TT$(ADR):sWf-79")
+    field (LNK8, "$(P):TT$(ADR):sWf-80")
+    field (LNK9, "$(P):TT$(ADR):sWf-81")
+    field (LNKA, "$(P):TT$(ADR):sWf-82")
+    field (LNKB, "$(P):TT$(ADR):sWf-83")
+    field (LNKC, "$(P):TT$(ADR):sWf-84")
+    field (SELM, "All")
+}

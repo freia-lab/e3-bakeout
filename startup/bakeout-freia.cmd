@@ -30,21 +30,6 @@ drvModbusAsynConfigure(DT320_1-8, "IFD9506", 8, 3, 0x1000, 8, 4, 2000, "dt320")
 drvModbusAsynConfigure(DT320_1-9, "IFD9506", 9, 3, 0x1000, 8, 4, 2000, "dt320")
 drvModbusAsynConfigure(DT320_1-10,"IFD9506", 10,3, 0x1000, 8, 4, 2000, "dt320")
 
-drvModbusAsynConfigure(DT320_5-1, "IFD9506", 1, 3, 0x1020, 8, 0, 2000, "dt320")
-drvModbusAsynConfigure(DT320_5-2, "IFD9506", 2, 3, 0x1020, 8, 0, 10000, "dt320")
-drvModbusAsynConfigure(DT320_5-3, "IFD9506", 3, 3, 0x1020, 8, 0, 10000, "dt320")
-
-drvModbusAsynConfigure(DT320_6-1, "IFD9506", 1, 3, 0x1028, 8, 0, 2000, "dt320")
-drvModbusAsynConfigure(DT320_6-2, "IFD9506", 2, 3, 0x1028, 8, 0, 2000, "dt320")
-drvModbusAsynConfigure(DT320_6-3, "IFD9506", 3, 3, 0x1028, 8, 0, 2000, "dt320")
-drvModbusAsynConfigure(DT320_6-4, "IFD9506", 4, 3, 0x1028, 8, 0, 2000, "dt320")
-drvModbusAsynConfigure(DT320_6-5, "IFD9506", 5, 3, 0x1028, 8, 0, 2000, "dt320")
-drvModbusAsynConfigure(DT320_6-6, "IFD9506", 6, 3, 0x1028, 8, 0, 2000, "dt320")
-drvModbusAsynConfigure(DT320_6-7, "IFD9506", 7, 3, 0x1028, 8, 0, 2000, "dt320")
-drvModbusAsynConfigure(DT320_6-8, "IFD9506", 8, 3, 0x1028, 8, 0, 2000, "dt320")
-drvModbusAsynConfigure(DT320_6-9, "IFD9506", 9, 3, 0x1028, 8, 0, 2000, "dt320")
-drvModbusAsynConfigure(DT320_6-10,"IFD9506", 10,3, 0x1028, 8, 0, 2000, "dt320")
-
 drvModbusAsynConfigure(DT320_7-1, "IFD9506", 1, 3, 0x1030, 8, 0, 2000, "dt320")
 drvModbusAsynConfigure(DT320_7-2, "IFD9506", 2, 3, 0x1030, 8, 0, 2000, "dt320")
 drvModbusAsynConfigure(DT320_7-3, "IFD9506", 3, 3, 0x1030, 8, 0, 2000, "dt320")
@@ -55,45 +40,6 @@ drvModbusAsynConfigure(DT320_7-7, "IFD9506", 7, 3, 0x1030, 8, 0, 2000, "dt320")
 drvModbusAsynConfigure(DT320_7-8, "IFD9506", 8, 3, 0x1030, 8, 0, 2000, "dt320")
 drvModbusAsynConfigure(DT320_7-9, "IFD9506", 9, 3, 0x1030, 8, 0, 2000, "dt320")
 drvModbusAsynConfigure(DT320_7-10,"IFD9506", 10,3, 0x1030, 8, 0, 2000, "dt320")
-
-drvModbusAsynConfigure(DT320_8-1, "IFD9506", 1, 3, 0x1038, 8, 0, 2000, "dt320")
-drvModbusAsynConfigure(DT320_8-2, "IFD9506", 2, 3, 0x1038, 8, 0, 2000, "dt320")
-drvModbusAsynConfigure(DT320_8-3, "IFD9506", 3, 3, 0x1038, 8, 0, 2000, "dt320")
-
-drvModbusAsynConfigure(DT320_77-1, "IFD9506", 1, 3, 0x1420, 8, 0, 10000, "dt320")
-drvModbusAsynConfigure(DT320_77-2, "IFD9506", 2, 3, 0x1420, 8, 0, 10000, "dt320")
-drvModbusAsynConfigure(DT320_77-3, "IFD9506", 3, 3, 0x1420, 8, 0, 10000, "dt320")
-drvModbusAsynConfigure(DT320_77-4, "IFD9506", 4, 3, 0x1420, 8, 0, 10000, "dt320")
-drvModbusAsynConfigure(DT320_77-5, "IFD9506", 5, 3, 0x1420, 8, 0, 10000, "dt320")
-drvModbusAsynConfigure(DT320_77-6, "IFD9506", 6, 3, 0x1420, 8, 0, 10000, "dt320")
-drvModbusAsynConfigure(DT320_77-7, "IFD9506", 7, 3, 0x1420, 8, 0, 10000, "dt320")
-drvModbusAsynConfigure(DT320_77-8, "IFD9506", 8, 3, 0x1420, 8, 0, 10000, "dt320")
-drvModbusAsynConfigure(DT320_77-9, "IFD9506", 9, 3, 0x1420, 8, 0, 10000, "dt320")
-drvModbusAsynConfigure(DT320_77-10,"IFD9506", 10,3, 0x1420, 8, 0, 10000, "dt320")
-
-drvModbusAsynConfigure(DT320_79-1, "IFD9506", 1, 3, 0x1100, 8, 0, 10000, "dt320")
-drvModbusAsynConfigure(DT320_79-2, "IFD9506", 2, 3, 0x1100, 8, 0, 10000, "dt320")
-drvModbusAsynConfigure(DT320_79-3, "IFD9506", 3, 3, 0x1100, 8, 0, 10000, "dt320")
-
-drvModbusAsynConfigure(DT320_80-1, "IFD9506", 1, 3, 0x1108, 8, 0, 10000, "dt320")
-drvModbusAsynConfigure(DT320_80-2, "IFD9506", 2, 3, 0x1108, 8, 0, 10000, "dt320")
-drvModbusAsynConfigure(DT320_80-3, "IFD9506", 3, 3, 0x1108, 8, 0, 10000, "dt320")
-
-drvModbusAsynConfigure(DT320_81-1, "IFD9506", 1, 3, 0x1110, 8, 0, 10000, "dt320")
-drvModbusAsynConfigure(DT320_81-2, "IFD9506", 2, 3, 0x1110, 8, 0, 10000, "dt320")
-drvModbusAsynConfigure(DT320_81-3, "IFD9506", 3, 3, 0x1110, 8, 0, 10000, "dt320")
-
-drvModbusAsynConfigure(DT320_82-1, "IFD9506", 1, 3, 0x1118, 8, 0, 10000, "dt320")
-drvModbusAsynConfigure(DT320_82-2, "IFD9506", 2, 3, 0x1118, 8, 0, 10000, "dt320")
-drvModbusAsynConfigure(DT320_82-3, "IFD9506", 3, 3, 0x1118, 8, 0, 10000, "dt320")
-
-drvModbusAsynConfigure(DT320_83-1, "IFD9506", 1, 3, 0x1120, 8, 0, 10000, "dt320")
-drvModbusAsynConfigure(DT320_83-2, "IFD9506", 2, 3, 0x1120, 8, 0, 10000, "dt320")
-drvModbusAsynConfigure(DT320_83-3, "IFD9506", 3, 3, 0x1120, 8, 0, 10000, "dt320")
-
-drvModbusAsynConfigure(DT320_84-1, "IFD9506", 1, 3, 0x1128, 8, 0, 10000, "dt320")
-drvModbusAsynConfigure(DT320_84-2, "IFD9506", 2, 3, 0x1128, 8, 0, 10000, "dt320")
-drvModbusAsynConfigure(DT320_84-3, "IFD9506", 3, 3, 0x1128, 8, 0, 10000, "dt320")
 
 drvModbusAsynConfigure(DT320_1R-1, "IFD9506", 1, 3, -1, 1, 4, 2000, "dt320")
 drvModbusAsynConfigure(DT320_1R-2, "IFD9506", 2, 3, -1, 1, 4, 2000, "dt320")
@@ -146,3 +92,19 @@ asynSetTraceMask "IFD9506",0,1     # Enable traceError
 dbLoadRecords("asynRecord.db","P='$(DT320_PREFIX)',R=:asynRec,PORT='IFD9506',ADDR='0',IMAX='64',OMAX='64'")
 
 dbLoadRecords("bakeout-freia.db", "DT320_PREFIX=$(DT320_PREFIX)")
+
+iocInit
+
+
+# Read current settings
+#
+dbpf $(DT320_PREFIX):Ctrl-TT01:cmdUpdate.PROC 1
+dbpf $(DT320_PREFIX):Ctrl-TT02:cmdUpdate.PROC 1
+dbpf $(DT320_PREFIX):Ctrl-TT03:cmdUpdate.PROC 1
+dbpf $(DT320_PREFIX):Ctrl-TT04:cmdUpdate.PROC 1
+dbpf $(DT320_PREFIX):Ctrl-TT05:cmdUpdate.PROC 1
+dbpf $(DT320_PREFIX):Ctrl-TT06:cmdUpdate.PROC 1
+dbpf $(DT320_PREFIX):Ctrl-TT07:cmdUpdate.PROC 1
+dbpf $(DT320_PREFIX):Ctrl-TT08:cmdUpdate.PROC 1
+dbpf $(DT320_PREFIX):Ctrl-TT09:cmdUpdate.PROC 1
+dbpf $(DT320_PREFIX):Ctrl-TT10:cmdUpdate.PROC 1

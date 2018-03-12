@@ -5,71 +5,7 @@ record(waveform, "$(P):TT$(ADR):sWf-6") {
     field(DTYP,"asynInt32ArrayIn")
     field(NELM,"8")
     field(FTVL,"LONG")
-    field(INP,"@asyn($(PORT),0,1000)INT16")
+    field(INP,"@asyn($(PORT),0x1028,1000)INT16")
     field(SCAN,"$(SCAN)")
 }
 
-record(longin, "$(P):TT$(ADR):sLEDs") {
-    field(DESC,"LED status lamps")
-    field(DTYP,"asynInt32")
-    field(INP,"@asyn($(PORT),2,0)MODBUS_DATA")
-    field(SCAN,"$(SCAN)")
-}
-
-record(bi, "$(P):TT$(ADR):sOut1-LED") {
-    field(DESC,"Output 1")
-    field(DTYP,"asynUInt32Digital")
-    field(INP,"@asynMask($(PORT),2,64,1000)")
-    field(SCAN,"$(SCAN)")
-    field(ZNAM, "Off")
-    field(ONAM, "On")
-#    field(MASK, "0x40")
-}
-record(bi, "$(P):TT$(ADR):sAutoTune-LED") {
-    field(DESC,"Auto Tune")
-    field(DTYP,"asynUInt32Digital")
-    field(INP,"@asynMask($(PORT) 2 0x80 1000)")
-    field(SCAN,"$(SCAN)")
-    field(ZNAM, "Off")
-    field(ONAM, "On")
-    field(MASK, "0x80")
-}
-record(bi, "$(P):TT$(ADR):sALRM1-LED") {
-    field(DESC,"Alarm 1")
-    field(DTYP,"asynUInt32Digital")
-    field(INP,"@asynMask($(PORT) 2 0x10 1000)")
-    field(SCAN,"$(SCAN)")
-    field(ZNAM, "Off")
-    field(ONAM, "On")
-    field(MASK, "0x10")
-}
-record(bi, "$(P):TT$(ADR):sALRM2-LED") {
-    field(DESC,"Alarm 2")
-    field(DTYP,"asynUInt32Digital")
-    field(INP,"@asynMask($(PORT) 2 0x02 1000)")
-    field(SCAN,"$(SCAN)")
-    field(ZNAM, "Off")
-    field(ONAM, "On")
-    field(MASK, "0x02")
-}
-record(bi, "$(P):TT$(ADR):sALRM3-LED") {
-    field(DESC,"Alarm 3")
-    field(DTYP,"asynUInt32Digital")
-    field(INP,"@asynMask($(PORT) 2 0x01 1000)")
-    field(SCAN,"$(SCAN)")
-    field(ZNAM, "Off")
-    field(ONAM, "On")
-    field(MASK, "0x01")
-}
-record(mbbi, "$(P):TT$(ADR):sEGU-LED") {
-    field(DESC,"Temperature units")
-    field(DTYP,"asynUInt32Digital")
-    field(INP,"@asynMask($(PORT) 2 0x0c 1000)")
-    field(SHFT, 2)
-    field(MASK, "0x0f")
-    field(SCAN,"$(SCAN)")
-    field(ZRVL, "1")
-    field(ONVL, "2")
-    field(ZRST, "°C")
-    field(ONST, "°F")
-}

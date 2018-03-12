@@ -120,6 +120,7 @@ record(ao, "$(P):TT$(ADR):cSlope-Man") {
     field(MDEL,"0.1")
     field(LINR,"SLOPE")
     field (ASLO, "0.1")
+    field (FLNK, "$(P):TT$(ADR):sWf-79")
 }
 
 record(ao, "$(P):TT$(ADR)-Prg:cSlope") {
@@ -133,6 +134,7 @@ record(ao, "$(P):TT$(ADR)-Prg:cSlope") {
     field(MDEL,"0.1")
     field(LINR,"SLOPE")
     field (ASLO, "0.1")
+    field (FLNK, "$(P):TT$(ADR):sWf-81")
 }
 
 
@@ -231,6 +233,7 @@ record (mbbo, "$(P):TT$(ADR):cSVMode") {
     field(THVL, "3")
     field(THST, "Remote")
     field(NOBT, "16")
+    field (FLNK, "$(P):TT$(ADR):sWf-83")
 }
 
 record (mbbo, "$(P):TT$(ADR):cSlopeUnit") {
@@ -242,6 +245,7 @@ record (mbbo, "$(P):TT$(ADR):cSlopeUnit") {
     field(ONVL, "1")
     field(ONST, "s")
     field(NOBT, "16")
+    field (FLNK, "$(P):TT$(ADR):sWf-83")
 }
 
 record(longout, "$(P):TT$(ADR)-Prg:cStartStep") {

@@ -1,10 +1,10 @@
 # Record template for DT320 temperature controller
 #ai record template for register inputs
 record(waveform, "$(P):TT$(ADR):sWf-82") {
-    field(DESC,"Data from pport DT320_82")
+    field(DESC,"Data from port DT320_82")
     field(DTYP,"asynInt32ArrayIn")
     field(NELM,"8")
     field(FTVL,"LONG")
-    field(INP,"@asyn($(PORT),0,1000)INT16")
+    field(INP,"@asyn($(PORT),0x1118,1000)INT16")
     field(SCAN,"$(SCAN)")
 }
