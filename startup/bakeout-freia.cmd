@@ -19,17 +19,6 @@ modbusInterposeConfig("IFD9506",1,2000,4)
 #                       pollMsec, 
 #                       plcType);
 
-drvModbusAsynConfigure(DT320_1-1, "IFD9506", 1, 3, 0x1000, 8, 4, 2000, "dt320")
-drvModbusAsynConfigure(DT320_1-2, "IFD9506", 2, 3, 0x1000, 8, 4, 2000, "dt320")
-drvModbusAsynConfigure(DT320_1-3, "IFD9506", 3, 3, 0x1000, 8, 4, 2000, "dt320")
-drvModbusAsynConfigure(DT320_1-4, "IFD9506", 4, 3, 0x1000, 8, 4, 2000, "dt320")
-drvModbusAsynConfigure(DT320_1-5, "IFD9506", 5, 3, 0x1000, 8, 4, 2000, "dt320")
-drvModbusAsynConfigure(DT320_1-6, "IFD9506", 6, 3, 0x1000, 8, 4, 2000, "dt320")
-drvModbusAsynConfigure(DT320_1-7, "IFD9506", 7, 3, 0x1000, 8, 4, 2000, "dt320")
-drvModbusAsynConfigure(DT320_1-8, "IFD9506", 8, 3, 0x1000, 8, 4, 2000, "dt320")
-drvModbusAsynConfigure(DT320_1-9, "IFD9506", 9, 3, 0x1000, 8, 4, 2000, "dt320")
-drvModbusAsynConfigure(DT320_1-10,"IFD9506", 10,3, 0x1000, 8, 4, 2000, "dt320")
-
 drvModbusAsynConfigure(DT320_7-1, "IFD9506", 1, 3, 0x1030, 8, 0, 2000, "dt320")
 drvModbusAsynConfigure(DT320_7-2, "IFD9506", 2, 3, 0x1030, 8, 0, 2000, "dt320")
 drvModbusAsynConfigure(DT320_7-3, "IFD9506", 3, 3, 0x1030, 8, 0, 2000, "dt320")
@@ -108,3 +97,14 @@ dbpf $(DT320_PREFIX):Ctrl-TT07:cmdUpdate.PROC 1
 dbpf $(DT320_PREFIX):Ctrl-TT08:cmdUpdate.PROC 1
 dbpf $(DT320_PREFIX):Ctrl-TT09:cmdUpdate.PROC 1
 dbpf $(DT320_PREFIX):Ctrl-TT10:cmdUpdate.PROC 1
+
+dbpf $(DT320_PREFIX):TT01-Prg:cmdUpdate.PROC 1
+dbpf $(DT320_PREFIX):TT02-Prg:cmdUpdate.PROC 1
+dbpf $(DT320_PREFIX):TT03-Prg:cmdUpdate.PROC 1
+dbpf $(DT320_PREFIX):TT04-Prg:cmdUpdate.PROC 1
+dbpf $(DT320_PREFIX):TT05-Prg:cmdUpdate.PROC 1
+dbpf $(DT320_PREFIX):TT06-Prg:cmdUpdate.PROC 1
+dbpf $(DT320_PREFIX):TT07-Prg:cmdUpdate.PROC 1
+dbpf $(DT320_PREFIX):TT08-Prg:cmdUpdate.PROC 1
+dbpf $(DT320_PREFIX):TT09-Prg:cmdUpdate.PROC 1
+dbpf $(DT320_PREFIX):TT10-Prg:cmdUpdate.PROC 1

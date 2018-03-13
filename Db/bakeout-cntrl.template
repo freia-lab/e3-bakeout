@@ -16,3 +16,52 @@ record (fanout, "$(P):Ctrl-TT$(ADR):cmdUpdate") {
     field (LNKC, "$(P):TT$(ADR):sWf-84")
     field (SELM, "All")
 }
+
+record (fanout, "$(P):TT$(ADR)-Prg:cmdUpdate-1") {
+    field (DESC,"Update patterns 0-3")
+    field (LNK0, "$(P):TT$(ADR)-Prg:sPattern-0a")
+    field (LNK1, "$(P):TT$(ADR)-Prg:sPattern-0b")
+#    field (LNK2, "$(P):TT$(ADR)-Prg:sPattern-0c")
+#    field (LNK3, "$(P):TT$(ADR)-Prg:sPattern-0d")
+#    field (LNK4, "$(P):TT$(ADR)-Prg:sPattern-1a")
+#    field (LNK5, "$(P):TT$(ADR)-Prg:sPattern-1b")
+#    field (LNK6, "$(P):TT$(ADR)-Prg:sPattern-1c")
+#    field (LNK7, "$(P):TT$(ADR)-Prg:sPattern-1d")
+#    field (LNK8, "$(P):TT$(ADR)-Prg:sPattern-2a")
+#    field (LNK9, "$(P):TT$(ADR)-Prg:sPattern-2b")
+#    field (LNKA, "$(P):TT$(ADR)-Prg:sPattern-2c")
+#    field (LNKB, "$(P):TT$(ADR)-Prg:sPattern-2d")
+#    field (LNKC, "$(P):TT$(ADR)-Prg:sPattern-3a")
+#    field (LNKD, "$(P):TT$(ADR)-Prg:sPattern-3b")
+#    field (LNKE, "$(P):TT$(ADR)-Prg:sPattern-3c")
+#    field (LNKF, "$(P):TT$(ADR)-Prg:sPattern-3d")
+    field (SELM, "All")
+}
+
+record (fanout, "$(P):TT$(ADR)-Prg:cmdUpdate-2") {
+    field (DESC,"Update patterns 4-7")
+    field (SELM, "All")
+}
+record (fanout, "$(P):TT$(ADR)-Prg:cmdUpdate-3") {
+    field (DESC,"Update patterns 8-11")
+    field (SELM, "All")
+}
+record (fanout, "$(P):TT$(ADR)-Prg:cmdUpdate-4") {
+    field (DESC,"Update patterns 12-15")
+    field (SELM, "All")
+}
+
+record (fanout, "$(P):TT$(ADR)-Prg:cmdUpdate") {
+    field (DESC,"Update all ro records")
+    field (LNK0, "$(P):TT$(ADR):sWf-73")
+    field (LNK1, "$(P):TT$(ADR):sWf-74")
+    field (LNK2, "$(P):TT$(ADR):sWf-75")
+    field (LNK3, "$(P):TT$(ADR):sWf-76")
+    field (LNK4, "$(P):TT$(ADR):sWf-77")
+    field (LNK5, "$(P):TT$(ADR):sWf-78")
+    field (LNK6, "$(P):TT$(ADR)-Prg:cmdUpdate-1")
+    field (LNK7, "$(P):TT$(ADR)-Prg:cmdUpdate-2")
+    field (LNK8, "$(P):TT$(ADR)-Prg:cmdUpdate-3")
+    field (LNK9, "$(P):TT$(ADR)-Prg:cmdUpdate-4")
+    field (SELM, "All")
+}

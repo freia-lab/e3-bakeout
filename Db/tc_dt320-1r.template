@@ -19,66 +19,81 @@ record(ai, "$(P):TT$(ADR):sRdV") {
 record(longin, "$(P):TT$(ADR):sLEDs") {
     field(DESC,"LED status lamps")
     field(DTYP,"asynInt32")
-    field(INP,"@asyn($(PORT),0x102a,0)MODBUS_DATA")
+    field(INP,"@asyn($(PORT),0x102a,0)UINT16")
     field(SCAN,"$(SCAN)")
     field(FLNK,"$(P):TT$(ADR):sOut1-LED")
 }
-record(bi, "$(P):TT$(ADR):sOut1-LED") {
+record(mbbi, "$(P):TT$(ADR):sOut1-LED") {
     field(DESC,"Output 1")
     field(DTYP,"Raw Soft Channel")
     field(INP,"$(P):TT$(ADR):sLEDs")
-    field(ZNAM, "Off")
-    field(ONAM, "On")
     field(MASK, "0x40")
+    field(ZRVL, "0")
+    field(ONVL, "0x40")
+    field(ZRST, "Off")
+    field(ONST, "On")
+    field(NOBT, "16")
     field(FLNK,"$(P):TT$(ADR):sAutoTune-LED")
 }
-record(bi, "$(P):TT$(ADR):sAutoTune-LED") {
+record(mbbi, "$(P):TT$(ADR):sAutoTune-LED") {
     field(DESC,"Auto Tune")
     field(DTYP,"Raw Soft Channel")
     field(INP,"$(P):TT$(ADR):sLEDs")
-    field(ZNAM, "Off")
-    field(ONAM, "On")
     field(MASK, "0x80")
+    field(ZRVL, "0")
+    field(ONVL, "0x80")
+    field(ZRST, "Off")
+    field(ONST, "On")
+    field(NOBT, "16")
     field(FLNK,"$(P):TT$(ADR):sALRM1-LED")
 }
-record(bi, "$(P):TT$(ADR):sALRM1-LED") {
+record(mbbi, "$(P):TT$(ADR):sALRM1-LED") {
     field(DESC,"Alarm 1")
     field(DTYP,"Raw Soft Channel")
     field(INP,"$(P):TT$(ADR):sLEDs")
-    field(ZNAM, "Off")
-    field(ONAM, "On")
     field(MASK, "0x10")
+    field(ZRVL, "0")
+    field(ONVL, "0x10")
+    field(ZRST, "Off")
+    field(ONST, "On")
+    field(NOBT, "16")
     field(FLNK,"$(P):TT$(ADR):sALRM2-LED")
 }
-record(bi, "$(P):TT$(ADR):sALRM2-LED") {
+record(mbbi, "$(P):TT$(ADR):sALRM2-LED") {
     field(DESC,"Alarm 2")
     field(DTYP,"Raw Soft Channel")
     field(INP,"$(P):TT$(ADR):sLEDs")
-    field(ZNAM, "Off")
-    field(ONAM, "On")
     field(MASK, "0x02")
+    field(ZRVL, "0")
+    field(ONVL, "0x02")
+    field(ZRST, "Off")
+    field(ONST, "On")
+    field(NOBT, "16")
     field(FLNK,"$(P):TT$(ADR):sALRM3-LED")
 }
-record(bi, "$(P):TT$(ADR):sALRM3-LED") {
+record(mbbi, "$(P):TT$(ADR):sALRM3-LED") {
     field(DESC,"Alarm 3")
     field(DTYP,"Raw Soft Channel")
     field(INP,"$(P):TT$(ADR):sLEDs")
-    field(ZNAM, "Off")
-    field(ONAM, "On")
     field(MASK, "0x01")
+    field(ZRVL, "0")
+    field(ONVL, "1")
+    field(ZRST, "Off")
+    field(ONST, "On")
+    field(NOBT, "16")
     field(FLNK,"$(P):TT$(ADR):sEGU-LED")
 }
 record(mbbi, "$(P):TT$(ADR):sEGU-LED") {
     field(DESC,"Temperature units")
     field(DTYP,"Raw Soft Channel")
     field(INP,"$(P):TT$(ADR):sLEDs")
-    field(SHFT, 2)
     field(MASK, "0x0c")
     field(SCAN,"$(SCAN)")
-    field(ZRVL, "1")
-    field(ONVL, "2")
+    field(ZRVL, "4")
+    field(ONVL, "8")
     field(ZRST, "°C")
     field(ONST, "°F")
+    field(NOBT, "16")
 }
 
 record (mbbi, "$(P):TT$(ADR):sRunMode") {
@@ -96,13 +111,3 @@ record (mbbi, "$(P):TT$(ADR):sRunMode") {
     field(NOBT, "16")
     field(SCAN,"$(SCAN)")
 }
-
-#record(bi, "$(P):TT$(ADR):sOut1") {
-#    field(DESC,"Output 1")
-#    field(DTYP,"asynInt32")
-#    field(INP,"@asyn($(PORT) 0x102a -16)MODBUS_DATA")
-#    field(SCAN,"$(SCAN)")
-#    field(ZNAM, "Off")
-#    field(ONAM, "On")
-#    field(MASK, "0x40")
-#}

@@ -5,14 +5,25 @@ record(waveform, "$(P):TT$(ADR):sWf-1") {
     field(DTYP,"asynInt32ArrayIn")
     field(NELM,"8")
     field(FTVL,"LONG")
-    field(INP,"@asyn($(PORT),0,1000)INT16")
+    field(INP,"@asyn($(PORT),0x1000,1000)INT16")
     field(SCAN,"$(SCAN)")
+   field (FLNK, "$(P):TT$(ADR):sWf1-1")
+}
+
+record (subArray, "$(P):TT$(ADR):sWf1-1") {
+   field (DESC, "Chan 1 of $(P):TT$(ADR):sWf-1")
+   field (DTYP, "Soft Channel")
+   field (INP, "$(P):TT$(ADR):sWf-1")
+   field (FTVL, "LONG")
+   field (INDX, 1)
+   field (MALM, 8)
+   field (FLNK, "$(P):TT$(ADR):sSP")
 }
 
 record(ai, "$(P):TT$(ADR):sSP") {
     field(DESC,"Set point")
-    field(DTYP,"asynInt32")
-    field(INP,"@asyn($(PORT) 1 -16)MODBUS_DATA")
+    field(DTYP,"Raw Soft Channel")
+    field(INP,"$(P):TT$(ADR):sWf1-1")
     field(EGU,"°C")
     field(HOPR,"500.0")
     field(LOPR,"-70.0")
@@ -21,12 +32,21 @@ record(ai, "$(P):TT$(ADR):sSP") {
     field(MDEL,"0.1")
     field(LINR,"SLOPE")
     field (ASLO, "0.1")
-    field(SCAN,"$(SCAN)")
+    field (FLNK, "$(P):TT$(ADR):sWf1-2")
+}
+record (subArray, "$(P):TT$(ADR):sWf1-2") {
+   field (DESC, "Chan 2 of $(P):TT$(ADR):sWf-1")
+   field (DTYP, "Soft Channel")
+   field (INP, "$(P):TT$(ADR):sWf-1")
+   field (FTVL, "LONG")
+   field (INDX, 2)
+   field (MALM, 8)
+   field (FLNK, "$(P):TT$(ADR):sRangeHi")
 }
 record(ai, "$(P):TT$(ADR):sRangeHi") {
     field(DESC,"Upper limit of temo. range")
-    field(DTYP,"asynInt32")
-    field(INP,"@asyn($(PORT) 2 -16)MODBUS_DATA")
+    field(DTYP,"Raw Soft Channel")
+    field(INP,"$(P):TT$(ADR):sWf1-2")
     field(EGU,"°C")
     field(HOPR,"2000")
     field(LOPR,"0")
@@ -35,12 +55,21 @@ record(ai, "$(P):TT$(ADR):sRangeHi") {
     field(MDEL,"0.1")
     field(LINR,"SLOPE")
     field (ASLO, "0.1")
-    field(SCAN,"$(SCAN)")
+    field (FLNK, "$(P):TT$(ADR):sWf1-3")
+}
+record (subArray, "$(P):TT$(ADR):sWf1-3") {
+   field (DESC, "Chan 3 of $(P):TT$(ADR):sWf-1")
+   field (DTYP, "Soft Channel")
+   field (INP, "$(P):TT$(ADR):sWf-1")
+   field (FTVL, "LONG")
+   field (INDX, 3)
+   field (MALM, 8)
+   field (FLNK, "$(P):TT$(ADR):sRangeLo")
 }
 record(ai, "$(P):TT$(ADR):sRangeLo") {
     field(DESC,"Lower limit of temo. range")
-    field(DTYP,"asynInt32")
-    field(INP,"@asyn($(PORT) 3 -16)MODBUS_DATA")
+    field(DTYP,"Raw Soft Channel")
+    field(INP,"$(P):TT$(ADR):sWf1-3")
     field(EGU,"°C")
     field(HOPR,"0")
     field(LOPR,"-500")
@@ -50,12 +79,22 @@ record(ai, "$(P):TT$(ADR):sRangeLo") {
     field(LINR,"SLOPE")
     field (ASLO, "0.1")
     field(SCAN,"$(SCAN)")
+    field (FLNK, "$(P):TT$(ADR):sWf1-4")
 }
 
+record (subArray, "$(P):TT$(ADR):sWf1-4") {
+   field (DESC, "Chan 4 of $(P):TT$(ADR):sWf-1")
+   field (DTYP, "Soft Channel")
+   field (INP, "$(P):TT$(ADR):sWf-1")
+   field (FTVL, "LONG")
+   field (INDX, 4)
+   field (MALM, 8)
+   field (FLNK, "$(P):TT$(ADR):sSensorType")
+}
 record (mbbi, "$(P):TT$(ADR):sSensorType") {
     field(DESC,"Sensor type readback")
-    field(DTYP,"asynInt32")
-    field(INP,"@asyn($(PORT) 4 -16)MODBUS_DATA")
+    field(DTYP,"Raw Soft Channel")
+    field(INP,"$(P):TT$(ADR):sWf1-4")
     field(ZRVL, "0")
     field(ZRST, "Thermocouple K")
     field(ONVL, "1")
@@ -87,13 +126,22 @@ record (mbbi, "$(P):TT$(ADR):sSensorType") {
     field(FTVL, "14")
     field(FTST, "Cu50")
     field(NOBT, "16")
-    field(SCAN,"$(SCAN)")
+    field (FLNK, "$(P):TT$(ADR):sWf1-5")
 }
 
+record (subArray, "$(P):TT$(ADR):sWf1-5") {
+   field (DESC, "Chan 5 of $(P):TT$(ADR):sWf-1")
+   field (DTYP, "Soft Channel")
+   field (INP, "$(P):TT$(ADR):sWf-1")
+   field (FTVL, "LONG")
+   field (INDX, 5)
+   field (MALM, 8)
+   field (FLNK, "$(P):TT$(ADR):sCntrlMode")
+}
 record (mbbi, "$(P):TT$(ADR):sCntrlMode") {
     field(DESC,"Control mode readback")
-    field(DTYP,"asynInt32")
-    field(INP,"@asyn($(PORT) 5 -16)MODBUS_DATA")
+    field(DTYP,"Raw Soft Channel")
+    field(INP,"$(P):TT$(ADR):sWf1-5")
     field(ZRVL, "0")
     field(ZRST, "PID")
     field(ONVL, "1")
@@ -103,13 +151,22 @@ record (mbbi, "$(P):TT$(ADR):sCntrlMode") {
     field(THVL, "3")
     field(THST, "Fuzzy")
     field(NOBT, "16")
-    field(SCAN,"$(SCAN)")
+    field (FLNK, "$(P):TT$(ADR):sWf1-7")
 }
 
+record (subArray, "$(P):TT$(ADR):sWf1-7") {
+   field (DESC, "Chan 7 of $(P):TT$(ADR):sWf-1")
+   field (DTYP, "Soft Channel")
+   field (INP, "$(P):TT$(ADR):sWf-1")
+   field (FTVL, "LONG")
+   field (INDX, 7)
+   field (MALM, 8)
+   field (FLNK, "$(P):TT$(ADR):sOut1-Period")
+}
 record(ai, "$(P):TT$(ADR):sOut1-Period") {
     field(DESC,"Out 1 control period in manual mode")
-    field(DTYP,"asynInt32")
-    field(INP,"@asyn($(PORT) 7 -16)MODBUS_DATA")
+    field(DTYP,"Raw Soft Channel")
+    field(INP,"$(P):TT$(ADR):sWf1-7")
     field(EGU,"s")
     field(HOPR,"990.0")
     field(LOPR,"1.0")
@@ -118,5 +175,4 @@ record(ai, "$(P):TT$(ADR):sOut1-Period") {
     field(MDEL,"0.1")
     field(LINR,"SLOPE")
     field (ASLO, "0.1")
-    field(SCAN,"$(SCAN)")
 }

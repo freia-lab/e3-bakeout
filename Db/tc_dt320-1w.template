@@ -12,6 +12,7 @@ record(ao, "$(P):TT$(ADR):cSP") {
     field(MDEL,"0.1")
     field(LINR,"SLOPE")
     field (ASLO, "0.1")
+    field (FLNK, "$(P):TT$(ADR):sWf-1")
 }
 
 record (mbbo, "$(P):TT$(ADR):cSensorType") {
@@ -49,6 +50,7 @@ record (mbbo, "$(P):TT$(ADR):cSensorType") {
     field(FTVL, "14")
     field(FTST, "Cu50")
     field(NOBT, "16")
+    field (FLNK, "$(P):TT$(ADR):sWf-1")
 }
 
 record (mbbo, "$(P):TT$(ADR):cCntrlMode") {
@@ -64,6 +66,7 @@ record (mbbo, "$(P):TT$(ADR):cCntrlMode") {
     field(THVL, "3")
     field(THST, "Fuzzy")
     field(NOBT, "16")
+    field (FLNK, "$(P):TT$(ADR):sWf-1")
 }
 
 record(ao, "$(P):TT$(ADR):cOut1-Period") {
@@ -77,7 +80,8 @@ record(ao, "$(P):TT$(ADR):cOut1-Period") {
     field(ADEL,"0.1")
     field(MDEL,"0.1")
     field(LINR,"SLOPE")
-    field (ASLO, "10.0")
+    field (ASLO, "0.1")
+    field (FLNK, "$(P):TT$(ADR):sWf-1")
 }
 
 record(ao, "$(P):TT$(ADR):cOut1-Hyst") {
@@ -86,6 +90,7 @@ record(ao, "$(P):TT$(ADR):cOut1-Hyst") {
     field(OUT,"@asyn($(PORT) 0x1010 -16)MODBUS_DATA")
     field(HOPR,"999.9")
     field(LOPR,"-99.9")
+    field(EGU,"°C")
     field(PREC,"1")
     field(ADEL,"0.1")
     field(MDEL,"0.1")
@@ -135,21 +140,6 @@ record(ao, "$(P):TT$(ADR)-Prg:cSlope") {
     field(LINR,"SLOPE")
     field (ASLO, "0.1")
     field (FLNK, "$(P):TT$(ADR):sWf-81")
-}
-
-
-record(ao, "$(P):TT$(ADR):cOut1-Period") {
-    field(DESC,"Out 1 control period in manual mode")
-    field(DTYP,"asynInt32")
-    field(OUT,"@asyn($(PORT) 0x1007 -16)MODBUS_DATA")
-    field(EGU,"s")
-    field(HOPR,"990.0")
-    field(LOPR,"1.0")
-    field(PREC,"1")
-    field(ADEL,"0.1")
-    field(MDEL,"0.1")
-    field(LINR,"SLOPE")
-    field (ASLO, "0.1")
 }
 
 record(ao, "$(P):TT$(ADR)-PID:cPB") {
@@ -203,6 +193,7 @@ record (mbbo, "$(P):TT$(ADR):cAutoTune") {
     field(ONVL, "1")
     field(ONST, "On")
     field(NOBT, "16")
+    field (FLNK, "$(P):TT$(ADR):sWf-8")
 }
 
 record (mbbo, "$(P):TT$(ADR):cRunMode") {

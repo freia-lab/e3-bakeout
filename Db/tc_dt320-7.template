@@ -9,16 +9,6 @@ record(waveform, "$(P):TT$(ADR):sWf-7") {
     field(SCAN,"$(SCAN)")
 }
 
-record(bi, "$(P):TT$(ADR)-Prg:sRunning") {
-    field(DESC,"Program running")
-    field(DTYP,"asynInt32")
-    field(INP,"@asyn($(PORT),3,1000)MODBUS_DATA")
-    field(SCAN,"$(SCAN)")
-    field(ZNAM, "Off")
-    field(ONAM, "On")
-#    field(MASK, "0x40")
-}
-
 record(longin, "$(P):TT$(ADR)-Prg:sStartPtrn") {
     field(DESC,"Start pattern # in program")
     field(DTYP,"asynInt32")
@@ -47,6 +37,15 @@ record(longin, "$(P):TT$(ADR)-Prg:sStep") {
     field(DTYP,"asynInt32")
     field(INP,"@asyn($(PORT),4,0)MODBUS_DATA")
     field(SCAN,"$(SCAN)")
+    field(FLNK,"$(P):TT$(ADR)-Prg:sStep-calc")
+}
+
+record(calcout, "$(P):TT$(ADR)-Prg:sStep-calc") {
+    field(DESC,"Current step in pattern")
+    field(INPA, "$(P):TT$(ADR)-Prg:sStep")
+    field(CALC,"A")
+    field(OOPT, "On Change")
+    field(OUT,"$(P):TT$(ADR):sWf-1.PROC")
 }
 
 record(longin, "$(P):TT$(ADR)-Prg:sPattern") {
