@@ -1,4 +1,4 @@
 To start the module on your local DM go to directory above modules 
 directory and start the IOC with the following command:
 
-rm require.lock-*; iocsh -r bakeout-freia,local -c 'requireSnippet(bakeout-freia.cmd, "IP_ADDR=192.168.1.104:2020, DT320PREFIX=xxx")'
+rm require.lock-*; iocsh -r ioc-bakeout-freia,local -c 'requireSnippet(bakeout-freia.cmd, "IP_ADDR=192.168.1.104:2020, DT320PREFIX=xxx")'
