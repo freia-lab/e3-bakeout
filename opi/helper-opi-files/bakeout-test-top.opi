@@ -10,7 +10,7 @@
   <background_color>
     <color red="240" green="240" blue="240" />
   </background_color>
-  <boy_version>5.1.0</boy_version>
+  <boy_version>5.1.0.201710241501</boy_version>
   <foreground_color>
     <color red="192" green="192" blue="192" />
   </foreground_color>
@@ -18,8 +18,8 @@
   <height>900</height>
   <macros>
     <include_parent_macros>true</include_parent_macros>
-    <P></P>
-    <R>:asynRec</R>
+    <P>Ctrl-Bake</P>
+    <R>Ctrl-Bake:asynRec</R>
   </macros>
   <name></name>
   <rules />
@@ -113,7 +113,7 @@
       <foreground_color>
         <color red="192" green="192" blue="192" />
       </foreground_color>
-      <height>821</height>
+      <height>819</height>
       <lock_children>false</lock_children>
       <macros>
         <include_parent_macros>true</include_parent_macros>
@@ -5549,7 +5549,7 @@ $(pv_value)</tooltip>
       <foreground_color>
         <color red="192" green="192" blue="192" />
       </foreground_color>
-      <height>821</height>
+      <height>819</height>
       <lock_children>false</lock_children>
       <macros>
         <include_parent_macros>true</include_parent_macros>
@@ -5586,7 +5586,7 @@ $(pv_value)</tooltip>
         <foreground_color>
           <color red="192" green="192" blue="192" />
         </foreground_color>
-        <height>696</height>
+        <height>819</height>
         <horizontal_tabs>true</horizontal_tabs>
         <macros>
           <include_parent_macros>true</include_parent_macros>
@@ -5724,10 +5724,10 @@ $(pv_value)</tooltip>
         <tooltip></tooltip>
         <visible>true</visible>
         <widget_type>Tabbed Container</widget_type>
-        <width>1021</width>
+        <width>1391</width>
         <wuid>-2215652e:161dbb3e447:-5fcd</wuid>
-        <x>12</x>
-        <y>6</y>
+        <x>0</x>
+        <y>0</y>
         <widget typeId="org.csstudio.opibuilder.widgets.groupingContainer" version="1.0.0">
           <actions hook="false" hook_all="false" />
           <background_color>
@@ -5746,7 +5746,7 @@ $(pv_value)</tooltip>
           <foreground_color>
             <color red="192" green="192" blue="192" />
           </foreground_color>
-          <height>658</height>
+          <height>779</height>
           <lock_children>false</lock_children>
           <macros>
             <include_parent_macros>true</include_parent_macros>
@@ -5762,9 +5762,9 @@ $(pv_value)</tooltip>
           <show_scrollbar>true</show_scrollbar>
           <tooltip></tooltip>
           <transparent>true</transparent>
-          <visible>true</visible>
+          <visible>false</visible>
           <widget_type>Grouping Container</widget_type>
-          <width>1019</width>
+          <width>1389</width>
           <wuid>-2215652e:161dbb3e447:-5fcc</wuid>
           <x>1</x>
           <y>1</y>
@@ -5786,7 +5786,7 @@ $(pv_value)</tooltip>
               <color red="192" green="192" blue="192" />
             </foreground_color>
             <group_name></group_name>
-            <height>656</height>
+            <height>779</height>
             <macros>
               <include_parent_macros>true</include_parent_macros>
               <N>01</N>
@@ -5804,7 +5804,7 @@ $(pv_value)</tooltip>
             <tooltip></tooltip>
             <visible>true</visible>
             <widget_type>Linking Container</widget_type>
-            <width>999</width>
+            <width>1389</width>
             <wuid>-2215652e:161dbb3e447:-5fcb</wuid>
             <x>0</x>
             <y>0</y>
@@ -5828,7 +5828,7 @@ $(pv_value)</tooltip>
           <foreground_color>
             <color red="192" green="192" blue="192" />
           </foreground_color>
-          <height>658</height>
+          <height>779</height>
           <lock_children>false</lock_children>
           <macros>
             <include_parent_macros>true</include_parent_macros>
@@ -5846,7 +5846,7 @@ $(pv_value)</tooltip>
           <transparent>true</transparent>
           <visible>false</visible>
           <widget_type>Grouping Container</widget_type>
-          <width>1019</width>
+          <width>1389</width>
           <wuid>-2215652e:161dbb3e447:-5fca</wuid>
           <x>1</x>
           <y>1</y>
@@ -5868,7 +5868,7 @@ $(pv_value)</tooltip>
               <color red="192" green="192" blue="192" />
             </foreground_color>
             <group_name></group_name>
-            <height>656</height>
+            <height>779</height>
             <macros>
               <include_parent_macros>true</include_parent_macros>
               <N>02</N>
@@ -5886,7 +5886,7 @@ $(pv_value)</tooltip>
             <tooltip></tooltip>
             <visible>true</visible>
             <widget_type>Linking Container</widget_type>
-            <width>999</width>
+            <width>1389</width>
             <wuid>-2215652e:161dbb3e447:-5fc9</wuid>
             <x>0</x>
             <y>0</y>
@@ -5910,7 +5910,7 @@ $(pv_value)</tooltip>
           <foreground_color>
             <color red="192" green="192" blue="192" />
           </foreground_color>
-          <height>658</height>
+          <height>779</height>
           <lock_children>false</lock_children>
           <macros>
             <include_parent_macros>true</include_parent_macros>
@@ -5928,7 +5928,7 @@ $(pv_value)</tooltip>
           <transparent>true</transparent>
           <visible>false</visible>
           <widget_type>Grouping Container</widget_type>
-          <width>1019</width>
+          <width>1389</width>
           <wuid>-2215652e:161dbb3e447:-5fc8</wuid>
           <x>1</x>
           <y>1</y>
@@ -5950,7 +5950,7 @@ $(pv_value)</tooltip>
               <color red="192" green="192" blue="192" />
             </foreground_color>
             <group_name></group_name>
-            <height>656</height>
+            <height>779</height>
             <macros>
               <include_parent_macros>true</include_parent_macros>
               <N>03</N>
@@ -5968,7 +5968,7 @@ $(pv_value)</tooltip>
             <tooltip></tooltip>
             <visible>true</visible>
             <widget_type>Linking Container</widget_type>
-            <width>1019</width>
+            <width>1389</width>
             <wuid>-2215652e:161dbb3e447:-470d</wuid>
             <x>0</x>
             <y>0</y>
@@ -5992,7 +5992,7 @@ $(pv_value)</tooltip>
           <foreground_color>
             <color red="192" green="192" blue="192" />
           </foreground_color>
-          <height>658</height>
+          <height>779</height>
           <lock_children>false</lock_children>
           <macros>
             <include_parent_macros>true</include_parent_macros>
@@ -6010,7 +6010,7 @@ $(pv_value)</tooltip>
           <transparent>true</transparent>
           <visible>false</visible>
           <widget_type>Grouping Container</widget_type>
-          <width>1019</width>
+          <width>1389</width>
           <wuid>-2215652e:161dbb3e447:-5fc7</wuid>
           <x>1</x>
           <y>1</y>
@@ -6032,7 +6032,7 @@ $(pv_value)</tooltip>
               <color red="192" green="192" blue="192" />
             </foreground_color>
             <group_name></group_name>
-            <height>656</height>
+            <height>779</height>
             <macros>
               <include_parent_macros>true</include_parent_macros>
               <N>04</N>
@@ -6050,7 +6050,7 @@ $(pv_value)</tooltip>
             <tooltip></tooltip>
             <visible>true</visible>
             <widget_type>Linking Container</widget_type>
-            <width>1019</width>
+            <width>1389</width>
             <wuid>-2215652e:161dbb3e447:-466b</wuid>
             <x>0</x>
             <y>0</y>
@@ -6074,7 +6074,7 @@ $(pv_value)</tooltip>
           <foreground_color>
             <color red="192" green="192" blue="192" />
           </foreground_color>
-          <height>658</height>
+          <height>779</height>
           <lock_children>false</lock_children>
           <macros>
             <include_parent_macros>true</include_parent_macros>
@@ -6092,7 +6092,7 @@ $(pv_value)</tooltip>
           <transparent>true</transparent>
           <visible>false</visible>
           <widget_type>Grouping Container</widget_type>
-          <width>1019</width>
+          <width>1389</width>
           <wuid>-2215652e:161dbb3e447:-5fc6</wuid>
           <x>1</x>
           <y>1</y>
@@ -6114,7 +6114,7 @@ $(pv_value)</tooltip>
               <color red="192" green="192" blue="192" />
             </foreground_color>
             <group_name></group_name>
-            <height>656</height>
+            <height>779</height>
             <macros>
               <include_parent_macros>true</include_parent_macros>
               <N>05</N>
@@ -6132,7 +6132,7 @@ $(pv_value)</tooltip>
             <tooltip></tooltip>
             <visible>true</visible>
             <widget_type>Linking Container</widget_type>
-            <width>1019</width>
+            <width>1389</width>
             <wuid>-2215652e:161dbb3e447:-463e</wuid>
             <x>0</x>
             <y>0</y>
@@ -6156,7 +6156,7 @@ $(pv_value)</tooltip>
           <foreground_color>
             <color red="192" green="192" blue="192" />
           </foreground_color>
-          <height>658</height>
+          <height>779</height>
           <lock_children>false</lock_children>
           <macros>
             <include_parent_macros>true</include_parent_macros>
@@ -6174,7 +6174,7 @@ $(pv_value)</tooltip>
           <transparent>true</transparent>
           <visible>false</visible>
           <widget_type>Grouping Container</widget_type>
-          <width>1019</width>
+          <width>1389</width>
           <wuid>-2215652e:161dbb3e447:-5fc5</wuid>
           <x>1</x>
           <y>1</y>
@@ -6196,7 +6196,7 @@ $(pv_value)</tooltip>
               <color red="192" green="192" blue="192" />
             </foreground_color>
             <group_name></group_name>
-            <height>656</height>
+            <height>779</height>
             <macros>
               <include_parent_macros>true</include_parent_macros>
               <N>06</N>
@@ -6214,7 +6214,7 @@ $(pv_value)</tooltip>
             <tooltip></tooltip>
             <visible>true</visible>
             <widget_type>Linking Container</widget_type>
-            <width>1019</width>
+            <width>1389</width>
             <wuid>-2215652e:161dbb3e447:-45da</wuid>
             <x>0</x>
             <y>0</y>
@@ -6238,7 +6238,7 @@ $(pv_value)</tooltip>
           <foreground_color>
             <color red="192" green="192" blue="192" />
           </foreground_color>
-          <height>658</height>
+          <height>779</height>
           <lock_children>false</lock_children>
           <macros>
             <include_parent_macros>true</include_parent_macros>
@@ -6256,7 +6256,7 @@ $(pv_value)</tooltip>
           <transparent>true</transparent>
           <visible>false</visible>
           <widget_type>Grouping Container</widget_type>
-          <width>1019</width>
+          <width>1389</width>
           <wuid>-2215652e:161dbb3e447:-5fc4</wuid>
           <x>1</x>
           <y>1</y>
@@ -6278,7 +6278,7 @@ $(pv_value)</tooltip>
               <color red="192" green="192" blue="192" />
             </foreground_color>
             <group_name></group_name>
-            <height>656</height>
+            <height>779</height>
             <macros>
               <include_parent_macros>true</include_parent_macros>
               <N>07</N>
@@ -6296,7 +6296,7 @@ $(pv_value)</tooltip>
             <tooltip></tooltip>
             <visible>true</visible>
             <widget_type>Linking Container</widget_type>
-            <width>1019</width>
+            <width>1389</width>
             <wuid>-2215652e:161dbb3e447:-4558</wuid>
             <x>0</x>
             <y>0</y>
@@ -6320,7 +6320,7 @@ $(pv_value)</tooltip>
           <foreground_color>
             <color red="192" green="192" blue="192" />
           </foreground_color>
-          <height>658</height>
+          <height>779</height>
           <lock_children>false</lock_children>
           <macros>
             <include_parent_macros>true</include_parent_macros>
@@ -6338,7 +6338,7 @@ $(pv_value)</tooltip>
           <transparent>true</transparent>
           <visible>false</visible>
           <widget_type>Grouping Container</widget_type>
-          <width>1019</width>
+          <width>1389</width>
           <wuid>-2215652e:161dbb3e447:-5fc3</wuid>
           <x>1</x>
           <y>1</y>
@@ -6360,7 +6360,7 @@ $(pv_value)</tooltip>
               <color red="192" green="192" blue="192" />
             </foreground_color>
             <group_name></group_name>
-            <height>656</height>
+            <height>779</height>
             <macros>
               <include_parent_macros>true</include_parent_macros>
               <N>08</N>
@@ -6378,7 +6378,7 @@ $(pv_value)</tooltip>
             <tooltip></tooltip>
             <visible>true</visible>
             <widget_type>Linking Container</widget_type>
-            <width>1019</width>
+            <width>1389</width>
             <wuid>-2215652e:161dbb3e447:-4539</wuid>
             <x>0</x>
             <y>0</y>
@@ -6402,7 +6402,7 @@ $(pv_value)</tooltip>
           <foreground_color>
             <color red="192" green="192" blue="192" />
           </foreground_color>
-          <height>658</height>
+          <height>779</height>
           <lock_children>false</lock_children>
           <macros>
             <include_parent_macros>true</include_parent_macros>
@@ -6418,9 +6418,9 @@ $(pv_value)</tooltip>
           <show_scrollbar>true</show_scrollbar>
           <tooltip></tooltip>
           <transparent>true</transparent>
-          <visible>false</visible>
+          <visible>true</visible>
           <widget_type>Grouping Container</widget_type>
-          <width>1019</width>
+          <width>1389</width>
           <wuid>-2215652e:161dbb3e447:-5fc2</wuid>
           <x>1</x>
           <y>1</y>
@@ -6442,7 +6442,7 @@ $(pv_value)</tooltip>
               <color red="192" green="192" blue="192" />
             </foreground_color>
             <group_name></group_name>
-            <height>656</height>
+            <height>779</height>
             <macros>
               <include_parent_macros>true</include_parent_macros>
               <N>09</N>
@@ -6460,7 +6460,7 @@ $(pv_value)</tooltip>
             <tooltip></tooltip>
             <visible>true</visible>
             <widget_type>Linking Container</widget_type>
-            <width>1019</width>
+            <width>1389</width>
             <wuid>-2215652e:161dbb3e447:-44ef</wuid>
             <x>0</x>
             <y>0</y>
@@ -6484,7 +6484,7 @@ $(pv_value)</tooltip>
           <foreground_color>
             <color red="192" green="192" blue="192" />
           </foreground_color>
-          <height>658</height>
+          <height>779</height>
           <lock_children>false</lock_children>
           <macros>
             <include_parent_macros>true</include_parent_macros>
@@ -6502,7 +6502,7 @@ $(pv_value)</tooltip>
           <transparent>true</transparent>
           <visible>false</visible>
           <widget_type>Grouping Container</widget_type>
-          <width>1019</width>
+          <width>1389</width>
           <wuid>-2215652e:161dbb3e447:-5fc1</wuid>
           <x>1</x>
           <y>1</y>
@@ -6524,7 +6524,7 @@ $(pv_value)</tooltip>
               <color red="192" green="192" blue="192" />
             </foreground_color>
             <group_name></group_name>
-            <height>656</height>
+            <height>779</height>
             <macros>
               <include_parent_macros>true</include_parent_macros>
               <N>10</N>
@@ -6542,7 +6542,7 @@ $(pv_value)</tooltip>
             <tooltip></tooltip>
             <visible>true</visible>
             <widget_type>Linking Container</widget_type>
-            <width>1019</width>
+            <width>1389</width>
             <wuid>-2215652e:161dbb3e447:-44a3</wuid>
             <x>0</x>
             <y>0</y>

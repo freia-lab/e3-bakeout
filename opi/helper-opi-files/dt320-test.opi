@@ -10,7 +10,7 @@
   <background_color>
     <color red="240" green="240" blue="240" />
   </background_color>
-  <boy_version>5.1.0</boy_version>
+  <boy_version>5.1.0.201710241501</boy_version>
   <foreground_color>
     <color red="192" green="192" blue="192" />
   </foreground_color>
@@ -111,7 +111,7 @@
       <foreground_color>
         <color red="192" green="192" blue="192" />
       </foreground_color>
-      <height>662</height>
+      <height>660</height>
       <lock_children>false</lock_children>
       <macros>
         <include_parent_macros>true</include_parent_macros>
@@ -151,13 +151,13 @@
           <color red="192" green="192" blue="192" />
         </foreground_color>
         <group_name></group_name>
-        <height>496</height>
+        <height>660</height>
         <macros>
           <include_parent_macros>true</include_parent_macros>
         </macros>
         <name>Linking Container</name>
         <opi_file>dt320-test-1.opi</opi_file>
-        <resize_behaviour>1</resize_behaviour>
+        <resize_behaviour>2</resize_behaviour>
         <rules />
         <scale_options>
           <width_scalable>true</width_scalable>
@@ -168,7 +168,7 @@
         <tooltip></tooltip>
         <visible>true</visible>
         <widget_type>Linking Container</widget_type>
-        <width>748</width>
+        <width>998</width>
         <wuid>-2215652e:161dbb3e447:-6a9d</wuid>
         <x>0</x>
         <y>0</y>
@@ -192,7 +192,7 @@
       <foreground_color>
         <color red="192" green="192" blue="192" />
       </foreground_color>
-      <height>662</height>
+      <height>660</height>
       <lock_children>false</lock_children>
       <macros>
         <include_parent_macros>true</include_parent_macros>
