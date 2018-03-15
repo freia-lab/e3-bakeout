@@ -9,11 +9,29 @@ record(ai, "$(P):TT$(ADR):sRdV") {
     field(HOPR,"500.0")
     field(LOPR,"-70.0")
     field(PREC,"1")
-    field(ADEL,"0.1")
+    field(ADEL,"0.5")
     field(MDEL,"0.1")
     field(LINR,"SLOPE")
     field (ASLO, "0.1")
     field(SCAN,"$(SCAN)")
+    field(FLNK, "$(P):TT$(ADR)-Prg:sTerr")
+}
+
+record(calc, "$(P):TT$(ADR)-Prg:sTerr") {
+    field(DESC,"Temperature error: setT-realT")
+    field(INPA, "$(P):TT$(ADR):sRdV")
+    field(INPB, "$(P):TT$(ADR)-Prg:sSV")
+    field(PREC,"1")
+    field(HIGH, "15")
+    field(HIHI, "30")
+    field(LOW, "-15")
+    field(LOLO, "-30")
+    field(HSV, "MINOR")
+    field(HHSV, "MAJOR")
+    field(LSV, "MINOR")
+    field(LLSV, "MAJOR")
+    field(HYST, "5")
+    field(CALC, "B-A")
 }
 
 record(longin, "$(P):TT$(ADR):sLEDs") {
@@ -56,6 +74,7 @@ record(mbbi, "$(P):TT$(ADR):sALRM1-LED") {
     field(ONVL, "0x10")
     field(ZRST, "Off")
     field(ONST, "On")
+    field(ONSV, "MAJOR")
     field(NOBT, "16")
     field(FLNK,"$(P):TT$(ADR):sALRM2-LED")
 }
@@ -68,6 +87,7 @@ record(mbbi, "$(P):TT$(ADR):sALRM2-LED") {
     field(ONVL, "0x02")
     field(ZRST, "Off")
     field(ONST, "On")
+    field(ONSV, "MAJOR")
     field(NOBT, "16")
     field(FLNK,"$(P):TT$(ADR):sALRM3-LED")
 }
@@ -80,6 +100,7 @@ record(mbbi, "$(P):TT$(ADR):sALRM3-LED") {
     field(ONVL, "1")
     field(ZRST, "Off")
     field(ONST, "On")
+    field(ONSV, "MAJOR")
     field(NOBT, "16")
     field(FLNK,"$(P):TT$(ADR):sEGU-LED")
 }

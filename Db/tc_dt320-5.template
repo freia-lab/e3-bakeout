@@ -9,3 +9,122 @@ record(waveform, "$(P):TT$(ADR):sWf-5") {
     field(SCAN,"$(SCAN)")
 }
 
+record (subArray, "$(P):TT$(ADR):sWf5-0") {
+   field (DESC, "Chan 0 of $(P):TT$(ADR):sWf-5")
+   field (DTYP, "Soft Channel")
+   field (INP, "$(P):TT$(ADR):sWf-5")
+   field (FTVL, "LONG")
+   field (INDX, 0)
+   field (MALM, 8)
+   field (FLNK, "$(P):TT$(ADR):sALRM1-Type")
+}
+
+record(longin, "$(P):TT$(ADR):sALRM1-Type") {
+    field(DESC,"ALARM1 type")
+    field(DTYP,"Soft Channel")
+    field(INP,"$(P):TT$(ADR):sW5-0")
+    field (FLNK, "$(P):TT$(ADR):sWf5-1")
+}
+record (subArray, "$(P):TT$(ADR):sWf5-1") {
+   field (DESC, "Chan 1 of $(P):TT$(ADR):sWf-5")
+   field (DTYP, "Soft Channel")
+   field (INP, "$(P):TT$(ADR):sWf-5")
+   field (FTVL, "LONG")
+   field (INDX, 1)
+   field (MALM, 8)
+   field (FLNK, "$(P):TT$(ADR):sALRM2-Type")
+}
+record(longin, "$(P):TT$(ADR):sALRM2-Type") {
+    field(DESC,"ALARM2 type")
+    field(DTYP,"Soft Channel")
+    field(INP,"$(P):TT$(ADR):sW5-1")
+    field (FLNK, "$(P):TT$(ADR):sWf5-4")
+}
+
+record (subArray, "$(P):TT$(ADR):sWf5-4") {
+   field (DESC, "Chan 4 of $(P):TT$(ADR):sWf-5")
+   field (DTYP, "Soft Channel")
+   field (INP, "$(P):TT$(ADR):sWf-5")
+   field (FTVL, "LONG")
+   field (INDX, 4)
+   field (MALM, 8)
+   field (FLNK, "$(P):TT$(ADR):sALRM1-HL")
+}
+record(ai, "$(P):TT$(ADR):sALRM1-HL") {
+    field(DESC,"ALARM1 high limit")
+    field(DTYP,"Raw Soft Channel")
+    field(INP,"$(P):TT$(ADR):sWf5-4")
+    field(HOPR,"1000.0")
+    field(LOPR,"-200.0")
+    field(PREC,"1")
+    field(ADEL,"0.1")
+    field(MDEL,"0.1")
+    field(LINR,"SLOPE")
+    field (ASLO, "0.1")
+    field (FLNK, "$(P):TT$(ADR):sWf5-5")
+}
+record (subArray, "$(P):TT$(ADR):sWf5-5") {
+   field (DESC, "Chan 5 of $(P):TT$(ADR):sWf-5")
+   field (DTYP, "Soft Channel")
+   field (INP, "$(P):TT$(ADR):sWf-5")
+   field (FTVL, "LONG")
+   field (INDX, 5)
+   field (MALM, 8)
+   field (FLNK, "$(P):TT$(ADR):sALRM1-LL")
+}
+record(ai, "$(P):TT$(ADR):sALRM1-LL") {
+    field(DESC,"ALARM1 low limit")
+    field(DTYP,"Raw Soft Channel")
+    field(INP,"$(P):TT$(ADR):sWf5-5")
+    field(HOPR,"1000.0")
+    field(LOPR,"-200.0")
+    field(PREC,"1")
+    field(ADEL,"0.1")
+    field(MDEL,"0.1")
+    field(LINR,"SLOPE")
+    field (ASLO, "0.1")
+    field (FLNK, "$(P):TT$(ADR):sWf5-6")
+}
+record (subArray, "$(P):TT$(ADR):sWf5-6") {
+   field (DESC, "Chan 6 of $(P):TT$(ADR):sWf-5")
+   field (DTYP, "Soft Channel")
+   field (INP, "$(P):TT$(ADR):sWf-5")
+   field (FTVL, "LONG")
+   field (INDX, 6)
+   field (MALM, 8)
+   field (FLNK, "$(P):TT$(ADR):sALRM2-HL")
+}
+record(ai, "$(P):TT$(ADR):sALRM2-HL") {
+    field(DESC,"ALARM2 high limit")
+    field(DTYP,"Raw Soft Channel")
+    field(INP,"$(P):TT$(ADR):sWf5-6")
+    field(HOPR,"1000.0")
+    field(LOPR,"-200.0")
+    field(PREC,"1")
+    field(ADEL,"0.1")
+    field(MDEL,"0.1")
+    field(LINR,"SLOPE")
+    field (ASLO, "0.1")
+    field (FLNK, "$(P):TT$(ADR):sWf5-7")
+}
+record (subArray, "$(P):TT$(ADR):sWf5-7") {
+   field (DESC, "Chan 7 of $(P):TT$(ADR):sWf-5")
+   field (DTYP, "Soft Channel")
+   field (INP, "$(P):TT$(ADR):sWf-5")
+   field (FTVL, "LONG")
+   field (INDX, 7)
+   field (MALM, 8)
+   field (FLNK, "$(P):TT$(ADR):sALRM2-LL")
+}
+record(ai, "$(P):TT$(ADR):sALRM2-LL") {
+    field(DESC,"ALARM2 low limit")
+    field(DTYP,"Raw Soft Channel")
+    field(INP,"$(P):TT$(ADR):sWf5-7")
+    field(HOPR,"1000.0")
+    field(LOPR,"-200.0")
+    field(PREC,"1")
+    field(ADEL,"0.1")
+    field(MDEL,"0.1")
+    field(LINR,"SLOPE")
+    field (ASLO, "0.1")
+}
