@@ -7,6 +7,7 @@ record(waveform, "$(P):TT$(ADR):sWf-5") {
     field(FTVL,"LONG")
     field(INP,"@asyn($(PORT),0x1020,1000)INT16")
     field(SCAN,"$(SCAN)")
+    field (FLNK, "$(P):TT$(ADR):sWf5-0")
 }
 
 record (subArray, "$(P):TT$(ADR):sWf5-0") {
@@ -22,7 +23,7 @@ record (subArray, "$(P):TT$(ADR):sWf5-0") {
 record(longin, "$(P):TT$(ADR):sALRM1-Type") {
     field(DESC,"ALARM1 type")
     field(DTYP,"Soft Channel")
-    field(INP,"$(P):TT$(ADR):sW5-0")
+    field(INP,"$(P):TT$(ADR):sWf5-0")
     field (FLNK, "$(P):TT$(ADR):sWf5-1")
 }
 record (subArray, "$(P):TT$(ADR):sWf5-1") {
@@ -37,7 +38,7 @@ record (subArray, "$(P):TT$(ADR):sWf5-1") {
 record(longin, "$(P):TT$(ADR):sALRM2-Type") {
     field(DESC,"ALARM2 type")
     field(DTYP,"Soft Channel")
-    field(INP,"$(P):TT$(ADR):sW5-1")
+    field(INP,"$(P):TT$(ADR):sWf5-1")
     field (FLNK, "$(P):TT$(ADR):sWf5-4")
 }
 
