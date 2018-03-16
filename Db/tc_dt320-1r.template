@@ -31,7 +31,7 @@ record(calc, "$(P):TT$(ADR)-Prg:sTerr") {
     field(LSV, "MINOR")
     field(LLSV, "MAJOR")
     field(HYST, "5")
-    field(CALC, "B-A")
+    field(CALC, "A-B")
 }
 
 record(longin, "$(P):TT$(ADR):sLEDs") {
