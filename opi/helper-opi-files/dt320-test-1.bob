@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <display version="2.0.0">
   <width>1000</width>
-  <background_color>
-    <color red="240" green="240" blue="240">
-    </color>
-  </background_color>
   <actions>
   </actions>
   <grid_visible>false</grid_visible>
@@ -318,7 +314,7 @@
     <x>22</x>
     <y>401</y>
     <width>101</width>
-    <height>21</height>
+    <height>25</height>
     <foreground_color>
       <color name="BLACK" red="0" green="0" blue="0">
       </color>
@@ -430,7 +426,7 @@
       <text>AT</text>
       <x>22</x>
       <width>18</width>
-      <height>21</height>
+      <height>25</height>
       <foreground_color>
         <color red="0" green="0" blue="0">
         </color>
@@ -455,7 +451,7 @@
       <text>OUT1</text>
       <x>52</x>
       <width>38</width>
-      <height>21</height>
+      <height>25</height>
       <foreground_color>
         <color red="0" green="0" blue="0">
         </color>
@@ -480,7 +476,7 @@
       <text>OUT2</text>
       <x>93</x>
       <width>38</width>
-      <height>21</height>
+      <height>25</height>
       <foreground_color>
         <color red="0" green="0" blue="0">
         </color>
@@ -505,7 +501,7 @@
       <text>ALM1</text>
       <x>136</x>
       <width>37</width>
-      <height>21</height>
+      <height>25</height>
       <foreground_color>
         <color red="0" green="0" blue="0">
         </color>
@@ -530,7 +526,7 @@
       <text>°F</text>
       <x>184</x>
       <width>14</width>
-      <height>21</height>
+      <height>25</height>
       <foreground_color>
         <color red="0" green="0" blue="0">
         </color>
@@ -555,7 +551,7 @@
       <text>°C</text>
       <x>222</x>
       <width>15</width>
-      <height>21</height>
+      <height>25</height>
       <foreground_color>
         <color red="0" green="0" blue="0">
         </color>
@@ -580,7 +576,7 @@
       <text>ALM2</text>
       <x>251</x>
       <width>37</width>
-      <height>21</height>
+      <height>25</height>
       <foreground_color>
         <color red="0" green="0" blue="0">
         </color>
@@ -1798,7 +1794,7 @@ and update the display.</tooltip>
     <x>82</x>
     <y>417</y>
     <width>39</width>
-    <height>21</height>
+    <height>25</height>
     <foreground_color>
       <color name="BLACK" red="0" green="0" blue="0">
       </color>
@@ -1824,7 +1820,7 @@ and update the display.</tooltip>
     <x>697</x>
     <y>60</y>
     <width>37</width>
-    <height>21</height>
+    <height>25</height>
     <foreground_color>
       <color red="0" green="0" blue="0">
       </color>

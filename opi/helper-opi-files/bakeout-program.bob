@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <display version="2.0.0">
   <width>1000</width>
-  <background_color>
-    <color red="240" green="240" blue="240">
-    </color>
-  </background_color>
   <actions>
   </actions>
   <grid_visible>false</grid_visible>
@@ -723,7 +719,7 @@ null</tooltip>
     <x>484</x>
     <y>438</y>
     <width>64</width>
-    <height>21</height>
+    <height>25</height>
     <foreground_color>
       <color red="0" green="0" blue="0">
       </color>
@@ -944,7 +940,7 @@ time in minutes</tooltip>
     <x>486</x>
     <y>530</y>
     <width>64</width>
-    <height>21</height>
+    <height>25</height>
     <foreground_color>
       <color red="0" green="0" blue="0">
       </color>
@@ -1018,7 +1014,7 @@ is not reached within &lt;Wait time&gt;</tooltip>
     <x>486</x>
     <y>555</y>
     <width>73</width>
-    <height>21</height>
+    <height>25</height>
     <foreground_color>
       <color red="0" green="0" blue="0">
       </color>
@@ -1139,7 +1135,7 @@ is not reached within &lt;Wait time&gt;</tooltip>
     <x>484</x>
     <y>455</y>
     <width>78</width>
-    <height>21</height>
+    <height>25</height>
     <foreground_color>
       <color red="0" green="0" blue="0">
       </color>

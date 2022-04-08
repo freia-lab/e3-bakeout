@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <name>details</name>
+  <macros>
+    <P>Ctrl-Bake</P>
+    <R>:asynRec</R>
+  </macros>
+  <width>1450</width>
+  <height>900</height>
+  <actions>
+  </actions>
+  <grid_visible>false</grid_visible>
+  <widget type="tabs" version="2.0.0">
+    <name>Tabbed Container_2</name>
+    <tabs>
+      <tab>
+        <name>Channel1</name>
+        <children>
+          <widget type="embedded" version="2.0.0">
+            <name>Linking Container</name>
+            <macros>
+              <N>01</N>
+            </macros>
+            <file>dt320-test.opi</file>
+            <width>1238</width>
+            <height>748</height>
+            <actions>
+            </actions>
+            <border_color>
+              <color red="0" green="128" blue="255">
+              </color>
+            </border_color>
+          </widget>
+        </children>
+      </tab>
+      <tab>
+        <name>Channel 2</name>
+        <children>
+          <widget type="embedded" version="2.0.0">
+            <name>Linking Container</name>
+            <macros>
+              <N>02</N>
+            </macros>
+            <file>dt320-test.opi</file>
+            <width>1068</width>
+            <height>728</height>
+            <transparent>true</transparent>
+            <actions>
+            </actions>
+            <border_color>
+              <color red="0" green="128" blue="255">
+              </color>
+            </border_color>
+          </widget>
+        </children>
+      </tab>
+      <tab>
+        <name>Channel 3</name>
+        <children>
+          <widget type="embedded" version="2.0.0">
+            <name>Linking Container</name>
+            <macros>
+              <N>03</N>
+            </macros>
+            <file>dt320-test.opi</file>
+            <width>1389</width>
+            <height>779</height>
+            <actions>
+            </actions>
+            <border_color>
+              <color red="0" green="128" blue="255">
+              </color>
+            </border_color>
+          </widget>
+        </children>
+      </tab>
+      <tab>
+        <name>Channel 4</name>
+        <children>
+          <widget type="embedded" version="2.0.0">
+            <name>Linking Container</name>
+            <macros>
+              <N>04</N>
+            </macros>
+            <file>dt320-test.opi</file>
+            <width>1389</width>
+            <height>779</height>
+            <actions>
+            </actions>
+            <border_color>
+              <color red="0" green="128" blue="255">
+              </color>
+            </border_color>
+          </widget>
+        </children>
+      </tab>
+      <tab>
+        <name>Channel 5</name>
+        <children>
+          <widget type="embedded" version="2.0.0">
+            <name>Linking Container</name>
+            <macros>
+              <N>05</N>
+            </macros>
+            <file>dt320-test.opi</file>
+            <width>1389</width>
+            <height>779</height>
+            <actions>
+            </actions>
+            <border_color>
+              <color red="0" green="128" blue="255">
+              </color>
+            </border_color>
+          </widget>
+        </children>
+      </tab>
+      <tab>
+        <name>Channel 6</name>
+        <children>
+          <widget type="embedded" version="2.0.0">
+            <name>Linking Container</name>
+            <macros>
+              <N>06</N>
+            </macros>
+            <file>dt320-test.opi</file>
+            <width>1389</width>
+            <height>779</height>
+            <actions>
+            </actions>
+            <border_color>
+              <color red="0" green="128" blue="255">
+              </color>
+            </border_color>
+          </widget>
+        </children>
+      </tab>
+      <tab>
+        <name>Channel 7</name>
+        <children>
+          <widget type="embedded" version="2.0.0">
+            <name>Linking Container</name>
+            <macros>
+              <N>07</N>
+            </macros>
+            <file>dt320-test.opi</file>
+            <width>1389</width>
+            <height>779</height>
+            <actions>
+            </actions>
+            <border_color>
+              <color red="0" green="128" blue="255">
+              </color>
+            </border_color>
+          </widget>
+        </children>
+      </tab>
+      <tab>
+        <name>Channel 8</name>
+        <children>
+          <widget type="embedded" version="2.0.0">
+            <name>Linking Container</name>
+            <macros>
+              <N>08</N>
+            </macros>
+            <file>dt320-test.opi</file>
+            <width>1389</width>
+            <height>779</height>
+            <actions>
+            </actions>
+            <border_color>
+              <color red="0" green="128" blue="255">
+              </color>
+            </border_color>
+          </widget>
+        </children>
+      </tab>
+      <tab>
+        <name>Channel 9</name>
+        <children>
+          <widget type="embedded" version="2.0.0">
+            <name>Linking Container</name>
+            <macros>
+              <N>09</N>
+            </macros>
+            <file>dt320-test.opi</file>
+            <width>1389</width>
+            <height>779</height>
+            <actions>
+            </actions>
+            <border_color>
+              <color red="0" green="128" blue="255">
+              </color>
+            </border_color>
+          </widget>
+        </children>
+      </tab>
+      <tab>
+        <name>Channel 10</name>
+        <children>
+          <widget type="embedded" version="2.0.0">
+            <name>Linking Container</name>
+            <macros>
+              <N>10</N>
+            </macros>
+            <file>dt320-test.opi</file>
+            <width>1389</width>
+            <height>779</height>
+            <actions>
+            </actions>
+            <border_color>
+              <color red="0" green="128" blue="255">
+              </color>
+            </border_color>
+          </widget>
+        </children>
+      </tab>
+    </tabs>
+    <width>1100</width>
+    <height>780</height>
+    <active_tab>1</active_tab>
+    <tab_height>10</tab_height>
+    <actions>
+    </actions>
+  </widget>
+</display>

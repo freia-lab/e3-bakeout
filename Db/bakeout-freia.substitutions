@@ -356,7 +356,7 @@ file "bakeout-cntrl.template"  { pattern
 { $(DT320_PREFIX), 04 }
 { $(DT320_PREFIX), 05 }
 { $(DT320_PREFIX), 06 }
-{ $(DT320_PREFIX), 07}
+{ $(DT320_PREFIX), 07 }
 { $(DT320_PREFIX), 08 }
 { $(DT320_PREFIX), 09 }
 { $(DT320_PREFIX), 10 }

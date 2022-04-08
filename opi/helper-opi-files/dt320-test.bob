@@ -17,7 +17,7 @@
         <children>
           <widget type="embedded" version="2.0.0">
             <name>Linking Container</name>
-            <file>dt320-test-1.opi</file>
+            <file>dt320-test-1.bob</file>
             <x>2</x>
             <y>5</y>
             <width>998</width>
@@ -36,7 +36,7 @@
         <children>
           <widget type="embedded" version="2.0.0">
             <name>Linking Container</name>
-            <file>bakeout-program.opi</file>
+            <file>bakeout-program.bob</file>
             <width>998</width>
             <height>660</height>
             <actions>
@@ -52,10 +52,6 @@
     <y>3</y>
     <width>1050</width>
     <height>700</height>
-    <background_color>
-      <color red="240" green="240" blue="240">
-      </color>
-    </background_color>
     <active_tab>1</active_tab>
     <tab_height>10</tab_height>
     <actions>

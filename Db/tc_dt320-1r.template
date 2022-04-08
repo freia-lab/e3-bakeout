@@ -32,6 +32,7 @@ record(calc, "$(P):TT$(ADR)-Prg:sTerr") {
     field(LLSV, "MAJOR")
     field(HYST, "5")
     field(CALC, "A-B")
+    field(FLNK, "$(P):TT$(ADR):sensStat")
 }
 
 record(longin, "$(P):TT$(ADR):sLEDs") {

@@ -65,3 +65,33 @@ record (fanout, "$(P):TT$(ADR)-Prg:cmdUpdate") {
     field (LNK9, "$(P):TT$(ADR)-Prg:cmdUpdate-4")
     field (SELM, "All")
 }
+
+record (calc, "$(P):TT$(ADR):sensStat") {
+    field(INPA, "$(P):TT$(ADR):sRdV")
+    field(INPB, "-3276.64")
+    field(INPC, "-3276.54")
+    field(INPD, "-3276.44")
+    field(INPE, "-3276.34")
+    field(INPF, "-3276.24")
+    field(INPG, "-3276.14")
+    field(CALC, "A<B?1:(A<C?2:(A<D?3:(A<E?4:(A<4?5:(A<G?6:0)))))")
+    field(FLNK, "$(P):TT$(ADR):sensStatS")
+}
+
+record(mbbi, "$(P):TT$(ADR):sensStatS") {
+    field(INP,  "$(P):TT$(ADR):sensStat")
+    field(ZRVL, "0")
+    field(ZRST, "OK")
+    field(ONVL, "1")
+    field(ONST, "Not ready")
+    field(TWVL, "2")
+    field(TWST, "Initializing...")
+    field(THVL, "3")
+    field(THST, "No sensor")
+    field(FRVL, "4")
+    field(FRST, "Sensor err")
+    field(FVVL, "5")
+    field(FVST, "ADC err")
+    field(SXVL, "6")
+    field(SXST, "Mem err")
+}
