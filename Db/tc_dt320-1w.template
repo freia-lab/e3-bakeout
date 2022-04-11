@@ -12,6 +12,7 @@ record(ao, "$(P):TT$(ADR):cSP") {
     field(MDEL,"0.1")
     field(LINR,"SLOPE")
     field (ASLO, "0.1")
+    field(UDFS, "NO_ALARM")
     field (FLNK, "$(P):TT$(ADR):sWf-1")
 }
 
@@ -50,6 +51,7 @@ record (mbbo, "$(P):TT$(ADR):cSensorType") {
     field(FTVL, "14")
     field(FTST, "Cu50")
     field(NOBT, "16")
+    field(UDFS, "NO_ALARM")
     field (FLNK, "$(P):TT$(ADR):sWf-1")
 }
 
@@ -66,6 +68,7 @@ record (mbbo, "$(P):TT$(ADR):cCntrlMode") {
     field(THVL, "3")
     field(THST, "Fuzzy")
     field(NOBT, "16")
+    field(UDFS, "NO_ALARM")
     field (FLNK, "$(P):TT$(ADR):sWf-1")
 }
 
@@ -81,6 +84,7 @@ record(ao, "$(P):TT$(ADR):cOut1-Period") {
     field(MDEL,"0.1")
     field(LINR,"SLOPE")
     field (ASLO, "0.1")
+    field(UDFS, "NO_ALARM")
     field (FLNK, "$(P):TT$(ADR):sWf-1")
 }
 
@@ -96,6 +100,7 @@ record(ao, "$(P):TT$(ADR):cOut1-Hyst") {
     field(MDEL,"0.1")
     field(LINR,"SLOPE")
     field (ASLO, "0.1")
+    field(UDFS, "NO_ALARM")
     field (FLNK, "$(P):TT$(ADR):sWf-3")
 }
 
@@ -111,6 +116,7 @@ record(ao, "$(P):TT$(ADR):cOut1-Perc") {
     field(MDEL,"0.1")
     field(LINR,"SLOPE")
     field (ASLO, "0.1")
+    field(UDFS, "NO_ALARM")
     field (FLNK, "$(P):TT$(ADR):sWf-3")
 }
 
@@ -126,6 +132,7 @@ record(ao, "$(P):TT$(ADR):cALRM1-HL") {
     field(MDEL,"0.1")
     field(LINR,"SLOPE")
     field (ASLO, "0.1")
+    field(UDFS, "NO_ALARM")
     field (FLNK, "$(P):TT$(ADR):sWf-5")
 }
 record(ao, "$(P):TT$(ADR):cALRM1-LL") {
@@ -140,6 +147,7 @@ record(ao, "$(P):TT$(ADR):cALRM1-LL") {
     field(MDEL,"0.1")
     field(LINR,"SLOPE")
     field (ASLO, "0.1")
+    field(UDFS, "NO_ALARM")
     field (FLNK, "$(P):TT$(ADR):sWf-5")
 }
 record(ao, "$(P):TT$(ADR):cALRM2-HL") {
@@ -154,6 +162,7 @@ record(ao, "$(P):TT$(ADR):cALRM2-HL") {
     field(MDEL,"0.1")
     field(LINR,"SLOPE")
     field (ASLO, "0.1")
+    field(UDFS, "NO_ALARM")
     field (FLNK, "$(P):TT$(ADR):sWf-5")
 }
 record(ao, "$(P):TT$(ADR):cALRM2-LL") {
@@ -168,6 +177,7 @@ record(ao, "$(P):TT$(ADR):cALRM2-LL") {
     field(MDEL,"0.1")
     field(LINR,"SLOPE")
     field (ASLO, "0.1")
+    field(UDFS, "NO_ALARM")
     field (FLNK, "$(P):TT$(ADR):sWf-5")
 }
 
@@ -177,6 +187,7 @@ record(longout, "$(P):TT$(ADR):cALRM1-Type") {
     field(OUT,"@asyn($(PORT),0x1020)MODBUS_DATA")
     field(HOPR,"19")
     field(LOPR,"0")
+    field(UDFS, "NO_ALARM")
     field(FLNK,"$(P):TT$(ADR):sWf-5")
 }
 record(longout, "$(P):TT$(ADR):cALRM2-Type") {
@@ -185,6 +196,7 @@ record(longout, "$(P):TT$(ADR):cALRM2-Type") {
     field(OUT,"@asyn($(PORT),0x1021)MODBUS_DATA")
     field(HOPR,"19")
     field(LOPR,"0")
+    field(UDFS, "NO_ALARM")
     field(FLNK,"$(P):TT$(ADR):sWf-5")
 }
 
@@ -199,6 +211,7 @@ record(ao, "$(P):TT$(ADR):cSlope-Man") {
     field(MDEL,"0.1")
     field(LINR,"SLOPE")
     field (ASLO, "0.1")
+    field(UDFS, "NO_ALARM")
     field (FLNK, "$(P):TT$(ADR):sWf-79")
 }
 
@@ -213,6 +226,7 @@ record(ao, "$(P):TT$(ADR)-Prg:cSlope") {
     field(MDEL,"0.1")
     field(LINR,"SLOPE")
     field (ASLO, "0.1")
+    field(UDFS, "NO_ALARM")
     field (FLNK, "$(P):TT$(ADR):sWf-81")
 }
 
@@ -227,6 +241,7 @@ record(ao, "$(P):TT$(ADR)-PID:cPB") {
     field(MDEL,"0.1")
     field(LINR,"SLOPE")
     field (ASLO, "0.1")
+    field(UDFS, "NO_ALARM")
     field (FLNK, "$(P):TT$(ADR):sWf-2")
 }
 record(ao, "$(P):TT$(ADR)-PID:cTi") {
@@ -241,6 +256,7 @@ record(ao, "$(P):TT$(ADR)-PID:cTi") {
     field(MDEL,"2")
     field(LINR,"SLOPE")
     field (ASLO, "1")
+    field(UDFS, "NO_ALARM")
     field (FLNK, "$(P):TT$(ADR):sWf-2")
 }
 record(ao, "$(P):TT$(ADR)-PID:cTd") {
@@ -255,6 +271,7 @@ record(ao, "$(P):TT$(ADR)-PID:cTd") {
     field(MDEL,"2")
     field(LINR,"SLOPE")
     field (ASLO, "1")
+    field(UDFS, "NO_ALARM")
     field (FLNK, "$(P):TT$(ADR):sWf-2")
 }
 
@@ -267,6 +284,7 @@ record (mbbo, "$(P):TT$(ADR):cAutoTune") {
     field(ONVL, "1")
     field(ONST, "On")
     field(NOBT, "16")
+    field(UDFS, "NO_ALARM")
     field (FLNK, "$(P):TT$(ADR):sWf-8")
 }
 
@@ -282,6 +300,7 @@ record (mbbo, "$(P):TT$(ADR):cRunMode") {
     field(TWST, "END")
     field(THVL, "3")
     field(THST, "HOLD")
+    field(UDFS, "NO_ALARM")
     field(NOBT, "16")
 }
 
@@ -298,6 +317,7 @@ record (mbbo, "$(P):TT$(ADR):cSVMode") {
     field(THVL, "3")
     field(THST, "Remote")
     field(NOBT, "16")
+    field(UDFS, "NO_ALARM")
     field (FLNK, "$(P):TT$(ADR):sWf-83")
 }
 
@@ -310,6 +330,7 @@ record (mbbo, "$(P):TT$(ADR):cSlopeUnit") {
     field(ONVL, "1")
     field(ONST, "s")
     field(NOBT, "16")
+    field(UDFS, "NO_ALARM")
     field (FLNK, "$(P):TT$(ADR):sWf-83")
 }
 
@@ -317,11 +338,13 @@ record(longout, "$(P):TT$(ADR)-Prg:cStartStep") {
     field(DESC,"Start step in program")
     field(DTYP,"asynInt32")
     field(OUT,"@asyn($(PORT),0x101f)MODBUS_DATA")
+    field(UDFS, "NO_ALARM")
     field(FLNK,"$(P):TT$(ADR):sWf-4")
 }
 record(longout, "$(P):TT$(ADR)-Prg:cStartPtrn") {
     field(DESC,"Start pattern in program")
     field(DTYP,"asynInt32")
+    field(UDFS, "NO_ALARM")
     field(OUT,"@asyn($(PORT),0x1030)MODBUS_DATA")
 }
 
@@ -331,6 +354,7 @@ record(bo, "$(P):TT$(ADR)-Prg:cmdSave") {
     field(OUT,"@asyn($(PORT),0x1129)MODBUS_DATA")
     field(ZNAM, "Idle")
     field(ONAM, "Save")
+    field(UDFS, "NO_ALARM")
     field(HIGH, "5")
 }
 
@@ -340,6 +364,7 @@ record(longout, "$(P):TT$(ADR)-Prg:cLastStep-0") {
     field(OUT,"@asyn($(PORT),0x1400)MODBUS_DATA")
     field(LOPR,"0")
     field(HOPR,"15")
+    field(UDFS, "NO_ALARM")
     field(FLNK,"$(P):TT$(ADR):sWf-73")
 }
 record(longout, "$(P):TT$(ADR)-Prg:cLastStep-1") {
@@ -348,6 +373,7 @@ record(longout, "$(P):TT$(ADR)-Prg:cLastStep-1") {
     field(OUT,"@asyn($(PORT),0x1401)MODBUS_DATA")
     field(LOPR,"0")
     field(HOPR,"15")
+    field(UDFS, "NO_ALARM")
     field(FLNK,"$(P):TT$(ADR):sWf-73")
 }
 record(longout, "$(P):TT$(ADR)-Prg:cLastStep-2") {
@@ -356,6 +382,7 @@ record(longout, "$(P):TT$(ADR)-Prg:cLastStep-2") {
     field(OUT,"@asyn($(PORT),0x1402)MODBUS_DATA")
     field(LOPR,"0")
     field(HOPR,"15")
+    field(UDFS, "NO_ALARM")
     field(FLNK,"$(P):TT$(ADR):sWf-73")
 }
 record(longout, "$(P):TT$(ADR)-Prg:cLastStep-3") {
@@ -364,6 +391,7 @@ record(longout, "$(P):TT$(ADR)-Prg:cLastStep-3") {
     field(OUT,"@asyn($(PORT),0x1403)MODBUS_DATA")
     field(LOPR,"0")
     field(HOPR,"15")
+    field(UDFS, "NO_ALARM")
     field(FLNK,"$(P):TT$(ADR):sWf-73")
 }
 record(longout, "$(P):TT$(ADR)-Prg:cLastStep-4") {
@@ -372,6 +400,7 @@ record(longout, "$(P):TT$(ADR)-Prg:cLastStep-4") {
     field(OUT,"@asyn($(PORT),0x1404)MODBUS_DATA")
     field(LOPR,"0")
     field(HOPR,"15")
+    field(UDFS, "NO_ALARM")
     field(FLNK,"$(P):TT$(ADR):sWf-73")
 }
 record(longout, "$(P):TT$(ADR)-Prg:cLastStep-5") {
@@ -380,6 +409,7 @@ record(longout, "$(P):TT$(ADR)-Prg:cLastStep-5") {
     field(OUT,"@asyn($(PORT),0x1405)MODBUS_DATA")
     field(LOPR,"0")
     field(HOPR,"15")
+    field(UDFS, "NO_ALARM")
     field(FLNK,"$(P):TT$(ADR):sWf-73")
 }
 record(longout, "$(P):TT$(ADR)-Prg:cLastStep-6") {
@@ -388,6 +418,7 @@ record(longout, "$(P):TT$(ADR)-Prg:cLastStep-6") {
     field(OUT,"@asyn($(PORT),0x1406)MODBUS_DATA")
     field(LOPR,"0")
     field(HOPR,"15")
+    field(UDFS, "NO_ALARM")
     field(FLNK,"$(P):TT$(ADR):sWf-73")
 }
 record(longout, "$(P):TT$(ADR)-Prg:cLastStep-7") {
@@ -396,6 +427,7 @@ record(longout, "$(P):TT$(ADR)-Prg:cLastStep-7") {
     field(OUT,"@asyn($(PORT),0x1407)MODBUS_DATA")
     field(LOPR,"0")
     field(HOPR,"15")
+    field(UDFS, "NO_ALARM")
     field(FLNK,"$(P):TT$(ADR):sWf-73")
 }
 record(longout, "$(P):TT$(ADR)-Prg:cLastStep-8") {
@@ -404,6 +436,7 @@ record(longout, "$(P):TT$(ADR)-Prg:cLastStep-8") {
     field(OUT,"@asyn($(PORT),0x1408)MODBUS_DATA")
     field(LOPR,"0")
     field(HOPR,"15")
+    field(UDFS, "NO_ALARM")
     field(FLNK,"$(P):TT$(ADR):sWf-74")
 }
 record(longout, "$(P):TT$(ADR)-Prg:cLastStep-9") {
@@ -412,6 +445,7 @@ record(longout, "$(P):TT$(ADR)-Prg:cLastStep-9") {
     field(OUT,"@asyn($(PORT),0x1409)MODBUS_DATA")
     field(LOPR,"0")
     field(HOPR,"15")
+    field(UDFS, "NO_ALARM")
     field(FLNK,"$(P):TT$(ADR):sWf-74")
 }
 record(longout, "$(P):TT$(ADR)-Prg:cLastStep-10") {
@@ -420,6 +454,7 @@ record(longout, "$(P):TT$(ADR)-Prg:cLastStep-10") {
     field(OUT,"@asyn($(PORT),0x140a)MODBUS_DATA")
     field(LOPR,"0")
     field(HOPR,"15")
+    field(UDFS, "NO_ALARM")
     field(FLNK,"$(P):TT$(ADR):sWf-74")
 }
 record(longout, "$(P):TT$(ADR)-Prg:cLastStep-11") {
@@ -428,6 +463,7 @@ record(longout, "$(P):TT$(ADR)-Prg:cLastStep-11") {
     field(OUT,"@asyn($(PORT),0x140b)MODBUS_DATA")
     field(LOPR,"0")
     field(HOPR,"15")
+    field(UDFS, "NO_ALARM")
     field(FLNK,"$(P):TT$(ADR):sWf-74")
 }
 record(longout, "$(P):TT$(ADR)-Prg:cLastStep-12") {
@@ -436,6 +472,7 @@ record(longout, "$(P):TT$(ADR)-Prg:cLastStep-12") {
     field(OUT,"@asyn($(PORT),0x140c)MODBUS_DATA")
     field(LOPR,"0")
     field(HOPR,"15")
+    field(UDFS, "NO_ALARM")
     field(FLNK,"$(P):TT$(ADR):sWf-74")
 }
 record(longout, "$(P):TT$(ADR)-Prg:cLastStep-13") {
@@ -444,6 +481,7 @@ record(longout, "$(P):TT$(ADR)-Prg:cLastStep-13") {
     field(OUT,"@asyn($(PORT),0x140d)MODBUS_DATA")
     field(LOPR,"0")
     field(HOPR,"15")
+    field(UDFS, "NO_ALARM")
     field(FLNK,"$(P):TT$(ADR):sWf-74")
 }
 record(longout, "$(P):TT$(ADR)-Prg:cLastStep-14") {
@@ -452,6 +490,7 @@ record(longout, "$(P):TT$(ADR)-Prg:cLastStep-14") {
     field(OUT,"@asyn($(PORT),0x140e)MODBUS_DATA")
     field(LOPR,"0")
     field(HOPR,"15")
+    field(UDFS, "NO_ALARM")
     field(FLNK,"$(P):TT$(ADR):sWf-74")
 }
 record(longout, "$(P):TT$(ADR)-Prg:cLastStep-15") {
@@ -460,6 +499,7 @@ record(longout, "$(P):TT$(ADR)-Prg:cLastStep-15") {
     field(OUT,"@asyn($(PORT),0x140f)MODBUS_DATA")
     field(LOPR,"0")
     field(HOPR,"15")
+    field(UDFS, "NO_ALARM")
     field(FLNK,"$(P):TT$(ADR):sWf-74")
 }
 
@@ -469,6 +509,7 @@ record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-0") {
     field(OUT,"@asyn($(PORT),0x1420)MODBUS_DATA")
     field(LOPR,"0")
     field(HOPR,"17")
+    field(UDFS, "NO_ALARM")
     field(FLNK,"$(P):TT$(ADR):sWf-77")
 }
 record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-1") {
@@ -477,6 +518,7 @@ record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-1") {
     field(OUT,"@asyn($(PORT),0x1421)MODBUS_DATA")
     field(LOPR,"0")
     field(HOPR,"17")
+    field(UDFS, "NO_ALARM")
     field(FLNK,"$(P):TT$(ADR):sWf-77")
 }
 record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-2") {
@@ -485,6 +527,7 @@ record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-2") {
     field(OUT,"@asyn($(PORT),0x1422)MODBUS_DATA")
     field(LOPR,"0")
     field(HOPR,"17")
+    field(UDFS, "NO_ALARM")
     field(FLNK,"$(P):TT$(ADR):sWf-77")
 }
 record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-3") {
@@ -493,6 +536,7 @@ record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-3") {
     field(OUT,"@asyn($(PORT),0x1423)MODBUS_DATA")
     field(LOPR,"0")
     field(HOPR,"17")
+    field(UDFS, "NO_ALARM")
     field(FLNK,"$(P):TT$(ADR):sWf-77")
 }
 record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-4") {
@@ -501,6 +545,7 @@ record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-4") {
     field(OUT,"@asyn($(PORT),0x1424)MODBUS_DATA")
     field(LOPR,"0")
     field(HOPR,"17")
+    field(UDFS, "NO_ALARM")
     field(FLNK,"$(P):TT$(ADR):sWf-77")
 }
 record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-5") {
@@ -509,6 +554,7 @@ record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-5") {
     field(OUT,"@asyn($(PORT),0x1425)MODBUS_DATA")
     field(LOPR,"0")
     field(HOPR,"17")
+    field(UDFS, "NO_ALARM")
     field(FLNK,"$(P):TT$(ADR):sWf-77")
 }
 record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-6") {
@@ -517,6 +563,7 @@ record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-6") {
     field(OUT,"@asyn($(PORT),0x1426)MODBUS_DATA")
     field(LOPR,"0")
     field(HOPR,"17")
+    field(UDFS, "NO_ALARM")
     field(FLNK,"$(P):TT$(ADR):sWf-77")
 }
 record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-7") {
@@ -525,6 +572,7 @@ record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-7") {
     field(OUT,"@asyn($(PORT),0x1427)MODBUS_DATA")
     field(LOPR,"0")
     field(HOPR,"17")
+    field(UDFS, "NO_ALARM")
     field(FLNK,"$(P):TT$(ADR):sWf-77")
 }
 record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-8") {
@@ -533,6 +581,7 @@ record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-8") {
     field(OUT,"@asyn($(PORT),0x1428)MODBUS_DATA")
     field(LOPR,"0")
     field(HOPR,"17")
+    field(UDFS, "NO_ALARM")
     field(FLNK,"$(P):TT$(ADR):sWf-78")
 }
 record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-9") {
@@ -541,6 +590,7 @@ record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-9") {
     field(OUT,"@asyn($(PORT),0x1429)MODBUS_DATA")
     field(LOPR,"0")
     field(HOPR,"17")
+    field(UDFS, "NO_ALARM")
     field(FLNK,"$(P):TT$(ADR):sWf-78")
 }
 record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-10") {
@@ -549,6 +599,7 @@ record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-10") {
     field(OUT,"@asyn($(PORT),0x142a)MODBUS_DATA")
     field(LOPR,"0")
     field(HOPR,"17")
+    field(UDFS, "NO_ALARM")
     field(FLNK,"$(P):TT$(ADR):sWf-78")
 }
 record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-11") {
@@ -557,6 +608,7 @@ record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-11") {
     field(OUT,"@asyn($(PORT),0x142b)MODBUS_DATA")
     field(LOPR,"0")
     field(HOPR,"17")
+    field(UDFS, "NO_ALARM")
     field(FLNK,"$(P):TT$(ADR):sWf-78")
 }
 record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-12") {
@@ -565,6 +617,7 @@ record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-12") {
     field(OUT,"@asyn($(PORT),0x142c)MODBUS_DATA")
     field(LOPR,"0")
     field(HOPR,"17")
+    field(UDFS, "NO_ALARM")
     field(FLNK,"$(P):TT$(ADR):sWf-78")
 }
 record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-13") {
@@ -573,6 +626,7 @@ record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-13") {
     field(OUT,"@asyn($(PORT),0x142d)MODBUS_DATA")
     field(LOPR,"0")
     field(HOPR,"17")
+    field(UDFS, "NO_ALARM")
     field(FLNK,"$(P):TT$(ADR):sWf-78")
 }
 record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-14") {
@@ -581,6 +635,7 @@ record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-14") {
     field(OUT,"@asyn($(PORT),0x142e)MODBUS_DATA")
     field(LOPR,"0")
     field(HOPR,"17")
+    field(UDFS, "NO_ALARM")
     field(FLNK,"$(P):TT$(ADR):sWf-78")
 }
 record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-15") {
@@ -590,6 +645,7 @@ record(longout, "$(P):TT$(ADR)-Prg:cLinkPtrn-15") {
     field(LOPR,"0")
     field(HOPR,"17")
     field(FLNK,"$(P):TT$(ADR):sWf-78")
+    field(UDFS, "NO_ALARM")
 }
 
 record(ao, "$(P):TT$(ADR)-Prg:cWaitTemp") {
@@ -604,6 +660,7 @@ record(ao, "$(P):TT$(ADR)-Prg:cWaitTemp") {
     field(MDEL,"0.1")
     field(LINR,"SLOPE")
     field (ASLO, "0.1")
+    field(UDFS, "NO_ALARM")
     field (FLNK, "$(P):TT$(ADR):sWf-81")
 }
 
@@ -614,6 +671,7 @@ record(longout, "$(P):TT$(ADR)-Prg:cWaitTime") {
     field(LOPR,"0")
     field(HOPR,"900")
     field(EGU,"min")
+    field(UDFS, "NO_ALARM")
     field(FLNK,"$(P):TT$(ADR):sWf-81")
 }
 

@@ -16,28 +16,6 @@
     <actions>
     </actions>
     <widget type="textupdate" version="2.0.0">
-      <name>Text Update</name>
-      <pv_name>$(P):TT$(N):sensStatS</pv_name>
-      <x>50</x>
-      <width>119</width>
-      <height>25</height>
-      <font>
-        <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
-        </font>
-      </font>
-      <format>6</format>
-      <precision>30</precision>
-      <show_units>false</show_units>
-      <vertical_alignment>1</vertical_alignment>
-      <wrap_words>false</wrap_words>
-      <actions>
-      </actions>
-      <border_color>
-        <color red="0" green="128" blue="255">
-        </color>
-      </border_color>
-    </widget>
-    <widget type="textupdate" version="2.0.0">
       <name>Text Update_1</name>
       <pv_name>$(P):TT$(N):sSP</pv_name>
       <x>50</x>
@@ -193,7 +171,7 @@
         <name>Label_31</name>
         <text>PV</text>
         <width>19</width>
-        <height>23</height>
+        <height>25</height>
         <font>
           <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
           </font>
@@ -251,7 +229,7 @@
         <text>SV</text>
         <y>59</y>
         <width>18</width>
-        <height>23</height>
+        <height>25</height>
         <font>
           <font name="Default Bold" family="Source Sans Pro" style="BOLD" size="16.0">
           </font>
@@ -288,6 +266,7 @@
         <name>Label_70</name>
         <text>OUT1</text>
         <width>33</width>
+        <height>21</height>
         <font>
           <font name="Fine Print" family="Source Sans Pro" style="REGULAR" size="14.0">
           </font>
@@ -316,6 +295,7 @@
         <text>ALM1</text>
         <x>43</x>
         <width>32</width>
+        <height>21</height>
         <font>
           <font name="Fine Print" family="Source Sans Pro" style="REGULAR" size="14.0">
           </font>
@@ -344,6 +324,7 @@
         <text>ALM2</text>
         <x>84</x>
         <width>32</width>
+        <height>21</height>
         <font>
           <font name="Fine Print" family="Source Sans Pro" style="REGULAR" size="14.0">
           </font>
@@ -372,6 +353,7 @@
         <text>ALM3</text>
         <x>127</x>
         <width>32</width>
+        <height>21</height>
         <font>
           <font name="Fine Print" family="Source Sans Pro" style="REGULAR" size="14.0">
           </font>
@@ -396,34 +378,62 @@
         </border_color>
       </widget>
     </widget>
-    <widget type="textupdate" version="2.0.0">
-      <name>rb-ok</name>
-      <pv_name>$(P):TT$(N):sRdV</pv_name>
+    <widget type="group" version="2.0.0">
+      <name>Group</name>
       <x>50</x>
       <width>119</width>
       <height>25</height>
-      <font>
-        <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update</name>
+        <pv_name>$(P):TT$(N):sensStatS</pv_name>
+        <width>119</width>
+        <height>25</height>
+        <font>
+          <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
+          </font>
         </font>
-      </font>
-      <format>1</format>
-      <precision>1</precision>
-      <vertical_alignment>1</vertical_alignment>
-      <wrap_words>false</wrap_words>
-      <actions>
-      </actions>
-      <rules>
-        <rule name="visible" prop_id="visible" out_exp="false">
-          <exp bool_exp="pv0&lt;-3276">
-            <value>false</value>
-          </exp>
-          <pv_name>$(pv_name)</pv_name>
-        </rule>
-      </rules>
-      <border_color>
-        <color red="0" green="128" blue="255">
-        </color>
-      </border_color>
+        <format>6</format>
+        <precision>30</precision>
+        <show_units>false</show_units>
+        <vertical_alignment>1</vertical_alignment>
+        <wrap_words>false</wrap_words>
+        <actions>
+        </actions>
+        <border_color>
+          <color red="0" green="128" blue="255">
+          </color>
+        </border_color>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>rb-ok</name>
+        <pv_name>$(P):TT$(N):sRdV</pv_name>
+        <width>119</width>
+        <height>25</height>
+        <font>
+          <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
+          </font>
+        </font>
+        <format>1</format>
+        <precision>1</precision>
+        <vertical_alignment>1</vertical_alignment>
+        <wrap_words>false</wrap_words>
+        <actions>
+        </actions>
+        <rules>
+          <rule name="visible" prop_id="visible" out_exp="false">
+            <exp bool_exp="pv0&lt;-3276">
+              <value>false</value>
+            </exp>
+            <pv_name>$(pv_name)</pv_name>
+          </rule>
+        </rules>
+        <border_color>
+          <color red="0" green="128" blue="255">
+          </color>
+        </border_color>
+      </widget>
     </widget>
   </widget>
 </display>

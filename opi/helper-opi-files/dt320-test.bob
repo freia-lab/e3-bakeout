@@ -2,10 +2,6 @@
 <display version="2.0.0">
   <width>1100</width>
   <height>750</height>
-  <background_color>
-    <color red="240" green="240" blue="240">
-    </color>
-  </background_color>
   <actions>
   </actions>
   <grid_visible>false</grid_visible>
@@ -41,18 +37,13 @@
             <height>660</height>
             <actions>
             </actions>
-            <border_color>
-              <color red="0" green="128" blue="255">
-              </color>
-            </border_color>
           </widget>
         </children>
       </tab>
     </tabs>
-    <y>3</y>
-    <width>1050</width>
-    <height>700</height>
-    <active_tab>1</active_tab>
+    <width>1010</width>
+    <height>670</height>
+    <direction>1</direction>
     <tab_height>10</tab_height>
     <actions>
     </actions>
