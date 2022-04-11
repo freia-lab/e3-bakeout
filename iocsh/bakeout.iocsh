@@ -1,4 +1,14 @@
-epicsEnvSet("DT320_PREFIX" "$(DT320PREFIX=Htr)")
+#- ###         MODBUS   bakeout   iocsh             ###
+#- ####################################################
+#- >> Mandatory
+#- IP_ADDR        - MODBUS IP address and port number
+#- IOCNAME	  - Name of this IOC
+#-
+#- >> Optional
+#- DT320PREFIX    - PV's prefix, default Ctrl-Bake
+
+epicsEnvSet("DT320_PREFIX" "$(DT320PREFIX=Ctrl-Bake)")
+epicsEnvSet("IOCNAME" "$(IOCNAME))
 
 drvAsynIPPortConfigure("IFD9506","$(IP_ADDR)",0,0,1)
 
@@ -78,33 +88,31 @@ asynSetTraceIOMask "IFD9506",0,4   # Enable traceIOHex
 #asynSetTraceMask "IFD9506",0,9     # Enable traceError and traceIODriver
 asynSetTraceMask "IFD9506",0,1     # Enable traceError
 
-dbLoadRecords("asynRecord.db","P='$(DT320_PREFIX)',R=:asynRec,PORT='IFD9506',ADDR='0',IMAX='64',OMAX='64'")
+dbLoadRecords("asynRecord.db","P='$(IOCNAME)',R=:asynRec,PORT='IFD9506',ADDR='0',IMAX='64',OMAX='64'")
 
 dbLoadRecords("bakeout-freia.db", "DT320_PREFIX=$(DT320_PREFIX)")
-
-iocInit
 
 
 # Read current settings
 #
-dbpf $(DT320_PREFIX):Ctrl-TT01:cmdUpdate.PROC 1
-dbpf $(DT320_PREFIX):Ctrl-TT02:cmdUpdate.PROC 1
-dbpf $(DT320_PREFIX):Ctrl-TT03:cmdUpdate.PROC 1
-dbpf $(DT320_PREFIX):Ctrl-TT04:cmdUpdate.PROC 1
-dbpf $(DT320_PREFIX):Ctrl-TT05:cmdUpdate.PROC 1
-dbpf $(DT320_PREFIX):Ctrl-TT06:cmdUpdate.PROC 1
-dbpf $(DT320_PREFIX):Ctrl-TT07:cmdUpdate.PROC 1
-dbpf $(DT320_PREFIX):Ctrl-TT08:cmdUpdate.PROC 1
-dbpf $(DT320_PREFIX):Ctrl-TT09:cmdUpdate.PROC 1
-dbpf $(DT320_PREFIX):Ctrl-TT10:cmdUpdate.PROC 1
+afterInit("dbpf $(DT320_PREFIX):Ctrl-TT01:cmdUpdate.PROC 1")
+afterInit("dbpf $(DT320_PREFIX):Ctrl-TT02:cmdUpdate.PROC 1")
+afterInit("dbpf $(DT320_PREFIX):Ctrl-TT03:cmdUpdate.PROC 1")
+afterInit("dbpf $(DT320_PREFIX):Ctrl-TT04:cmdUpdate.PROC 1")
+afterInit("dbpf $(DT320_PREFIX):Ctrl-TT05:cmdUpdate.PROC 1")
+afterInit("dbpf $(DT320_PREFIX):Ctrl-TT06:cmdUpdate.PROC 1")
+afterInit("dbpf $(DT320_PREFIX):Ctrl-TT07:cmdUpdate.PROC 1")
+afterInit("dbpf $(DT320_PREFIX):Ctrl-TT08:cmdUpdate.PROC 1")
+afterInit("dbpf $(DT320_PREFIX):Ctrl-TT09:cmdUpdate.PROC 1")
+afterInit("dbpf $(DT320_PREFIX):Ctrl-TT10:cmdUpdate.PROC 1")
 
-dbpf $(DT320_PREFIX):TT01-Prg:cmdUpdate.PROC 1
-dbpf $(DT320_PREFIX):TT02-Prg:cmdUpdate.PROC 1
-dbpf $(DT320_PREFIX):TT03-Prg:cmdUpdate.PROC 1
-dbpf $(DT320_PREFIX):TT04-Prg:cmdUpdate.PROC 1
-dbpf $(DT320_PREFIX):TT05-Prg:cmdUpdate.PROC 1
-dbpf $(DT320_PREFIX):TT06-Prg:cmdUpdate.PROC 1
-dbpf $(DT320_PREFIX):TT07-Prg:cmdUpdate.PROC 1
-dbpf $(DT320_PREFIX):TT08-Prg:cmdUpdate.PROC 1
-dbpf $(DT320_PREFIX):TT09-Prg:cmdUpdate.PROC 1
-dbpf $(DT320_PREFIX):TT10-Prg:cmdUpdate.PROC 1
+afterInit("dbpf $(DT320_PREFIX):TT01-Prg:cmdUpdate.PROC 1")
+afterInit("dbpf $(DT320_PREFIX):TT02-Prg:cmdUpdate.PROC 1")
+afterInit("dbpf $(DT320_PREFIX):TT03-Prg:cmdUpdate.PROC 1")
+afterInit("dbpf $(DT320_PREFIX):TT04-Prg:cmdUpdate.PROC 1")
+afterInit("dbpf $(DT320_PREFIX):TT05-Prg:cmdUpdate.PROC 1")
+afterInit("dbpf $(DT320_PREFIX):TT06-Prg:cmdUpdate.PROC 1")
+afterInit("dbpf $(DT320_PREFIX):TT07-Prg:cmdUpdate.PROC 1")
+afterInit("dbpf $(DT320_PREFIX):TT08-Prg:cmdUpdate.PROC 1")
+afterInit("dbpf $(DT320_PREFIX):TT09-Prg:cmdUpdate.PROC 1")
+afterInit("dbpf $(DT320_PREFIX):TT10-Prg:cmdUpdate.PROC 1")

@@ -4,7 +4,7 @@
 record(ai, "$(P):TT$(ADR):sRdV") {
     field(DESC,"Actual temperature")
     field(DTYP,"asynInt32")
-    field(INP,"@asyn($(PORT) 0x1000 -16)MODBUS_DATA")
+    field(INP,"@asynMask($(PORT) 0x1000 -16)MODBUS_DATA")
     field(EGU,"°C")
     field(HOPR,"500.0")
     field(LOPR,"-70.0")

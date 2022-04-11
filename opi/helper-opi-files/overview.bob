@@ -15,11 +15,14 @@
     <actions execute_as_one="true">
       <action type="open_display">
         <file>../../freia-symbols/display-builder/asyn/asynRecord.bob</file>
-        <target>standalone</target>
+        <macros>
+          <P>ioc13-bake</P>
+        </macros>
+        <target>window</target>
       </action>
     </actions>
-    <pv_name>$(P):asynRec</pv_name>
-    <text>$(P):asynRec</text>
+    <pv_name>ioc13-bake:asynRec</pv_name>
+    <text>asynRec</text>
     <x>1030</x>
     <y>450</y>
     <width>177</width>
