@@ -10,6 +10,7 @@
 core.*
 *-loc/*.Makefile
 bakeout/*.Makefile
+bakeout/O*
 cellMods/
 testMods*/
 *PVs.list
